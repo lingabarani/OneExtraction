@@ -1,0 +1,610 @@
+[
+  {
+    "company_id": "mx_899f29b3-fbbb-8e57-9923-7adea4d9372f",
+    "legal_name": "TECNOLOGIAS DE MEXICO SA DE CV",
+    "trade_name": "TECNOLOGIAS DE MEXICO",
+    "normalized_name": "TECNOLOGIAS DE MEXICO",
+    "rfc": "TME150115AB1",
+    "rfc_type": "MORAL",
+    "website": "https://tec-mexico.com.mx",
+    "domain": "tec-mexico.com.mx",
+    "industry": "Servicios Profesionales",
+    "industry_code": "541510",
+    "employee_count_min": 25,
+    "employee_count_max": 25,
+    "employee_count_source": "25",
+    "phone": "+525555123456",
+    "phones": [
+      {
+        "value": "+525555123456",
+        "source": "SIEM",
+        "type": "OFFICE",
+        "verified": false
+      }
+    ],
+    "email": "contacto@tec-mexico.com.mx",
+    "emails": [
+      {
+        "value": "contacto@tec-mexico.com.mx",
+        "source": "SIEM",
+        "verified": false
+      },
+      {
+        "value": "compras@tec-mexico.com.mx",
+        "source": "SUPPLIER_REGISTRY",
+        "verified": false
+      }
+    ],
+    "address": {
+      "street": "Av. Insurgentes Sur",
+      "number": "1602 Int Piso 4",
+      "colony": "Credito Constructor",
+      "municipality": "Benito Juarez",
+      "state": "Ciudad de México",
+      "postal_code": "03940",
+      "country": "Mexico"
+    },
+    "latitude": null,
+    "longitude": null,
+    "decision_makers": [
+      {
+        "person_id": "per_50c2f312-ed55-4213-b786-b488c199521d",
+        "company_id": "mx_899f29b3-fbbb-8e57-9923-7adea4d9372f",
+        "company_name": "TECNOLOGIAS DE MEXICO SA DE CV",
+        "company_domain": "tec-mexico.com.mx",
+        "first_name": "Carlos",
+        "last_name": "Gonzalez Rodriguez",
+        "full_name": "Carlos Gonzalez Rodriguez",
+        "title": "Chief Executive Officer (CEO)",
+        "standardized_title": "Chief Executive Officer (CEO)",
+        "seniority_level": "C_SUITE",
+        "department": "EXECUTIVE",
+        "work_email": "carlos.gonzalez@tec-mexico.com.mx",
+        "email_pattern": null,
+        "email_status": "UNVERIFIED",
+        "email_confidence_score": 20,
+        "mail_provider": "UNKNOWN",
+        "direct_phone": "5512345678",
+        "phone_extension": null,
+        "phone_type": "DIRECT",
+        "source_provenance": [
+          {
+            "source": "SIEM",
+            "source_record_id": "per_50c2f312-ed55-4213-b786-b488c199521d",
+            "source_url": "https://tec-mexico.com.mx",
+            "retrieved_at": "2026-09-03T09:49:54.838116+00:00",
+            "source_updated_at": null,
+            "raw_hash": null
+          }
+        ],
+        "is_active": true,
+        "created_at": "2026-09-03T09:49:54.890238+00:00",
+        "updated_at": "2026-09-03T09:49:54.890238+00:00"
+      }
+    ],
+    "decision_maker_count": 1,
+    "source_records": [
+      {
+        "source": "SAT",
+        "source_record_id": "TME150115AB1",
+        "source_url": "http://omawww.sat.gob.mx/cifras_sat/Documents/Listado_Completo_69-B.csv",
+        "retrieved_at": "2026-09-03T09:49:54.836383+00:00",
+        "source_updated_at": null,
+        "raw_hash": "82d54d4a5bad20a3b3940de9b3d4d340986d32f445a47ce1acd6563df235bba3"
+      },
+      {
+        "source": "SIEM",
+        "source_record_id": "siem_001",
+        "source_url": "https://datos.gob.mx/busca/api/3/action/package_show?id=sistema-de-informacion-empresarial-mexicano",
+        "retrieved_at": "2026-09-03T09:49:52.224545+00:00",
+        "source_updated_at": null,
+        "raw_hash": "f0a2d635ed6ec50fdc216a2a8792113770f7a6a849f6ba74f56260dcda42f3fc"
+      },
+      {
+        "source": "SUPPLIER_REGISTRY",
+        "source_record_id": "sup_101",
+        "source_url": "https://datos.gob.mx/busca/api/3/action/package_show?id=padron-de-proveedores-y-contratistas",
+        "retrieved_at": "2026-09-03T09:49:52.230107+00:00",
+        "source_updated_at": null,
+        "raw_hash": "89e82d11245f137103a800dae91c69124e871449a9d636dccd6ffcc53a22e543"
+      }
+    ],
+    "source_count": 3,
+    "data_quality_score": 96,
+    "entity_fingerprint": "rfc_TME150115AB1",
+    "last_verified_at": "2026-09-03T09:49:54.838116+00:00",
+    "created_at": "2026-09-03T09:49:52.226315+00:00",
+    "updated_at": "2026-09-03T09:49:54.838116+00:00",
+    "privacy_classification": "B2B_PUBLIC",
+    "deletion_status": "ACTIVE"
+  },
+  {
+    "company_id": "mx_f36da3f1-76e9-d7cb-f6f2-503d4d3345b5",
+    "legal_name": "CONSTRUCCIONES DEL SURESTE SA DE CV",
+    "trade_name": "CONSTRUCCIONES SURESTE",
+    "normalized_name": "CONSTRUCCIONES DEL SURESTE",
+    "rfc": "CSO120405H89",
+    "rfc_type": "MORAL",
+    "website": "https://consureste.com.mx",
+    "domain": "consureste.com.mx",
+    "industry": null,
+    "industry_code": null,
+    "employee_count_min": null,
+    "employee_count_max": null,
+    "employee_count_source": null,
+    "phone": "+529999123456",
+    "phones": [
+      {
+        "value": "+529999123456",
+        "source": "SUPPLIER_REGISTRY",
+        "type": "OFFICE",
+        "verified": false
+      }
+    ],
+    "email": "contacto@consureste.com.mx",
+    "emails": [
+      {
+        "value": "contacto@consureste.com.mx",
+        "source": "SUPPLIER_REGISTRY",
+        "verified": false
+      }
+    ],
+    "address": {
+      "street": "Calle 60",
+      "number": "305",
+      "colony": "Centro",
+      "municipality": "Merida",
+      "state": "Yucatán",
+      "postal_code": "97000",
+      "country": "Mexico"
+    },
+    "latitude": null,
+    "longitude": null,
+    "decision_makers": [
+      {
+        "person_id": "per_4f52775e-edd5-095e-f9e0-68677b5a83a3",
+        "company_id": "mx_f36da3f1-76e9-d7cb-f6f2-503d4d3345b5",
+        "company_name": "CONSTRUCCIONES DEL SURESTE SA DE CV",
+        "company_domain": "consureste.com.mx",
+        "first_name": "Jorge Luis",
+        "last_name": "Hernandez Medina",
+        "full_name": "Jorge Luis Hernandez Medina",
+        "title": "Representante Legal y Administrador Unico",
+        "standardized_title": "Sole Administrator / Owner",
+        "seniority_level": "FOUNDER",
+        "department": "EXECUTIVE",
+        "work_email": "jorge.hernandez@consureste.com.mx",
+        "email_pattern": null,
+        "email_status": "UNVERIFIED",
+        "email_confidence_score": 20,
+        "mail_provider": "UNKNOWN",
+        "direct_phone": "9991234567",
+        "phone_extension": null,
+        "phone_type": "DIRECT",
+        "source_provenance": [
+          {
+            "source": "SUPPLIER_REGISTRY",
+            "source_record_id": "per_4f52775e-edd5-095e-f9e0-68677b5a83a3",
+            "source_url": "https://consureste.com.mx",
+            "retrieved_at": "2026-09-03T09:49:54.838116+00:00",
+            "source_updated_at": null,
+            "raw_hash": null
+          }
+        ],
+        "is_active": true,
+        "created_at": "2026-09-03T09:49:54.932840+00:00",
+        "updated_at": "2026-09-03T09:49:54.932840+00:00"
+      }
+    ],
+    "decision_maker_count": 1,
+    "source_records": [
+      {
+        "source": "SAT",
+        "source_record_id": "CSO120405H89",
+        "source_url": "http://omawww.sat.gob.mx/cifras_sat/Documents/Listado_Completo_69-B.csv",
+        "retrieved_at": "2026-09-03T09:49:54.836383+00:00",
+        "source_updated_at": null,
+        "raw_hash": "0c6a9bfc0882502af982a06c20342353bc1879ef33ad78dae04d6e246c6d5427"
+      },
+      {
+        "source": "SUPPLIER_REGISTRY",
+        "source_record_id": "sup_103",
+        "source_url": "https://datos.gob.mx/busca/api/3/action/package_show?id=padron-de-proveedores-y-contratistas",
+        "retrieved_at": "2026-09-03T09:49:52.230107+00:00",
+        "source_updated_at": null,
+        "raw_hash": "822d6f61df1911d77bbf19d542810d40005f028508bb5c3e78057ff6c874fb26"
+      }
+    ],
+    "source_count": 2,
+    "data_quality_score": 81,
+    "entity_fingerprint": "rfc_CSO120405H89",
+    "last_verified_at": "2026-09-03T09:49:54.838116+00:00",
+    "created_at": "2026-09-03T09:49:52.232043+00:00",
+    "updated_at": "2026-09-03T09:49:54.838116+00:00",
+    "privacy_classification": "B2B_PUBLIC",
+    "deletion_status": "ACTIVE"
+  },
+  {
+    "company_id": "mx_d9e541a3-1232-fad6-0984-cb6ac6052b33",
+    "legal_name": "TECNOLOGIAS DE MEXICO S.A. DE C.V.",
+    "trade_name": "TECNOLOGIAS DE MEXICO",
+    "normalized_name": "TECNOLOGIAS DE MEXICO",
+    "rfc": null,
+    "rfc_type": null,
+    "website": "https://www.tec-mexico.com.mx",
+    "domain": "tec-mexico.com.mx",
+    "industry": "Desarrollo de software y consultoria en informatica",
+    "industry_code": "541510",
+    "employee_count_min": 11,
+    "employee_count_max": 30,
+    "employee_count_source": "11 a 30 personas",
+    "phone": "+525555123456",
+    "phones": [
+      {
+        "value": "+525555123456",
+        "source": "DENUE",
+        "type": "OFFICE",
+        "verified": false
+      }
+    ],
+    "email": "contacto@tec-mexico.com.mx",
+    "emails": [
+      {
+        "value": "contacto@tec-mexico.com.mx",
+        "source": "DENUE",
+        "verified": false
+      }
+    ],
+    "address": {
+      "street": "Avenida Insurgentes Sur",
+      "number": "1602 Int Piso 4",
+      "colony": "Credito Constructor",
+      "municipality": "Benito Juárez",
+      "state": "Ciudad de México",
+      "postal_code": "03940",
+      "country": "Mexico"
+    },
+    "latitude": 19.362145,
+    "longitude": -99.182312,
+    "decision_makers": [],
+    "decision_maker_count": 0,
+    "source_records": [
+      {
+        "source": "DENUE",
+        "source_record_id": "0901501234567890123456",
+        "source_url": "local_fixture://denue",
+        "retrieved_at": "2026-09-03T09:49:52.213567+00:00",
+        "source_updated_at": null,
+        "raw_hash": "15a39deca48310ef7d62014a4ff7c9aaabebcc115107962708a024f31028d06c"
+      }
+    ],
+    "source_count": 1,
+    "data_quality_score": 87,
+    "entity_fingerprint": "fp_tecnologiasdemexic_4271a702e6a3e1fb",
+    "last_verified_at": "2026-09-03T09:49:52.213567+00:00",
+    "created_at": "2026-09-03T09:49:52.217429+00:00",
+    "updated_at": "2026-09-03T09:49:52.217429+00:00",
+    "privacy_classification": "B2B_PUBLIC",
+    "deletion_status": "ACTIVE"
+  },
+  {
+    "company_id": "mx_402179cf-a495-6d67-070f-4033a2d4dcfa",
+    "legal_name": "LOGISTICA Y DISTRIBUCION OCCIDENTE S. DE R.L. DE C.V.",
+    "trade_name": "LOGISTICA Y DISTRIBUCION OCCIDENTE",
+    "normalized_name": "LOGISTICA Y DISTRIBUCION OCCIDENTE",
+    "rfc": "LDO180620XY9",
+    "rfc_type": "MORAL",
+    "website": "https://logisticaoccidente.com.mx",
+    "domain": "logisticaoccidente.com.mx",
+    "industry": "Servicios de mensajeria y paqueteria",
+    "industry_code": "492110",
+    "employee_count_min": 51,
+    "employee_count_max": 100,
+    "employee_count_source": "51 a 100 personas",
+    "phone": "+523336123456",
+    "phones": [
+      {
+        "value": "+523336123456",
+        "source": "DENUE",
+        "type": "OFFICE",
+        "verified": false
+      }
+    ],
+    "email": "info@logisticaoccidente.com.mx",
+    "emails": [
+      {
+        "value": "info@logisticaoccidente.com.mx",
+        "source": "DENUE",
+        "verified": false
+      },
+      {
+        "value": "atencion@logisticaoccidente.com.mx",
+        "source": "SIEM",
+        "verified": false
+      }
+    ],
+    "address": {
+      "street": "Calzada Lazaro Cardenas",
+      "number": "2300",
+      "colony": "Las Torres",
+      "municipality": "Guadalajara",
+      "state": "Jalisco",
+      "postal_code": "44920",
+      "country": "Mexico"
+    },
+    "latitude": 20.641234,
+    "longitude": -103.351234,
+    "decision_makers": [
+      {
+        "person_id": "per_3fb091ec-1e31-7d66-eaa1-13628f8adac8",
+        "company_id": "mx_402179cf-a495-6d67-070f-4033a2d4dcfa",
+        "company_name": "LOGISTICA Y DISTRIBUCION OCCIDENTE S. DE R.L. DE C.V.",
+        "company_domain": "logisticaoccidente.com.mx",
+        "first_name": "Ana Maria",
+        "last_name": "Torres Vazquez",
+        "full_name": "Ana Maria Torres Vazquez",
+        "title": "Directora de Recursos Humanos (CHRO)",
+        "standardized_title": "Chief Human Resources Officer (CHRO)",
+        "seniority_level": "C_SUITE",
+        "department": "HR_PEOPLE",
+        "work_email": "ana.torres@logisticaoccidente.com.mx",
+        "email_pattern": null,
+        "email_status": "UNVERIFIED",
+        "email_confidence_score": 20,
+        "mail_provider": "UNKNOWN",
+        "direct_phone": "3319876543",
+        "phone_extension": null,
+        "phone_type": "DIRECT",
+        "source_provenance": [
+          {
+            "source": "SIEM",
+            "source_record_id": "per_3fb091ec-1e31-7d66-eaa1-13628f8adac8",
+            "source_url": "https://logisticaoccidente.com.mx",
+            "retrieved_at": "2026-09-03T09:49:54.838116+00:00",
+            "source_updated_at": null,
+            "raw_hash": null
+          }
+        ],
+        "is_active": true,
+        "created_at": "2026-09-03T09:49:56.254688+00:00",
+        "updated_at": "2026-09-03T09:49:56.254688+00:00"
+      }
+    ],
+    "decision_maker_count": 1,
+    "source_records": [
+      {
+        "source": "DENUE",
+        "source_record_id": "1403909876543210987654",
+        "source_url": "local_fixture://denue",
+        "retrieved_at": "2026-09-03T09:49:52.214380+00:00",
+        "source_updated_at": null,
+        "raw_hash": "e2b373f9c0daf0019695f58bcf34ec94eb2c3277a2e8ade449d451dfdaba48e9"
+      },
+      {
+        "source": "SIEM",
+        "source_record_id": "siem_002",
+        "source_url": "https://datos.gob.mx/busca/api/3/action/package_show?id=sistema-de-informacion-empresarial-mexicano",
+        "retrieved_at": "2026-09-03T09:49:52.225128+00:00",
+        "source_updated_at": null,
+        "raw_hash": "20b2ff23e565e7d8e4cd5db64ea3bb5578696b7951811c88707586fdf5b8c531"
+      }
+    ],
+    "source_count": 2,
+    "data_quality_score": 100,
+    "entity_fingerprint": "fp_logisticaydistribu_92f5653a44adb102",
+    "last_verified_at": "2026-09-03T09:49:54.838116+00:00",
+    "created_at": "2026-09-03T09:49:52.218673+00:00",
+    "updated_at": "2026-09-03T09:49:54.838116+00:00",
+    "privacy_classification": "B2B_PUBLIC",
+    "deletion_status": "ACTIVE"
+  },
+  {
+    "company_id": "mx_a515c98a-b0ff-b405-5002-feb618b7495e",
+    "legal_name": "MANUFACTURA INDUSTRIAL DEL NORTE S.A.P.I. DE C.V.",
+    "trade_name": "MANUFACTURA INDUSTRIAL NORTE",
+    "normalized_name": "MANUFACTURA INDUSTRIAL DEL NORTE",
+    "rfc": "MIN190310ZZ4",
+    "rfc_type": "MORAL",
+    "website": "https://www.manufacturanorte.com",
+    "domain": "manufacturanorte.com",
+    "industry": "Fabricacion de productos metalicos",
+    "industry_code": "332310",
+    "employee_count_min": 101,
+    "employee_count_max": 250,
+    "employee_count_source": "101 a 250 personas",
+    "phone": "+528183123456",
+    "phones": [
+      {
+        "value": "+528183123456",
+        "source": "DENUE",
+        "type": "OFFICE",
+        "verified": false
+      }
+    ],
+    "email": "ventas@manufacturanorte.com",
+    "emails": [
+      {
+        "value": "ventas@manufacturanorte.com",
+        "source": "DENUE",
+        "verified": false
+      },
+      {
+        "value": "licitaciones@manufacturanorte.com",
+        "source": "SUPPLIER_REGISTRY",
+        "verified": false
+      }
+    ],
+    "address": {
+      "street": "Boulevard Diaz Ordaz",
+      "number": "100 Int Bodega 5",
+      "colony": "Santa Maria",
+      "municipality": "Monterrey",
+      "state": "Nuevo León",
+      "postal_code": "64650",
+      "country": "Mexico"
+    },
+    "latitude": 25.671234,
+    "longitude": -100.351234,
+    "decision_makers": [
+      {
+        "person_id": "per_8a157d58-69b2-d3df-7c94-49381f8234da",
+        "company_id": "mx_a515c98a-b0ff-b405-5002-feb618b7495e",
+        "company_name": "MANUFACTURA INDUSTRIAL DEL NORTE S.A.P.I. DE C.V.",
+        "company_domain": "manufacturanorte.com",
+        "first_name": "Alejandro",
+        "last_name": "Morales Garza",
+        "full_name": "Alejandro Morales Garza",
+        "title": "Director de Operaciones (COO)",
+        "standardized_title": "Chief Operating Officer (COO)",
+        "seniority_level": "C_SUITE",
+        "department": "OPERATIONS",
+        "work_email": "alejandro.morales@manufacturanorte.com",
+        "email_pattern": null,
+        "email_status": "UNVERIFIED",
+        "email_confidence_score": 20,
+        "mail_provider": "UNKNOWN",
+        "direct_phone": "8119876543",
+        "phone_extension": null,
+        "phone_type": "DIRECT",
+        "source_provenance": [
+          {
+            "source": "SUPPLIER_REGISTRY",
+            "source_record_id": "per_8a157d58-69b2-d3df-7c94-49381f8234da",
+            "source_url": "https://www.manufacturanorte.com",
+            "retrieved_at": "2026-09-03T09:49:54.838116+00:00",
+            "source_updated_at": null,
+            "raw_hash": null
+          }
+        ],
+        "is_active": true,
+        "created_at": "2026-09-03T09:49:56.274849+00:00",
+        "updated_at": "2026-09-03T09:49:56.274849+00:00"
+      }
+    ],
+    "decision_maker_count": 1,
+    "source_records": [
+      {
+        "source": "DENUE",
+        "source_record_id": "1903901122334455667788",
+        "source_url": "local_fixture://denue",
+        "retrieved_at": "2026-09-03T09:49:52.214380+00:00",
+        "source_updated_at": null,
+        "raw_hash": "af16e4c18ccb19290e4f3e53cfaa88707d80a541362852f49a0c7c905a9b8775"
+      },
+      {
+        "source": "SUPPLIER_REGISTRY",
+        "source_record_id": "sup_102",
+        "source_url": "https://datos.gob.mx/busca/api/3/action/package_show?id=padron-de-proveedores-y-contratistas",
+        "retrieved_at": "2026-09-03T09:49:52.230107+00:00",
+        "source_updated_at": null,
+        "raw_hash": "2c1b6ef86f5258a272b52a723b56a148399bf6615dd7e5307de3e5b3001cff8b"
+      }
+    ],
+    "source_count": 2,
+    "data_quality_score": 100,
+    "entity_fingerprint": "fp_manufacturaindustri_628c089c339a7bd5",
+    "last_verified_at": "2026-09-03T09:49:54.838116+00:00",
+    "created_at": "2026-09-03T09:49:52.220209+00:00",
+    "updated_at": "2026-09-03T09:49:54.838116+00:00",
+    "privacy_classification": "B2B_PUBLIC",
+    "deletion_status": "ACTIVE"
+  },
+  {
+    "company_id": "mx_8e7eb7a6-3dcc-b8b6-7907-570fc199772c",
+    "legal_name": "ALIMENTOS Y BEBIDAS DE PUEBLA SA DE CV",
+    "trade_name": "BEBIDAS DE PUEBLA",
+    "normalized_name": "ALIMENTOS Y BEBIDAS DE PUEBLA",
+    "rfc": "ALM050810JK3",
+    "rfc_type": "MORAL",
+    "website": "https://alimentosdelcentro.com.mx",
+    "domain": "alimentosdelcentro.com.mx",
+    "industry": "Manufactura de Alimentos",
+    "industry_code": "311900",
+    "employee_count_min": 40,
+    "employee_count_max": 40,
+    "employee_count_source": "40",
+    "phone": "+522222123456",
+    "phones": [
+      {
+        "value": "+522222123456",
+        "source": "SIEM",
+        "type": "OFFICE",
+        "verified": false
+      }
+    ],
+    "email": "ventas@alimentosdelcentro.com.mx",
+    "emails": [
+      {
+        "value": "ventas@alimentosdelcentro.com.mx",
+        "source": "SIEM",
+        "verified": false
+      }
+    ],
+    "address": {
+      "street": "Av Juarez",
+      "number": "1402",
+      "colony": "La Paz",
+      "municipality": "Puebla",
+      "state": "Puebla",
+      "postal_code": "72160",
+      "country": "Mexico"
+    },
+    "latitude": null,
+    "longitude": null,
+    "decision_makers": [
+      {
+        "person_id": "per_eca0dfc2-c6e9-98b5-f208-0fe8e3e5890c",
+        "company_id": "mx_8e7eb7a6-3dcc-b8b6-7907-570fc199772c",
+        "company_name": "ALIMENTOS Y BEBIDAS DE PUEBLA SA DE CV",
+        "company_domain": "alimentosdelcentro.com.mx",
+        "first_name": "Roberto",
+        "last_name": "Sanchez Lopez",
+        "full_name": "Roberto Sanchez Lopez",
+        "title": "Director de Finanzas (CFO)",
+        "standardized_title": "Chief Financial Officer (CFO)",
+        "seniority_level": "C_SUITE",
+        "department": "FINANCE",
+        "work_email": "roberto.sanchez@alimentosdelcentro.com.mx",
+        "email_pattern": null,
+        "email_status": "PROBABLE",
+        "email_confidence_score": 75,
+        "mail_provider": "CUSTOM_SMTP",
+        "direct_phone": "2225678901",
+        "phone_extension": null,
+        "phone_type": "DIRECT",
+        "source_provenance": [
+          {
+            "source": "SIEM",
+            "source_record_id": "per_eca0dfc2-c6e9-98b5-f208-0fe8e3e5890c",
+            "source_url": "https://alimentosdelcentro.com.mx",
+            "retrieved_at": "2026-09-03T09:49:52.225128+00:00",
+            "source_updated_at": null,
+            "raw_hash": null
+          }
+        ],
+        "is_active": true,
+        "created_at": "2026-09-03T09:49:56.370113+00:00",
+        "updated_at": "2026-09-03T09:49:56.370113+00:00"
+      }
+    ],
+    "decision_maker_count": 1,
+    "source_records": [
+      {
+        "source": "SIEM",
+        "source_record_id": "siem_003",
+        "source_url": "https://datos.gob.mx/busca/api/3/action/package_show?id=sistema-de-informacion-empresarial-mexicano",
+        "retrieved_at": "2026-09-03T09:49:52.225128+00:00",
+        "source_updated_at": null,
+        "raw_hash": "6bf70eb5e2e3ce79b6011146381f5d47c5ce2faef65a73f75ea41084a1805b95"
+      }
+    ],
+    "source_count": 1,
+    "data_quality_score": 93,
+    "entity_fingerprint": "rfc_ALM050810JK3",
+    "last_verified_at": "2026-09-03T09:49:52.225128+00:00",
+    "created_at": "2026-09-03T09:49:52.227887+00:00",
+    "updated_at": "2026-09-03T09:49:52.227887+00:00",
+    "privacy_classification": "B2B_PUBLIC",
+    "deletion_status": "ACTIVE"
+  }
+]

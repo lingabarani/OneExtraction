@@ -1,0 +1,75 @@
+{
+  "summary_metrics": {
+    "total_raw_records": 11,
+    "valid_records": 11,
+    "invalid_records": 0,
+    "duplicates": 5,
+    "merged_records": 6,
+    "total_decision_makers": 5,
+    "c_suite_executives": 4,
+    "founders_and_owners": 1,
+    "hr_and_people_leads": 1,
+    "deliverable_work_emails": 1,
+    "microsoft_365_outlook_domains": 0,
+    "google_workspace_domains": 0,
+    "records_in_review_queue": 0,
+    "records_per_source": {
+      "DENUE": 3,
+      "SIEM": 3,
+      "SUPPLIER_REGISTRY": 3,
+      "DATOS_GOB": 0,
+      "SAT": 2
+    },
+    "records_with_email": 6,
+    "records_with_phone": 6,
+    "records_with_website": 6,
+    "records_with_rfc": 5,
+    "records_with_coordinates": 3,
+    "average_quality_score": 92.83,
+    "total_duration_seconds": 105.98,
+    "timestamp": "2026-09-03T09:49:56.370113+00:00"
+  },
+  "source_statuses": {
+    "DENUE": {
+      "status": "SUCCESS",
+      "records_ingested": 3,
+      "invalid_records": 0,
+      "duration_seconds": 101.83,
+      "error": null,
+      "timestamp": "2026-09-03T09:49:52.221048+00:00"
+    },
+    "SIEM": {
+      "status": "SUCCESS",
+      "records_ingested": 3,
+      "invalid_records": 0,
+      "duration_seconds": 0.01,
+      "error": null,
+      "timestamp": "2026-09-03T09:49:52.228400+00:00"
+    },
+    "SUPPLIER_REGISTRY": {
+      "status": "SUCCESS",
+      "records_ingested": 3,
+      "invalid_records": 0,
+      "duration_seconds": 0.0,
+      "error": null,
+      "timestamp": "2026-09-03T09:49:52.232710+00:00"
+    },
+    "DATOS_GOB": {
+      "status": "SUCCESS",
+      "records_ingested": 0,
+      "invalid_records": 0,
+      "duration_seconds": 2.59,
+      "error": null,
+      "timestamp": "2026-09-03T09:49:54.827020+00:00"
+    },
+    "SAT": {
+      "status": "SUCCESS",
+      "records_ingested": 2,
+      "invalid_records": 0,
+      "duration_seconds": 0.01,
+      "error": null,
+      "timestamp": "2026-09-03T09:49:54.837532+00:00"
+    }
+  },
+  "invalid_records_sample": []
+}

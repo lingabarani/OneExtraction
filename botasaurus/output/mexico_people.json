@@ -1,0 +1,172 @@
+[
+  {
+    "person_id": "per_50c2f312-ed55-4213-b786-b488c199521d",
+    "company_id": "mx_899f29b3-fbbb-8e57-9923-7adea4d9372f",
+    "company_name": "TECNOLOGIAS DE MEXICO SA DE CV",
+    "company_domain": "tec-mexico.com.mx",
+    "first_name": "Carlos",
+    "last_name": "Gonzalez Rodriguez",
+    "full_name": "Carlos Gonzalez Rodriguez",
+    "title": "Chief Executive Officer (CEO)",
+    "standardized_title": "Chief Executive Officer (CEO)",
+    "seniority_level": "C_SUITE",
+    "department": "EXECUTIVE",
+    "work_email": "carlos.gonzalez@tec-mexico.com.mx",
+    "email_pattern": null,
+    "email_status": "UNVERIFIED",
+    "email_confidence_score": 20,
+    "mail_provider": "UNKNOWN",
+    "direct_phone": "5512345678",
+    "phone_extension": null,
+    "phone_type": "DIRECT",
+    "source_provenance": [
+      {
+        "source": "SIEM",
+        "source_record_id": "per_50c2f312-ed55-4213-b786-b488c199521d",
+        "source_url": "https://tec-mexico.com.mx",
+        "retrieved_at": "2026-09-03T09:49:54.838116+00:00",
+        "source_updated_at": null,
+        "raw_hash": null
+      }
+    ],
+    "is_active": true,
+    "created_at": "2026-09-03T09:49:54.890238+00:00",
+    "updated_at": "2026-09-03T09:49:54.890238+00:00"
+  },
+  {
+    "person_id": "per_4f52775e-edd5-095e-f9e0-68677b5a83a3",
+    "company_id": "mx_f36da3f1-76e9-d7cb-f6f2-503d4d3345b5",
+    "company_name": "CONSTRUCCIONES DEL SURESTE SA DE CV",
+    "company_domain": "consureste.com.mx",
+    "first_name": "Jorge Luis",
+    "last_name": "Hernandez Medina",
+    "full_name": "Jorge Luis Hernandez Medina",
+    "title": "Representante Legal y Administrador Unico",
+    "standardized_title": "Sole Administrator / Owner",
+    "seniority_level": "FOUNDER",
+    "department": "EXECUTIVE",
+    "work_email": "jorge.hernandez@consureste.com.mx",
+    "email_pattern": null,
+    "email_status": "UNVERIFIED",
+    "email_confidence_score": 20,
+    "mail_provider": "UNKNOWN",
+    "direct_phone": "9991234567",
+    "phone_extension": null,
+    "phone_type": "DIRECT",
+    "source_provenance": [
+      {
+        "source": "SUPPLIER_REGISTRY",
+        "source_record_id": "per_4f52775e-edd5-095e-f9e0-68677b5a83a3",
+        "source_url": "https://consureste.com.mx",
+        "retrieved_at": "2026-09-03T09:49:54.838116+00:00",
+        "source_updated_at": null,
+        "raw_hash": null
+      }
+    ],
+    "is_active": true,
+    "created_at": "2026-09-03T09:49:54.932840+00:00",
+    "updated_at": "2026-09-03T09:49:54.932840+00:00"
+  },
+  {
+    "person_id": "per_3fb091ec-1e31-7d66-eaa1-13628f8adac8",
+    "company_id": "mx_402179cf-a495-6d67-070f-4033a2d4dcfa",
+    "company_name": "LOGISTICA Y DISTRIBUCION OCCIDENTE S. DE R.L. DE C.V.",
+    "company_domain": "logisticaoccidente.com.mx",
+    "first_name": "Ana Maria",
+    "last_name": "Torres Vazquez",
+    "full_name": "Ana Maria Torres Vazquez",
+    "title": "Directora de Recursos Humanos (CHRO)",
+    "standardized_title": "Chief Human Resources Officer (CHRO)",
+    "seniority_level": "C_SUITE",
+    "department": "HR_PEOPLE",
+    "work_email": "ana.torres@logisticaoccidente.com.mx",
+    "email_pattern": null,
+    "email_status": "UNVERIFIED",
+    "email_confidence_score": 20,
+    "mail_provider": "UNKNOWN",
+    "direct_phone": "3319876543",
+    "phone_extension": null,
+    "phone_type": "DIRECT",
+    "source_provenance": [
+      {
+        "source": "SIEM",
+        "source_record_id": "per_3fb091ec-1e31-7d66-eaa1-13628f8adac8",
+        "source_url": "https://logisticaoccidente.com.mx",
+        "retrieved_at": "2026-09-03T09:49:54.838116+00:00",
+        "source_updated_at": null,
+        "raw_hash": null
+      }
+    ],
+    "is_active": true,
+    "created_at": "2026-09-03T09:49:56.254688+00:00",
+    "updated_at": "2026-09-03T09:49:56.254688+00:00"
+  },
+  {
+    "person_id": "per_8a157d58-69b2-d3df-7c94-49381f8234da",
+    "company_id": "mx_a515c98a-b0ff-b405-5002-feb618b7495e",
+    "company_name": "MANUFACTURA INDUSTRIAL DEL NORTE S.A.P.I. DE C.V.",
+    "company_domain": "manufacturanorte.com",
+    "first_name": "Alejandro",
+    "last_name": "Morales Garza",
+    "full_name": "Alejandro Morales Garza",
+    "title": "Director de Operaciones (COO)",
+    "standardized_title": "Chief Operating Officer (COO)",
+    "seniority_level": "C_SUITE",
+    "department": "OPERATIONS",
+    "work_email": "alejandro.morales@manufacturanorte.com",
+    "email_pattern": null,
+    "email_status": "UNVERIFIED",
+    "email_confidence_score": 20,
+    "mail_provider": "UNKNOWN",
+    "direct_phone": "8119876543",
+    "phone_extension": null,
+    "phone_type": "DIRECT",
+    "source_provenance": [
+      {
+        "source": "SUPPLIER_REGISTRY",
+        "source_record_id": "per_8a157d58-69b2-d3df-7c94-49381f8234da",
+        "source_url": "https://www.manufacturanorte.com",
+        "retrieved_at": "2026-09-03T09:49:54.838116+00:00",
+        "source_updated_at": null,
+        "raw_hash": null
+      }
+    ],
+    "is_active": true,
+    "created_at": "2026-09-03T09:49:56.274849+00:00",
+    "updated_at": "2026-09-03T09:49:56.274849+00:00"
+  },
+  {
+    "person_id": "per_eca0dfc2-c6e9-98b5-f208-0fe8e3e5890c",
+    "company_id": "mx_8e7eb7a6-3dcc-b8b6-7907-570fc199772c",
+    "company_name": "ALIMENTOS Y BEBIDAS DE PUEBLA SA DE CV",
+    "company_domain": "alimentosdelcentro.com.mx",
+    "first_name": "Roberto",
+    "last_name": "Sanchez Lopez",
+    "full_name": "Roberto Sanchez Lopez",
+    "title": "Director de Finanzas (CFO)",
+    "standardized_title": "Chief Financial Officer (CFO)",
+    "seniority_level": "C_SUITE",
+    "department": "FINANCE",
+    "work_email": "roberto.sanchez@alimentosdelcentro.com.mx",
+    "email_pattern": null,
+    "email_status": "PROBABLE",
+    "email_confidence_score": 75,
+    "mail_provider": "CUSTOM_SMTP",
+    "direct_phone": "2225678901",
+    "phone_extension": null,
+    "phone_type": "DIRECT",
+    "source_provenance": [
+      {
+        "source": "SIEM",
+        "source_record_id": "per_eca0dfc2-c6e9-98b5-f208-0fe8e3e5890c",
+        "source_url": "https://alimentosdelcentro.com.mx",
+        "retrieved_at": "2026-09-03T09:49:52.225128+00:00",
+        "source_updated_at": null,
+        "raw_hash": null
+      }
+    ],
+    "is_active": true,
+    "created_at": "2026-09-03T09:49:56.370113+00:00",
+    "updated_at": "2026-09-03T09:49:56.370113+00:00"
+  }
+]

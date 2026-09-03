@@ -1,0 +1,42 @@
+{
+  "DENUE": {
+    "status": "SUCCESS",
+    "records_ingested": 3,
+    "invalid_records": 0,
+    "duration_seconds": 101.83,
+    "error": null,
+    "timestamp": "2026-09-03T09:49:52.221048+00:00"
+  },
+  "SIEM": {
+    "status": "SUCCESS",
+    "records_ingested": 3,
+    "invalid_records": 0,
+    "duration_seconds": 0.01,
+    "error": null,
+    "timestamp": "2026-09-03T09:49:52.228400+00:00"
+  },
+  "SUPPLIER_REGISTRY": {
+    "status": "SUCCESS",
+    "records_ingested": 3,
+    "invalid_records": 0,
+    "duration_seconds": 0.0,
+    "error": null,
+    "timestamp": "2026-09-03T09:49:52.232710+00:00"
+  },
+  "DATOS_GOB": {
+    "status": "SUCCESS",
+    "records_ingested": 0,
+    "invalid_records": 0,
+    "duration_seconds": 2.59,
+    "error": null,
+    "timestamp": "2026-09-03T09:49:54.827020+00:00"
+  },
+  "SAT": {
+    "status": "SUCCESS",
+    "records_ingested": 2,
+    "invalid_records": 0,
+    "duration_seconds": 0.01,
+    "error": null,
+    "timestamp": "2026-09-03T09:49:54.837532+00:00"
+  }
+}

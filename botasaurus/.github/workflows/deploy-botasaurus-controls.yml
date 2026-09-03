@@ -1,0 +1,67 @@
+name: Build and Deploy Botasaurus Controls
+
+on:
+  push:
+    branches: [ master ]
+    paths:
+      - 'botasaurus-controls/**'
+
+jobs:
+  build-and-deploy:
+    permissions:
+      contents: write
+      id-token: write # Required for trusted publishing
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        persist-credentials: false
+        fetch-depth: 0
+
+    # NOTE: do NOT set `registry-url` here. It makes setup-node write a
+    # `_authToken=${NODE_AUTH_TOKEN}` line to .npmrc, which short-circuits the
+    # OIDC handshake and makes `npm publish` fail with a misleading 404.
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: 24
+
+    - name: Upgrade npm (trusted publishing requires npm >= 11.5.1)
+      run: npm install -g npm@latest
+
+    - name: Install dependencies and build
+      working-directory: botasaurus-controls
+      run: |
+        npm i
+        npm run upload
+
+    - name: Pull Changes
+      run: |
+        git pull
+
+    - name: Commit & Push changes
+      uses: actions-js/push@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: master
+
+    - uses: nick-fields/retry@v2
+      name: Update Botasaurus Desktop Starter Dependencies
+      with:
+        timeout_minutes: 10
+        max_attempts: 2
+        command: |
+          git clone https://${{ secrets.PAT }}@github.com/omkarcloud/botasaurus-desktop-starter.git desktop-starter
+          cd desktop-starter
+          npm i
+          npm run update
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git pull
+          git add .
+          git commit -m "Update Botasaurus Desktop Starter Dependencies"
+          git push
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}        

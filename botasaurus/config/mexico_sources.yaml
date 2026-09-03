@@ -1,0 +1,92 @@
+# Mexico B2B Data Sources Configuration
+# Official open-data portals and public APIs for Mexican company data
+
+version: "1.0"
+
+settings:
+  max_workers: 5
+  request_timeout_seconds: 30
+  retry_max_attempts: 3
+  retry_backoff_factor: 2.0
+  enable_personal_contact_fields: false
+  min_merge_confidence: 0.95
+  review_queue_threshold: 0.80
+
+sources:
+  denue:
+    name: "DENUE"
+    display_name: "INEGI DENUE"
+    description: "Directorio Estadístico Nacional de Unidades Económicas (INEGI Official API & Open Data)"
+    enabled: true
+    type: "api"
+    base_url: "https://www.inegi.org.mx/app/api/denue/v1/consulta"
+    token_env: "DENUE_API_TOKEN"
+    endpoints:
+      search_area_act: "BuscarAreaAct"
+      search_geo: "Buscar"
+      details: "Ficha"
+    default_condition: "todos"
+    default_state_code: "09" # CDMX default for targeted queries
+    default_activity_code: "0" # All activities
+    bulk_download_url: "https://www.inegi.org.mx/app/descarga/default.html"
+    rate_limit_per_second: 5
+    priority: 85
+
+  siem:
+    name: "SIEM"
+    display_name: "SIEM - Secretaría de Economía"
+    description: "Sistema de Información Empresarial Mexicano (Secretaría de Economía)"
+    enabled: true
+    type: "csv"
+    url: "https://datos.gob.mx/dataset/sistema_informacion_empresarial_mexicano"
+    direct_resource_url: "https://datos.gob.mx/busca/api/3/action/package_show?id=sistema-de-informacion-empresarial-mexicano"
+    chunk_size: 5000
+    priority: 80
+
+  supplier_registry:
+    name: "SUPPLIER_REGISTRY"
+    display_name: "Mexican Supplier Registry"
+    description: "Padrón Único de Proveedores y Contratistas (CompraNet / Secretaría de la Función Pública)"
+    enabled: true
+    type: "csv"
+    url: "https://datos.gob.mx/dataset/padron-de-proveedores-y-contratistas"
+    direct_resource_url: "https://datos.gob.mx/busca/api/3/action/package_show?id=padron-de-proveedores-y-contratistas"
+    chunk_size: 5000
+    priority: 75
+
+  datos_gob:
+    name: "DATOS_GOB"
+    display_name: "datos.gob.mx Catalog"
+    description: "Catálogo Nacional de Datos Abiertos de México"
+    enabled: true
+    type: "api"
+    base_url: "https://datos.gob.mx/busca/api/3/action"
+    default_tags:
+      - "empresas"
+      - "proveedores"
+      - "contratistas"
+      - "padron"
+      - "unidades economicas"
+    priority: 70
+
+  sat:
+    name: "SAT"
+    display_name: "SAT Contribuyentes Publicados"
+    description: "Servicio de Administración Tributaria - Art. 69 y 69-B del CFF (Cumplimiento/Estatus)"
+    enabled: true
+    type: "csv"
+    url: "https://www.sat.gob.mx/minisitio/DatosAbiertos/contribuyentes_publicados.html"
+    resource_url: "http://omawww.sat.gob.mx/cifras_sat/Documents/Listado_Completo_69-B.csv"
+    is_compliance_only: true
+    priority: 95
+
+  rpc:
+    name: "RPC"
+    display_name: "RPC / SIGER"
+    description: "Registro Público de Comercio (Secretaría de Economía)"
+    enabled: false # Compliance boundary: bulk automated extraction disabled
+    is_bulk_enabled: false
+    type: "web"
+    url: "https://rpc.economia.gob.mx/siger2/xhtml/consulta/consultaPublica/consultaPublica.xhtml"
+    compliance_note: "Legal verification interface only. Automated bulk access is restricted by policy."
+    priority: 100

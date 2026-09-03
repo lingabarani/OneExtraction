@@ -1,0 +1,73 @@
+name: Build and Deploy Botasaurus Desktop API Docs
+
+on:
+  push:
+    branches: [ master ]
+    paths:
+      - 'js/botasaurus-desktop-api/botasaurus-desktop-api-docs/**'
+
+jobs:
+  build-and-deploy:
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
+        fetch-depth: 0             # otherwise, you will fail to push refs to dest repo
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: 24
+
+    - name: Install dependencies and build
+      working-directory: js/botasaurus-desktop-api/botasaurus-desktop-api-docs
+      run: |
+        npm i --legacy-peer-deps
+        npm run build
+
+    - name: Get built asset names
+      id: assets
+      working-directory: js/botasaurus-desktop-api/botasaurus-desktop-api-docs
+      run: |
+        CSS_FILE=$(ls build/static/css/main.*.css | sed 's/build\/static\/css\///')
+        JS_FILE=$(ls build/static/js/main.*.js | sed 's/build\/static\/js\///')
+        echo "CSS_FILE=${CSS_FILE}" >> $GITHUB_OUTPUT
+        echo "JS_FILE=${JS_FILE}" >> $GITHUB_OUTPUT
+
+    - name: Configure AWS Credentials
+      uses: aws-actions/configure-aws-credentials@v3
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: us-east-1
+
+    - name: Deploy to S3
+      working-directory: js/botasaurus-desktop-api/botasaurus-desktop-api-docs
+      run: |
+        aws s3 cp build/ s3://botasaurus-api/ --recursive
+
+    # Update the config file and push it. The push to `js/botasaurus-server-js/**`
+    # triggers the `Build and Deploy Botasaurus Server JS` workflow, which builds
+    # and publishes botasaurus-server-js to npm. No `npm run upload` needed here.
+    - name: Update config file
+      working-directory: js/botasaurus-server-js/src
+      run: |
+        sed -i "s/main.[a-z0-9]\{8\}.css/${{ steps.assets.outputs.CSS_FILE }}/g" api-config.ts
+        sed -i "s/main.[a-z0-9]\{8\}.js/${{ steps.assets.outputs.JS_FILE }}/g" api-config.ts
+
+    - name: Pull Changes
+      run: |
+        git pull
+
+    # Push with a PAT (not GITHUB_TOKEN) so the push to js/botasaurus-server-js/**
+    # triggers the "Build and Deploy Botasaurus Server JS" workflow.
+    - name: Commit & Push changes
+      uses: actions-js/push@master
+      with:
+        github_token: ${{ secrets.PAT }}
+        branch: master
