@@ -43,7 +43,7 @@ class DecisionMaker:
     )
 
     def to_dict(self, include_personal_contacts: bool = True) -> Dict[str, Any]:
-        """Converts model to dictionary applying privacy controls if needed."""
+        """Converts model to dictionary matching reference JSON format."""
         return {
             "person_id": self.person_id,
             "company_id": self.company_id,
@@ -57,17 +57,13 @@ class DecisionMaker:
             "seniority_level": self.seniority_level,
             "department": self.department,
             "work_email": self.work_email if include_personal_contacts else None,
-            "email_pattern": self.email_pattern,
             "email_status": self.email_status,
             "email_confidence_score": self.email_confidence_score,
             "mail_provider": self.mail_provider,
             "direct_phone": self.direct_phone if include_personal_contacts else None,
-            "phone_extension": self.phone_extension if include_personal_contacts else None,
             "phone_type": self.phone_type,
-            "source_provenance": [s.to_dict() for s in self.source_provenance],
             "is_active": self.is_active,
             "created_at": self.created_at,
-            "updated_at": self.updated_at,
         }
 
     def to_flat_dict(self, include_personal_contacts: bool = True) -> Dict[str, Any]:

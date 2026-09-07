@@ -1,7 +1,7 @@
 # Mexico B2B Data Sources Configuration
-# Official open-data portals and public APIs for Mexican company data
+# Official open-data portals, public APIs, and business/industrial directories
 
-version: "1.0"
+version: "2.0"
 
 settings:
   max_workers: 5
@@ -13,13 +13,20 @@ settings:
   review_queue_threshold: 0.80
 
 sources:
+  # ==========================================
+  # 1. INEGI DENUE & Open Data
+  # ==========================================
   denue:
     name: "DENUE"
     display_name: "INEGI DENUE"
-    description: "Directorio Estadístico Nacional de Unidades Económicas (INEGI Official API & Open Data)"
+    description: "Directorio Estadístico Nacional de Unidades Económicas (INEGI Official API & Bulk Data)"
     enabled: true
     type: "api"
     base_url: "https://www.inegi.org.mx/app/api/denue/v1/consulta"
+    api_docs_url: "https://www.inegi.org.mx/servicios/api_denue.html"
+    bulk_download_url: "https://www.inegi.org.mx/app/descarga/"
+    interactive_map_url: "https://www.inegi.org.mx/app/mapa/denue/default.aspx"
+    datos_abiertos_url: "https://www.inegi.org.mx/datosabiertos/"
     token_env: "DENUE_API_TOKEN"
     endpoints:
       search_area_act: "BuscarAreaAct"
@@ -28,38 +35,35 @@ sources:
     default_condition: "todos"
     default_state_code: "09" # CDMX default for targeted queries
     default_activity_code: "0" # All activities
-    bulk_download_url: "https://www.inegi.org.mx/app/descarga/default.html"
     rate_limit_per_second: 5
-    priority: 85
+    priority: 90
 
+  # ==========================================
+  # 2. SIEM & Secretaría de Economía
+  # ==========================================
   siem:
     name: "SIEM"
     display_name: "SIEM - Secretaría de Economía"
     description: "Sistema de Información Empresarial Mexicano (Secretaría de Economía)"
     enabled: true
     type: "csv"
+    portal_url: "https://siem.economia.gob.mx/"
+    gov_info_url: "https://www.gob.mx/tuempresa/documentos/sistema-de-informacion-empresarial-mexicano-siem-149379"
     url: "https://datos.gob.mx/dataset/sistema_informacion_empresarial_mexicano"
     direct_resource_url: "https://datos.gob.mx/busca/api/3/action/package_show?id=sistema-de-informacion-empresarial-mexicano"
     chunk_size: 5000
-    priority: 80
+    priority: 85
 
-  supplier_registry:
-    name: "SUPPLIER_REGISTRY"
-    display_name: "Mexican Supplier Registry"
-    description: "Padrón Único de Proveedores y Contratistas (CompraNet / Secretaría de la Función Pública)"
-    enabled: true
-    type: "csv"
-    url: "https://datos.gob.mx/dataset/padron-de-proveedores-y-contratistas"
-    direct_resource_url: "https://datos.gob.mx/busca/api/3/action/package_show?id=padron-de-proveedores-y-contratistas"
-    chunk_size: 5000
-    priority: 75
-
+  # ==========================================
+  # 3. datos.gob.mx National Open Data Catalog
+  # ==========================================
   datos_gob:
     name: "DATOS_GOB"
     display_name: "datos.gob.mx Catalog"
     description: "Catálogo Nacional de Datos Abiertos de México"
     enabled: true
     type: "api"
+    portal_url: "https://www.datos.gob.mx/"
     base_url: "https://datos.gob.mx/busca/api/3/action"
     default_tags:
       - "empresas"
@@ -69,24 +73,115 @@ sources:
       - "unidades economicas"
     priority: 70
 
+  # ==========================================
+  # 4. SAT (Tax Authority & Compliance)
+  # ==========================================
   sat:
     name: "SAT"
-    display_name: "SAT Contribuyentes Publicados"
-    description: "Servicio de Administración Tributaria - Art. 69 y 69-B del CFF (Cumplimiento/Estatus)"
+    display_name: "SAT Contribuyentes Publicados & RFC"
+    description: "Servicio de Administración Tributaria - Art. 69/69-B del CFF y Validación RFC"
     enabled: true
     type: "csv"
+    portal_url: "https://www.sat.gob.mx/"
+    rfc_validation_url: "https://www.sat.gob.mx/aplicacion/operacion/79615/valida-en-linea-rfc´s-uno-a-uno-o-de-manera-masiva-hasta-5-mil-registros"
     url: "https://www.sat.gob.mx/minisitio/DatosAbiertos/contribuyentes_publicados.html"
     resource_url: "http://omawww.sat.gob.mx/cifras_sat/Documents/Listado_Completo_69-B.csv"
     is_compliance_only: true
     priority: 95
 
+  # ==========================================
+  # 5. Public Supplier Registries (CompraNet / SFP)
+  # ==========================================
+  supplier_registry:
+    name: "SUPPLIER_REGISTRY"
+    display_name: "Mexican Supplier Registry"
+    description: "Padrón Único de Proveedores y Contratistas (CompraNet / Secretaría de la Función Pública)"
+    enabled: true
+    type: "csv"
+    url: "https://datos.gob.mx/dataset/padron-de-proveedores-y-contratistas"
+    direct_resource_url: "https://datos.gob.mx/busca/api/3/action/package_show?id=padron-de-proveedores-y-contratistas"
+    chunk_size: 5000
+    priority: 80
+
+  # ==========================================
+  # 6. Commercial Registry (RPC / SIGER 2.0)
+  # ==========================================
   rpc:
     name: "RPC"
-    display_name: "RPC / SIGER"
+    display_name: "RPC / SIGER 2.0"
     description: "Registro Público de Comercio (Secretaría de Economía)"
     enabled: false # Compliance boundary: bulk automated extraction disabled
     is_bulk_enabled: false
     type: "web"
+    portal_url: "https://rpc.economia.gob.mx/siger2/xhtml/login/login.xhtml"
+    public_login_url: "https://rpc.economia.gob.mx/siger2/xhtml/login/login2.xhtml"
     url: "https://rpc.economia.gob.mx/siger2/xhtml/consulta/consultaPublica/consultaPublica.xhtml"
     compliance_note: "Legal verification interface only. Automated bulk access is restricted by policy."
     priority: 100
+
+  # ==========================================
+  # 7. CANACINTRA Industrial Chambers & Directories
+  # ==========================================
+  canacintra:
+    name: "CANACINTRA"
+    display_name: "CANACINTRA Directorio Industrial"
+    description: "Cámara Nacional de la Industria de Transformación (National & Morelos Regional Directories)"
+    enabled: true
+    type: "directory"
+    national_portal_url: "https://canacintra.org.mx/"
+    directory_url: "https://directorioindustrial.mx/"
+    morelos_directory_url: "https://www.canacintramorelos.org.mx/directorio_canacintra2.php"
+    rate_limit_per_second: 3
+    priority: 82
+
+  # ==========================================
+  # 8. AmCham Mexico (American Chamber of Commerce)
+  # ==========================================
+  amcham:
+    name: "AMCHAM"
+    display_name: "AmCham Mexico Trade & Investment Center"
+    description: "American Chamber of Commerce in Mexico - Corporate Member Directory & B2B Services"
+    enabled: true
+    type: "directory"
+    portal_url: "https://amcham.org.mx/trade-and-investment-center/"
+    rate_limit_per_second: 3
+    priority: 84
+
+  # ==========================================
+  # 9. COSMOS Online (Industrial B2B Directory)
+  # ==========================================
+  cosmos:
+    name: "COSMOS"
+    display_name: "COSMOS Online Industrial B2B"
+    description: "Directorio B2B y Portal de Proveedores Industriales de México"
+    enabled: true
+    type: "directory"
+    portal_url: "https://www.cosmos.com.mx/"
+    rate_limit_per_second: 3
+    priority: 83
+
+  # ==========================================
+  # 10. QuimiNet (B2B Industrial Directory & Marketplace)
+  # ==========================================
+  quiminet:
+    name: "QUIMINET"
+    display_name: "QuimiNet B2B Industrial Directory"
+    description: "Plataforma de Negocios y Directorio de Proveedores Industriales en México y LATAM"
+    enabled: true
+    type: "directory"
+    portal_url: "https://www.quiminet.com/"
+    rate_limit_per_second: 3
+    priority: 81
+
+  # ==========================================
+  # 11. Sección Amarilla México
+  # ==========================================
+  seccion_amarilla:
+    name: "SECCION_AMARILLA"
+    display_name: "Sección Amarilla México"
+    description: "Directorio Comercial y de Empresas de México (Yellow Pages)"
+    enabled: true
+    type: "directory"
+    portal_url: "https://www.seccionamarilla.com.mx/"
+    rate_limit_per_second: 3
+    priority: 78

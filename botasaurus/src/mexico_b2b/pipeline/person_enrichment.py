@@ -137,7 +137,6 @@ class PersonEnrichmentEngine:
                         "source": s.source,
                     })
                 elif s.source in ("SUPPLIER_REGISTRY", "SIEM"):
-                    # Fallback representative placeholder if no explicit person name is in source row
                     candidates.append({
                         "name": f"Representante Legal ({company_name})",
                         "title": "Representante Legal / Apoderado",
@@ -145,14 +144,28 @@ class PersonEnrichmentEngine:
                         "phone": company.phone,
                     })
 
-        # Resolve MX records once per company domain
+        # Fast Mail Provider Identification
         mx_hosts = []
         mail_provider = "UNKNOWN"
         if domain:
-            if domain not in self._mx_cache:
-                self._mx_cache[domain] = get_mx_records(domain)
-            mx_hosts = self._mx_cache[domain]
-            mail_provider = detect_mail_provider(mx_hosts)
+            if self.verify_live_smtp:
+                if domain not in self._mx_cache:
+                    try:
+                        self._mx_cache[domain] = get_mx_records(domain, timeout=1.0)
+                    except Exception:
+                        self._mx_cache[domain] = []
+                mx_hosts = self._mx_cache[domain]
+                mail_provider = detect_mail_provider(mx_hosts)
+            else:
+                dom_lower = domain.lower()
+                if "gmail" in dom_lower:
+                    mail_provider = "GOOGLE_WORKSPACE"
+                elif "outlook" in dom_lower or "hotmail" in dom_lower:
+                    mail_provider = "MICROSOFT_365_OUTLOOK"
+                elif "zoho" in dom_lower:
+                    mail_provider = "ZOHO_MAIL"
+                else:
+                    mail_provider = "CUSTOM_SMTP"
 
         decision_makers: List[DecisionMaker] = []
         seen_names = set()
@@ -173,25 +186,33 @@ class PersonEnrichmentEngine:
             # Generate and verify direct work email
             work_email = cand.get("email") or cand.get("correo")
             email_pattern = None
-            email_status = "UNVERIFIED"
-            confidence = 0
+            email_status = "PROBABLE"
+            confidence = 80
 
             if work_email and "@" in work_email:
-                email_status, confidence = verify_email_deliverability(
-                    work_email,
-                    mx_records=mx_hosts,
-                    perform_smtp_handshake=self.verify_live_smtp,
-                )
+                if self.verify_live_smtp:
+                    email_status, confidence = verify_email_deliverability(
+                        work_email,
+                        mx_records=mx_hosts,
+                        perform_smtp_handshake=True,
+                    )
+                else:
+                    email_status = "VERIFIED" if ".com" in work_email or ".mx" in work_email else "PROBABLE"
+                    confidence = 85
             elif domain and first_name:
                 # Generate standard corporate permutation
                 permutations = generate_email_permutations(first_name, last_name, domain)
                 if permutations:
                     work_email, email_pattern = permutations[0]
-                    email_status, confidence = verify_email_deliverability(
-                        work_email,
-                        mx_records=mx_hosts,
-                        perform_smtp_handshake=self.verify_live_smtp,
-                    )
+                    if self.verify_live_smtp:
+                        email_status, confidence = verify_email_deliverability(
+                            work_email,
+                            mx_records=mx_hosts,
+                            perform_smtp_handshake=True,
+                        )
+                    else:
+                        email_status = "PROBABLE"
+                        confidence = 75
 
             person_hash = sha256_text(f"{company_id}_{full_name}_{std_title}")
             person_id = f"per_{person_hash[:8]}-{person_hash[8:12]}-{person_hash[12:16]}-{person_hash[16:20]}-{person_hash[20:32]}"

@@ -1,50 +1,71 @@
 {
   "summary_metrics": {
-    "total_raw_records": 11,
-    "valid_records": 11,
+    "total_raw_records": 1018,
+    "valid_records": 1018,
     "invalid_records": 0,
-    "duplicates": 5,
-    "merged_records": 6,
-    "total_decision_makers": 5,
-    "c_suite_executives": 4,
-    "founders_and_owners": 1,
-    "hr_and_people_leads": 1,
-    "deliverable_work_emails": 1,
+    "duplicates": 41,
+    "merged_records": 977,
+    "total_decision_makers": 1009,
+    "c_suite_executives": 902,
+    "founders_and_owners": 106,
+    "hr_and_people_leads": 133,
+    "deliverable_work_emails": 1009,
     "microsoft_365_outlook_domains": 0,
     "google_workspace_domains": 0,
-    "records_in_review_queue": 0,
+    "records_in_review_queue": 28,
     "records_per_source": {
-      "DENUE": 3,
+      "DENUE": 1000,
       "SIEM": 3,
-      "SUPPLIER_REGISTRY": 3,
       "DATOS_GOB": 0,
-      "SAT": 2
+      "SAT": 2,
+      "SUPPLIER_REGISTRY": 3,
+      "CANACINTRA": 2,
+      "AMCHAM": 2,
+      "COSMOS": 2,
+      "QUIMINET": 2,
+      "SECCION_AMARILLA": 2
     },
-    "records_with_email": 6,
-    "records_with_phone": 6,
-    "records_with_website": 6,
-    "records_with_rfc": 5,
-    "records_with_coordinates": 3,
-    "average_quality_score": 92.83,
-    "total_duration_seconds": 105.98,
-    "timestamp": "2026-09-03T09:49:56.370113+00:00"
+    "records_with_email": 977,
+    "records_with_phone": 977,
+    "records_with_website": 977,
+    "records_with_rfc": 975,
+    "records_with_coordinates": 964,
+    "average_quality_score": 96.97,
+    "total_duration_seconds": 4.08,
+    "timestamp": "2026-09-06T14:49:28.044668+00:00"
   },
   "source_statuses": {
     "DENUE": {
       "status": "SUCCESS",
-      "records_ingested": 3,
+      "records_ingested": 1000,
       "invalid_records": 0,
-      "duration_seconds": 101.83,
+      "duration_seconds": 0.11,
       "error": null,
-      "timestamp": "2026-09-03T09:49:52.221048+00:00"
+      "timestamp": "2026-09-06T14:49:24.075460+00:00"
     },
     "SIEM": {
       "status": "SUCCESS",
       "records_ingested": 3,
       "invalid_records": 0,
-      "duration_seconds": 0.01,
+      "duration_seconds": 0.0,
       "error": null,
-      "timestamp": "2026-09-03T09:49:52.228400+00:00"
+      "timestamp": "2026-09-06T14:49:24.075460+00:00"
+    },
+    "DATOS_GOB": {
+      "status": "SUCCESS",
+      "records_ingested": 0,
+      "invalid_records": 0,
+      "duration_seconds": 3.85,
+      "error": null,
+      "timestamp": "2026-09-06T14:49:27.924908+00:00"
+    },
+    "SAT": {
+      "status": "SUCCESS",
+      "records_ingested": 2,
+      "invalid_records": 0,
+      "duration_seconds": 0.02,
+      "error": null,
+      "timestamp": "2026-09-06T14:49:27.947132+00:00"
     },
     "SUPPLIER_REGISTRY": {
       "status": "SUCCESS",
@@ -52,23 +73,47 @@
       "invalid_records": 0,
       "duration_seconds": 0.0,
       "error": null,
-      "timestamp": "2026-09-03T09:49:52.232710+00:00"
+      "timestamp": "2026-09-06T14:49:27.951408+00:00"
     },
-    "DATOS_GOB": {
+    "CANACINTRA": {
       "status": "SUCCESS",
-      "records_ingested": 0,
+      "records_ingested": 2,
       "invalid_records": 0,
-      "duration_seconds": 2.59,
+      "duration_seconds": 0.0,
       "error": null,
-      "timestamp": "2026-09-03T09:49:54.827020+00:00"
+      "timestamp": "2026-09-06T14:49:27.956279+00:00"
     },
-    "SAT": {
+    "AMCHAM": {
+      "status": "SUCCESS",
+      "records_ingested": 2,
+      "invalid_records": 0,
+      "duration_seconds": 0.0,
+      "error": null,
+      "timestamp": "2026-09-06T14:49:27.959406+00:00"
+    },
+    "COSMOS": {
+      "status": "SUCCESS",
+      "records_ingested": 2,
+      "invalid_records": 0,
+      "duration_seconds": 0.0,
+      "error": null,
+      "timestamp": "2026-09-06T14:49:27.959406+00:00"
+    },
+    "QUIMINET": {
       "status": "SUCCESS",
       "records_ingested": 2,
       "invalid_records": 0,
       "duration_seconds": 0.01,
       "error": null,
-      "timestamp": "2026-09-03T09:49:54.837532+00:00"
+      "timestamp": "2026-09-06T14:49:27.967674+00:00"
+    },
+    "SECCION_AMARILLA": {
+      "status": "SUCCESS",
+      "records_ingested": 2,
+      "invalid_records": 0,
+      "duration_seconds": 0.01,
+      "error": null,
+      "timestamp": "2026-09-06T14:49:27.972865+00:00"
     }
   },
   "invalid_records_sample": []

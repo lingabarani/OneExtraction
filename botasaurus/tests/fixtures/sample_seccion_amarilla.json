@@ -1,0 +1,36 @@
+[
+  {
+    "id": "sa_89210",
+    "nombre": "DISTRIBUIDORA ELECTRICA Y FERRETERA DEL CENTRO S.A. DE C.V.",
+    "anuncio_comercial": "ELECTROFERRETERA DEL CENTRO",
+    "categoria": "Material Eléctrico e Iluminación Industrial",
+    "calle_numero": "Calle Ayuntamiento 84",
+    "colonia": "Centro",
+    "alcaldia_municipio": "Cuauhtémoc",
+    "estado": "CDMX",
+    "codigo_postal": "06050",
+    "telefono": "5555123456",
+    "email": "pedidos@electroferretera.com.mx",
+    "sitio_web": "https://www.electroferretera.com.mx",
+    "latitud": 19.4305,
+    "longitud": -99.1452,
+    "url_seccion_amarilla": "https://www.seccionamarilla.com.mx/negocio/electroferretera-del-centro/89210"
+  },
+  {
+    "id": "sa_55431",
+    "nombre": "SERVICIOS LOGISTICOS INTEGRALES BAJIO S.A. DE C.V.",
+    "anuncio_comercial": "LOGISTICA BAJIO EXPRESS",
+    "categoria": "Fletes y Transporte de Carga Consolidada",
+    "calle_numero": "Boulevard Aeropuerto 1020",
+    "colonia": "San José el Alto",
+    "alcaldia_municipio": "León",
+    "estado": "Guanajuato",
+    "codigo_postal": "37545",
+    "telefono": "4777102030",
+    "email": "cotizaciones@logisticabajio.com.mx",
+    "sitio_web": "www.logisticabajio.com.mx",
+    "latitud": 21.0921,
+    "longitud": -101.6214,
+    "url_seccion_amarilla": "https://www.seccionamarilla.com.mx/negocio/logistica-bajio-express/55431"
+  }
+]

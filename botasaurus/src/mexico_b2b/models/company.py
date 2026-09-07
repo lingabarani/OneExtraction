@@ -86,7 +86,7 @@ class CanonicalCompany:
     deletion_status: str = "ACTIVE"
 
     def to_dict(self, include_personal_contacts: bool = True) -> Dict[str, Any]:
-        """Converts model to dictionary, applying privacy controls if needed."""
+        """Converts model to dictionary matching reference JSON format."""
         d = {
             "company_id": self.company_id,
             "legal_name": self.legal_name,
@@ -108,17 +108,9 @@ class CanonicalCompany:
             "address": self.address.to_dict() if isinstance(self.address, Address) else self.address,
             "latitude": self.latitude,
             "longitude": self.longitude,
-            "decision_makers": [dm.to_dict(include_personal_contacts=include_personal_contacts) for dm in self.decision_makers],
-            "decision_maker_count": len(self.decision_makers),
-            "source_records": [s.to_dict() for s in self.source_records],
             "source_count": self.source_count or len(self.source_records),
             "data_quality_score": self.data_quality_score,
-            "entity_fingerprint": self.entity_fingerprint,
-            "last_verified_at": self.last_verified_at,
-            "created_at": self.created_at,
-            "updated_at": self.updated_at,
-            "privacy_classification": self.privacy_classification,
-            "deletion_status": self.deletion_status,
+            "last_verified_at": self.last_verified_at or self.created_at,
         }
         return d
 

@@ -61,7 +61,7 @@ def test_full_pipeline_run():
         assert len(data) == metrics["merged_records"]
         first = data[0]
         assert "company_id" in first
-        assert "source_records" in first
+        assert "source_count" in first
         assert "data_quality_score" in first
         assert "address" in first
         assert "country" in first["address"]

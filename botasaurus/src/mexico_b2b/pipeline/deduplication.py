@@ -1,5 +1,5 @@
 """
-Deduplication engine utilizing deterministic entity fingerprinting and resolution clustering.
+Deduplication engine utilizing deterministic entity fingerprinting and high-speed block resolution clustering.
 """
 
 from collections import defaultdict
@@ -23,7 +23,7 @@ class DeduplicationEngine:
         records: List[CanonicalCompany]
     ) -> Tuple[List[List[CanonicalCompany]], List[CanonicalCompany], int]:
         """
-        Groups records into clusters of identical/resolving entities.
+        Groups records into clusters of identical/resolving entities using fast multi-key blocking.
         
         Returns:
             (merge_clusters, review_queue, duplicate_count)
@@ -55,16 +55,19 @@ class DeduplicationEngine:
             else:
                 unclustered.append(group[0])
 
-        # Step 3: Progressive pairwise entity resolution on remaining unclustered records (O(K^2) for small sample / block)
-        # Block by state or industry to optimize
+        # Step 3: High-speed multi-token blocking for unclustered records
+        # Block by (State, First Two Name Tokens) to avoid O(N^2) state-wide scans
         blocks: Dict[str, List[CanonicalCompany]] = defaultdict(list)
         for rec in unclustered:
-            state_key = (rec.address.state if rec.address and rec.address.state else "UNKNOWN").lower()
-            blocks[state_key].append(rec)
+            state_key = (rec.address.state if rec.address and rec.address.state else "UNKNOWN").lower().strip()
+            name_tokens = (rec.normalized_name or "").split()
+            token_prefix = "_".join(name_tokens[:2]) if len(name_tokens) >= 2 else (name_tokens[0] if name_tokens else "NO_NAME")
+            block_key = f"{state_key}::{token_prefix}"
+            blocks[block_key].append(rec)
 
         visited: Set[str] = set()
 
-        for state_key, block_records in blocks.items():
+        for block_key, block_records in blocks.items():
             n = len(block_records)
             for i in range(n):
                 c1 = block_records[i]

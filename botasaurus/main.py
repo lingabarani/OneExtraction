@@ -37,7 +37,7 @@ from mexico_b2b.config.settings import settings
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Mexico B2B Company Open-Data Ingestion Pipeline (INEGI DENUE, SIEM, datos.gob.mx, SAT, Suppliers)",
+        description="Mexico B2B Company Ingestion Pipeline (INEGI DENUE, SIEM, SAT, CANACINTRA, AmCham, COSMOS, QuimiNet, Sección Amarilla)",
         formatter_class=argparse.ArgumentDefaultsHelpFormatter,
     )
 
@@ -46,7 +46,7 @@ def main():
         "-s",
         type=str,
         default="all",
-        help="Source to ingest: 'denue', 'siem', 'supplier', 'sat', 'datos_gob', or 'all'",
+        help="Source to ingest: 'all', 'denue', 'siem', 'canacintra', 'amcham', 'cosmos', 'quiminet', 'seccion_amarilla', 'sat', 'supplier', 'datos_gob'",
     )
 
     parser.add_argument(
@@ -108,6 +108,9 @@ def main():
 
         if not args.dry_run:
             print(f"\n[OK] Production Output Files Generated:")
+            print(f" [Combined All-in-One Master Data (All Websites & Executives)]")
+            print(f"   - Excel  : {settings.OUTPUT_DIR / 'mexico_master_combined.xlsx'}")
+            print(f"   - CSV    : {settings.OUTPUT_DIR / 'mexico_master_combined.csv'}")
             print(f" [Companies Master Data]")
             print(f"   - JSON   : {settings.OUTPUT_DIR / 'mexico_companies.json'}")
             print(f"   - CSV    : {settings.OUTPUT_DIR / 'mexico_companies.csv'}")

@@ -112,10 +112,14 @@ class IngestionPipeline:
 
         # Stage 4: Decision-Maker & Executive Enrichment Layer (Layer 2)
         all_decision_makers: List[DecisionMaker] = []
+        seen_person_ids = set()
         for company in merged_companies:
             executives = self.person_engine.extract_and_enrich_decision_makers(company)
             company.decision_makers = executives
-            all_decision_makers.extend(executives)
+            for dm in executives:
+                if dm.person_id not in seen_person_ids:
+                    seen_person_ids.add(dm.person_id)
+                    all_decision_makers.append(dm)
 
         # Stage 5: Calculate Quality and Summary Metrics
         total_score = sum(c.data_quality_score for c in merged_companies)
@@ -167,6 +171,7 @@ class IngestionPipeline:
             self.output_mgr.write_people_json(all_decision_makers)
             self.output_mgr.write_people_csv(all_decision_makers)
             self.output_mgr.write_people_xlsx(all_decision_makers)
+            self.output_mgr.write_combined_master_export(merged_companies)
             self.output_mgr.write_validation_report(validation_report)
             self.output_mgr.write_source_status(source_statuses)
         else:

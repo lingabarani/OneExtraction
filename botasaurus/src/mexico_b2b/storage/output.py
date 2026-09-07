@@ -1,5 +1,6 @@
 """
 Output export manager for JSON, CSV, Excel, and validation reports.
+Supports unified multi-source master exports combining company profiles and executive decision-makers.
 """
 
 import csv
@@ -15,7 +16,7 @@ from ..utils.logging import logger
 
 
 class OutputManager:
-    """Manages writing canonical datasets and validation reports to disk."""
+    """Manages writing canonical datasets, combined master files, and validation reports to disk."""
 
     def __init__(self, output_dir: Optional[Path] = None):
         self.output_dir = output_dir or settings.OUTPUT_DIR
@@ -236,6 +237,128 @@ class OutputManager:
         wb.save(target_path)
         logger.info("Generated People Excel dataset", path=str(target_path), records=len(people))
         return target_path
+
+    def write_combined_master_export(
+        self,
+        companies: List[CanonicalCompany],
+        filename_csv: str = "mexico_master_combined.csv",
+        filename_xlsx: str = "mexico_master_combined.xlsx",
+        include_personal_contacts: Optional[bool] = None,
+    ) -> Dict[str, Path]:
+        """
+        Creates a single unified master export combining ALL websites, company data,
+        and primary executive decision-makers into one consolidated spreadsheet.
+        """
+        include_contacts = (
+            include_personal_contacts
+            if include_personal_contacts is not None
+            else settings.ENABLE_PERSONAL_CONTACT_FIELDS
+        )
+
+        combined_rows = []
+        for c in companies:
+            c_dict = c.to_flat_dict(include_personal_contacts=include_contacts)
+            primary_dm = c.decision_makers[0] if c.decision_makers else None
+
+            row = {
+                # Company Core
+                "company_id": c.company_id,
+                "legal_name": c.legal_name or "",
+                "trade_name": c.trade_name or "",
+                "rfc": c.rfc or "",
+                "rfc_type": c.rfc_type or "",
+                "industry": c.industry or "",
+                "industry_code": c.industry_code or "",
+                "employee_count_min": c.employee_count_min if c.employee_count_min is not None else "",
+                "employee_count_max": c.employee_count_max if c.employee_count_max is not None else "",
+                # Web & Contacts
+                "website": c.website or "",
+                "domain": c.domain or "",
+                "company_phone": c_dict.get("phone", ""),
+                "company_email": c_dict.get("email", ""),
+                # Location & Geo
+                "street": c_dict.get("street", ""),
+                "number": c_dict.get("number", ""),
+                "colony": c_dict.get("colony", ""),
+                "municipality": c_dict.get("municipality", ""),
+                "state": c_dict.get("state", ""),
+                "postal_code": c_dict.get("postal_code", ""),
+                "country": c_dict.get("country", "Mexico"),
+                "latitude": c_dict.get("latitude", ""),
+                "longitude": c_dict.get("longitude", ""),
+                # Executive Lead (Combined)
+                "executive_name": primary_dm.full_name if primary_dm else "",
+                "executive_title": primary_dm.title if primary_dm else "",
+                "standardized_title": primary_dm.standardized_title if primary_dm else "",
+                "seniority_level": primary_dm.seniority_level if primary_dm else "",
+                "department": primary_dm.department if primary_dm else "",
+                "executive_work_email": (primary_dm.work_email if include_contacts else "") if primary_dm else "",
+                "email_status": primary_dm.email_status if primary_dm else "",
+                "executive_phone": (primary_dm.direct_phone if include_contacts else "") if primary_dm else "",
+                # Provenance & Quality
+                "all_sources_combined": c_dict.get("sources", ""),
+                "source_count": c.source_count or len(c.source_records),
+                "data_quality_score": c.data_quality_score,
+                "last_verified_at": c.last_verified_at or "",
+            }
+            combined_rows.append(row)
+
+        if not combined_rows:
+            combined_rows = [{}]
+
+        fieldnames = list(combined_rows[0].keys())
+
+        # 1. Write CSV
+        target_csv = self.output_dir / filename_csv
+        with open(target_csv, "w", encoding="utf-8-sig", newline="") as f:
+            writer = csv.DictWriter(f, fieldnames=fieldnames)
+            writer.writeheader()
+            if companies:
+                writer.writerows(combined_rows)
+
+        # 2. Write Excel
+        target_xlsx = self.output_dir / filename_xlsx
+        wb = openpyxl.Workbook()
+        ws = wb.active
+        ws.title = "Master Combined Directory"
+
+        header_fill = PatternFill(start_color="0F172A", end_color="0F172A", fill_type="solid")
+        header_font = Font(name="Calibri", size=11, bold=True, color="FFFFFF")
+        border_thin = Border(
+            left=Side(style='thin', color='E2E8F0'),
+            right=Side(style='thin', color='E2E8F0'),
+            top=Side(style='thin', color='E2E8F0'),
+            bottom=Side(style='thin', color='E2E8F0'),
+        )
+
+        for col_num, header in enumerate(fieldnames, 1):
+            cell = ws.cell(row=1, column=col_num, value=header.replace("_", " ").title())
+            cell.fill = header_fill
+            cell.font = header_font
+            cell.alignment = Alignment(horizontal="center", vertical="center")
+
+        # Fast row appending for large volumes
+        for row_num, row_data in enumerate(combined_rows, 2):
+            for col_num, header in enumerate(fieldnames, 1):
+                val = row_data.get(header, "")
+                cell = ws.cell(row=row_num, column=col_num, value=val)
+                cell.border = border_thin
+
+        # Limit auto-adjust on large sets to first 1000 rows for speed
+        for col in ws.columns:
+            max_len = max(len(str(cell.value or "")) for cell in col[:1000])
+            col_letter = openpyxl.utils.get_column_letter(col[0].column)
+            ws.column_dimensions[col_letter].width = min(max(max_len + 3, 12), 45)
+
+        wb.save(target_xlsx)
+        logger.info(
+            "Generated Unified Master Combined Exports",
+            csv=str(target_csv),
+            xlsx=str(target_xlsx),
+            records=len(companies),
+        )
+
+        return {"csv": target_csv, "xlsx": target_xlsx}
 
     def write_validation_report(
         self,

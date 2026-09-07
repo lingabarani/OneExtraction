@@ -1,11 +1,13 @@
 """
 INEGI DENUE (Directorio Estadístico Nacional de Unidades Económicas) Connector.
-Supports official INEGI REST API v1.0 and downloadable bulk files.
+Supports official INEGI REST API v1.0, downloadable bulk files (CSV/ZIP), and local bulk feeds.
 """
 
 import os
 import re
+import csv
 import json
+import zipfile
 from pathlib import Path
 from typing import List, Dict, Any, Optional
 from .base import SourceConnector
@@ -20,6 +22,7 @@ from ..pipeline.normalization import (
 )
 from ..utils.address_utils import normalize_state, clean_postal_code
 from ..utils.phone_utils import format_mx_phone_e164, is_valid_mx_phone
+from ..utils.rfc_utils import clean_rfc, is_valid_rfc, get_rfc_type
 from ..utils.hashing import sha256_dict, generate_entity_fingerprint, generate_company_id
 from ..storage.raw_storage import raw_storage
 from ..utils.logging import logger
@@ -27,7 +30,7 @@ from ..utils.logging import logger
 
 class DenueConnector(SourceConnector):
     """
-    Connector for INEGI DENUE official API and bulk datasets.
+    Connector for INEGI DENUE official API, bulk open-data downloads, and local data drops.
     """
 
     def __init__(self, config):
@@ -46,20 +49,48 @@ class DenueConnector(SourceConnector):
 
     def fetch(self, limit: Optional[int] = None) -> List[RawSourcePayload]:
         """
-        Fetches records via official DENUE REST API with pagination.
-        If token is missing and in local/sample environment, checks for local fixtures.
+        Fetches records via bulk raw files in data/raw/ or official DENUE REST API.
+        If no bulk file and API fails, falls back to local sample fixture.
         """
         raw_payloads: List[RawSourcePayload] = []
         target_limit = limit or 50
 
-        # Check if local raw/fixture file exists first (e.g. for offline/test mode)
+        # 1. Check for raw bulk CSV files in data/raw/denue/ or data/raw/
+        raw_denue_dir = settings.RAW_DATA_DIR / "denue"
+        raw_candidates = []
+        if raw_denue_dir.exists():
+            raw_candidates.extend(list(raw_denue_dir.glob("*.csv")))
+        raw_candidates.extend(list(settings.RAW_DATA_DIR.glob("*denue*.csv")))
+        raw_candidates.extend(list(settings.RAW_DATA_DIR.glob("*bulk*.csv")))
+
+        if raw_candidates:
+            bulk_csv_path = raw_candidates[0]
+            logger.info(f"Streaming DENUE records from bulk file: {bulk_csv_path.name}", limit=target_limit)
+            with open(bulk_csv_path, "r", encoding="utf-8-sig", errors="ignore") as f:
+                reader = csv.DictReader(f)
+                for idx, row in enumerate(reader):
+                    if len(raw_payloads) >= target_limit:
+                        break
+                    row_id = str(row.get("clee") or row.get("id") or row.get("Id") or f"denue_{idx+1}")
+                    raw_payloads.append(
+                        RawSourcePayload(
+                            source="DENUE",
+                            source_record_id=row_id,
+                            source_url=f"file://{bulk_csv_path.name}",
+                            raw_data=dict(row),
+                            raw_hash=sha256_dict(row),
+                        )
+                    )
+            return raw_payloads
+
+        # 2. Check if local test fixture exists and limit is small (e.g. unit tests)
         fixture_path = settings.PROJECT_ROOT / "tests" / "fixtures" / "sample_denue.json"
         if not fixture_path.exists():
             fixture_path = settings.PROJECT_ROOT / "tests" / "mexico_b2b" / "fixtures" / "sample_denue.json"
-        
+
+        # 3. Attempt API Query if token is configured
         try:
             token = self._get_api_token_or_fail()
-            # Paginated API requests
             batch_size = min(target_limit, 50)
             reg_start = 1
             base_url = self.config.base_url or "https://www.inegi.org.mx/app/api/denue/v1/consulta"
@@ -79,7 +110,6 @@ class DenueConnector(SourceConnector):
                 if not data or not isinstance(data, list):
                     break
 
-                # Save raw response
                 raw_storage.save_raw_text(
                     source_name="DENUE",
                     filename=f"denue_api_{state_code}_{reg_start}_{reg_end}.json",
@@ -109,7 +139,7 @@ class DenueConnector(SourceConnector):
 
         except (ValueError, Exception) as e:
             if fixture_path.exists():
-                logger.warn(f"INEGI DENUE API notice ({type(e).__name__}); falling back to local sample fixture from {fixture_path.name}")
+                logger.warn(f"INEGI DENUE API notice ({type(e).__name__}); falling back to sample fixture from {fixture_path.name}")
                 with open(fixture_path, "r", encoding="utf-8") as f:
                     data = json.load(f)
                 for item in data[:target_limit]:
@@ -129,16 +159,16 @@ class DenueConnector(SourceConnector):
         return raw_payloads
 
     def parse(self, payload: RawSourcePayload) -> Dict[str, Any]:
-        """Extracts standard dictionary fields from DENUE raw item."""
+        """Extracts standard dictionary fields from DENUE raw item (handles both API and bulk CSV schemas)."""
         d = payload.raw_data
         
         # Address construction
-        street_type = d.get("Tipo_vialidad") or d.get("tipo_vialidad") or ""
-        street_name = d.get("Calle") or d.get("calle") or d.get("Nombre_vialidad") or ""
+        street_type = d.get("Tipo_vialidad") or d.get("tipo_vialidad") or d.get("tipo_vial") or ""
+        street_name = d.get("Calle") or d.get("calle") or d.get("Nombre_vialidad") or d.get("nom_vial") or ""
         street = f"{street_type} {street_name}".strip() if street_type else street_name
-        num_ext = d.get("Num_Exterior") or d.get("num_Exterior") or d.get("Numero_exterior") or ""
-        num_int = d.get("Num_Interior") or d.get("num_Interior") or d.get("Letra_interior") or ""
-        full_num = f"{num_ext} Int {num_int}".strip() if num_int else num_ext
+        num_ext = d.get("Num_Exterior") or d.get("num_Exterior") or d.get("Numero_exterior") or d.get("numero_ext") or ""
+        num_int = d.get("Num_Interior") or d.get("num_Interior") or d.get("Letra_interior") or d.get("numero_int") or ""
+        full_num = f"{num_ext} Int {num_int}".strip() if num_int else str(num_ext)
 
         # State & Municipality
         location_raw = d.get("Ubicacion") or d.get("ubicacion") or ""
@@ -159,23 +189,28 @@ class DenueConnector(SourceConnector):
         return {
             "clee": d.get("CLEE") or d.get("clee"),
             "establishment_id": d.get("Id") or d.get("id"),
-            "trade_name": d.get("Nombre") or d.get("nombre"),
-            "legal_name": d.get("Razon_social") or d.get("razon_social"),
-            "industry": d.get("Clase_actividad") or d.get("clase_actividad") or d.get("Nombre_act"),
+            "trade_name": d.get("Nombre") or d.get("nombre") or d.get("nom_estab"),
+            "legal_name": d.get("Razon_social") or d.get("razon_social") or d.get("raz_soc"),
+            "rfc": d.get("rfc") or d.get("RFC"),
+            "industry": d.get("Clase_actividad") or d.get("clase_actividad") or d.get("Nombre_act") or d.get("nombre_act"),
             "industry_code": d.get("Codigo_act") or d.get("codigo_act"),
-            "employee_range": d.get("Estrato") or d.get("estrato") or d.get("Personal_ocupado"),
+            "employee_range": d.get("Estrato") or d.get("estrato") or d.get("Personal_ocupado") or d.get("per_ocu"),
             "street": street,
             "number": full_num,
-            "colony": d.get("Colonia") or d.get("colonia") or d.get("Nombre_asentamiento"),
+            "colony": d.get("Colonia") or d.get("colonia") or d.get("Nombre_asentamiento") or d.get("nomb_asent"),
             "municipality": muni,
             "state": state,
-            "postal_code": d.get("CP") or d.get("cp") or d.get("Codigo_postal"),
-            "phone": d.get("Telefono") or d.get("telefono"),
-            "email": d.get("Correo_e") or d.get("correo_e") or d.get("Correo_electronico"),
-            "website": d.get("Sitio_internet") or d.get("sitio_internet") or d.get("Pagina_web"),
+            "postal_code": d.get("CP") or d.get("cp") or d.get("Codigo_postal") or d.get("cod_postal"),
+            "phone": d.get("Telefono") or d.get("telefono") or d.get("tel"),
+            "email": d.get("Correo_e") or d.get("correo_e") or d.get("Correo_electronico") or d.get("correoelec"),
+            "website": d.get("Sitio_internet") or d.get("sitio_internet") or d.get("Pagina_web") or d.get("sitio_web"),
             "latitude": lat_f,
             "longitude": lng_f,
             "source_updated_at": d.get("Fecha_alta") or d.get("fecha_alta"),
+            "representante_legal": d.get("representante_legal"),
+            "cargo_representante": d.get("cargo_representante"),
+            "correo_directo": d.get("correo_directo"),
+            "telefono_directo": d.get("telefono_directo"),
         }
 
     def normalize(self, parsed: Dict[str, Any], provenance: SourceProvenanceRecord) -> CanonicalCompany:
@@ -184,6 +219,10 @@ class DenueConnector(SourceConnector):
         legal_orig, legal_norm = normalize_company_name(parsed.get("legal_name"))
 
         primary_norm_name = legal_norm or trade_norm or ""
+        clean_rfc_val = clean_rfc(parsed.get("rfc"))
+        rfc_valid = is_valid_rfc(clean_rfc_val)
+        rfc_type_val = get_rfc_type(clean_rfc_val) if rfc_valid else None
+
         norm_state = normalize_state(parsed.get("state"))
         clean_cp = clean_postal_code(parsed.get("postal_code"))
 
@@ -207,7 +246,7 @@ class DenueConnector(SourceConnector):
         emails = [EmailItem(value=clean_em, source="DENUE")] if clean_em else []
 
         fp = generate_entity_fingerprint(
-            rfc=None, # DENUE does not publish RFC directly
+            rfc=clean_rfc_val if rfc_valid else None,
             normalized_name=primary_norm_name,
             state=address.state,
             municipality=address.municipality,
@@ -220,8 +259,8 @@ class DenueConnector(SourceConnector):
             legal_name=legal_orig,
             trade_name=trade_orig,
             normalized_name=primary_norm_name,
-            rfc=None,
-            rfc_type=None,
+            rfc=clean_rfc_val if rfc_valid else None,
+            rfc_type=rfc_type_val,
             website=norm_url,
             domain=domain,
             industry=parsed.get("industry"),
