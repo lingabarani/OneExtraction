@@ -1,0 +1,427 @@
+{
+  "generated_at": "2026-09-30T12:35:55.797173",
+  "database": "PostgreSQL 127.0.0.1:5432/oneextraction",
+  "score": 93,
+  "summary": {
+    "total": 69,
+    "passed": 64,
+    "failed": 0,
+    "warnings": 0
+  },
+  "results": [
+    {
+      "cat": "Conn",
+      "test": "DB type active",
+      "status": "PASS",
+      "detail": "POSTGRESQL"
+    },
+    {
+      "cat": "Conn",
+      "test": "Connection target",
+      "status": "PASS",
+      "detail": "PostgreSQL 127.0.0.1:5432/oneextraction"
+    },
+    {
+      "cat": "Schema",
+      "test": "Table: companies",
+      "status": "PASS",
+      "detail": "exists"
+    },
+    {
+      "cat": "Schema",
+      "test": "Table: enrichment_results",
+      "status": "PASS",
+      "detail": "exists"
+    },
+    {
+      "cat": "Schema",
+      "test": "Table: people",
+      "status": "PASS",
+      "detail": "exists"
+    },
+    {
+      "cat": "Schema",
+      "test": "Table: processing_log",
+      "status": "PASS",
+      "detail": "exists"
+    },
+    {
+      "cat": "Schema",
+      "test": "Indexes",
+      "status": "PASS",
+      "detail": "18 indexes"
+    },
+    {
+      "cat": "Schema",
+      "test": "  index: idx_companies_domain",
+      "status": "PASS",
+      "detail": "found"
+    },
+    {
+      "cat": "Schema",
+      "test": "  index: idx_companies_state",
+      "status": "PASS",
+      "detail": "found"
+    },
+    {
+      "cat": "Schema",
+      "test": "  index: idx_companies_industry",
+      "status": "PASS",
+      "detail": "found"
+    },
+    {
+      "cat": "Schema",
+      "test": "  index: idx_companies_ein",
+      "status": "PASS",
+      "detail": "found"
+    },
+    {
+      "cat": "Schema",
+      "test": "  index: idx_people_company",
+      "status": "PASS",
+      "detail": "found"
+    },
+    {
+      "cat": "Schema",
+      "test": "  index: idx_people_email",
+      "status": "PASS",
+      "detail": "found"
+    },
+    {
+      "cat": "Schema",
+      "test": "  index: idx_enrichment_company",
+      "status": "PASS",
+      "detail": "found"
+    },
+    {
+      "cat": "Schema",
+      "test": "  index: idx_enrichment_status",
+      "status": "PASS",
+      "detail": "found"
+    },
+    {
+      "cat": "Schema",
+      "test": "  index: idx_enrichment_verified",
+      "status": "PASS",
+      "detail": "found"
+    },
+    {
+      "cat": "Schema",
+      "test": "Foreign key constraints",
+      "status": "PASS",
+      "detail": "2 FKs"
+    },
+    {
+      "cat": "Schema",
+      "test": "  companies.id",
+      "status": "PASS",
+      "detail": "present"
+    },
+    {
+      "cat": "Schema",
+      "test": "  companies.name",
+      "status": "PASS",
+      "detail": "present"
+    },
+    {
+      "cat": "Schema",
+      "test": "  companies.domain",
+      "status": "PASS",
+      "detail": "present"
+    },
+    {
+      "cat": "Schema",
+      "test": "  companies.email",
+      "status": "PASS",
+      "detail": "present"
+    },
+    {
+      "cat": "Schema",
+      "test": "  companies.industry",
+      "status": "PASS",
+      "detail": "present"
+    },
+    {
+      "cat": "Schema",
+      "test": "  companies.state_code",
+      "status": "PASS",
+      "detail": "present"
+    },
+    {
+      "cat": "Schema",
+      "test": "  companies.data_quality_score",
+      "status": "PASS",
+      "detail": "present"
+    },
+    {
+      "cat": "Data",
+      "test": "companies rows",
+      "status": "PASS",
+      "detail": "1,145"
+    },
+    {
+      "cat": "Data",
+      "test": "people rows",
+      "status": "PASS",
+      "detail": "2,370"
+    },
+    {
+      "cat": "Data",
+      "test": "enrichment rows",
+      "status": "PASS",
+      "detail": "2,000"
+    },
+    {
+      "cat": "Data",
+      "test": "processing_log",
+      "status": "PASS",
+      "detail": "1 entries"
+    },
+    {
+      "cat": "Quality",
+      "test": "name coverage",
+      "status": "PASS",
+      "detail": "1,145 (100.0%)"
+    },
+    {
+      "cat": "Quality",
+      "test": "domain coverage",
+      "status": "PASS",
+      "detail": "1,145 (100.0%)"
+    },
+    {
+      "cat": "Quality",
+      "test": "email coverage",
+      "status": "PASS",
+      "detail": "962 (84.0%)"
+    },
+    {
+      "cat": "Quality",
+      "test": "industry coverage",
+      "status": "PASS",
+      "detail": "1,145 (100.0%)"
+    },
+    {
+      "cat": "Quality",
+      "test": "state coverage",
+      "status": "PASS",
+      "detail": "1,145 (100.0%)"
+    },
+    {
+      "cat": "Quality",
+      "test": "avg quality score",
+      "status": "PASS",
+      "detail": "60.5/100"
+    },
+    {
+      "cat": "Quality",
+      "test": "zero duplicate names",
+      "status": "PASS",
+      "detail": "0 duplicates"
+    },
+    {
+      "cat": "Quality",
+      "test": "exec coverage (companies)",
+      "status": "PASS",
+      "detail": "1,145/1,145 companies covered"
+    },
+    {
+      "cat": "Quality",
+      "test": "exec per company (avg)",
+      "status": "PASS",
+      "detail": "2.1x"
+    },
+    {
+      "cat": "Email",
+      "test": "total emails in enrichment",
+      "status": "PASS",
+      "detail": "2,000"
+    },
+    {
+      "cat": "Email",
+      "test": "LIKELY_VALID emails",
+      "status": "PASS",
+      "detail": "289"
+    },
+    {
+      "cat": "Email",
+      "test": "INVALID emails",
+      "status": "INFO",
+      "detail": "711"
+    },
+    {
+      "cat": "Email",
+      "test": "verified emails (True)",
+      "status": "PASS",
+      "detail": "289"
+    },
+    {
+      "cat": "Email",
+      "test": "email syntax valid (sample)",
+      "status": "PASS",
+      "detail": "200/200 (100.0%)"
+    },
+    {
+      "cat": "Perf",
+      "test": "Full table scan companies",
+      "status": "PASS",
+      "detail": "1.9ms"
+    },
+    {
+      "cat": "Perf",
+      "test": "Filter by state (NY)",
+      "status": "PASS",
+      "detail": "1.6ms"
+    },
+    {
+      "cat": "Perf",
+      "test": "Filter by industry",
+      "status": "PASS",
+      "detail": "1.1ms"
+    },
+    {
+      "cat": "Perf",
+      "test": "JOIN companies+enrichment",
+      "status": "PASS",
+      "detail": "1.1ms"
+    },
+    {
+      "cat": "Perf",
+      "test": "JOIN companies+people",
+      "status": "PASS",
+      "detail": "1.9ms"
+    },
+    {
+      "cat": "Perf",
+      "test": "GROUP BY industry",
+      "status": "PASS",
+      "detail": "0.0ms"
+    },
+    {
+      "cat": "Perf",
+      "test": "Email status breakdown",
+      "status": "PASS",
+      "detail": "1.2ms"
+    },
+    {
+      "cat": "Perf",
+      "test": "Top states",
+      "status": "PASS",
+      "detail": "0.0ms"
+    },
+    {
+      "cat": "Scripts",
+      "test": "db_connector.py exists",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "cat": "Scripts",
+      "test": ".env written",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "cat": "Scripts",
+      "test": "db_config.py written",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "cat": "Scripts",
+      "test": "  .env: DATABASE_TYPE",
+      "status": "PASS",
+      "detail": "present"
+    },
+    {
+      "cat": "Scripts",
+      "test": "  .env: DATABASE_HOST",
+      "status": "PASS",
+      "detail": "present"
+    },
+    {
+      "cat": "Scripts",
+      "test": "  .env: DATABASE_PORT",
+      "status": "PASS",
+      "detail": "present"
+    },
+    {
+      "cat": "Scripts",
+      "test": "  .env: DATABASE_NAME",
+      "status": "PASS",
+      "detail": "present"
+    },
+    {
+      "cat": "Scripts",
+      "test": "  .env: DATABASE_URL",
+      "status": "PASS",
+      "detail": "present"
+    },
+    {
+      "cat": "Scripts",
+      "test": "check_stats.py",
+      "status": "PASS",
+      "detail": "uses db_connector \u2705"
+    },
+    {
+      "cat": "Scripts",
+      "test": "email_stats_dashboard.py",
+      "status": "PASS",
+      "detail": "uses db_connector \u2705"
+    },
+    {
+      "cat": "Scripts",
+      "test": "export_verified_emails.py",
+      "status": "PASS",
+      "detail": "uses db_connector \u2705"
+    },
+    {
+      "cat": "Scripts",
+      "test": "scripts/email_extractor.py",
+      "status": "PASS",
+      "detail": "uses db_connector \u2705"
+    },
+    {
+      "cat": "Scripts",
+      "test": "scripts/batch_email_validator.py",
+      "status": "PASS",
+      "detail": "uses db_connector \u2705"
+    },
+    {
+      "cat": "pgAdmin",
+      "test": "oneextraction DB in pg_catalog",
+      "status": "PASS",
+      "detail": "Databases: oneextraction, postgres"
+    },
+    {
+      "cat": "pgAdmin",
+      "test": "Tables visible in public schema",
+      "status": "PASS",
+      "detail": "4 tables"
+    },
+    {
+      "cat": "pgAdmin",
+      "test": "  table size: people",
+      "status": "INFO",
+      "detail": "600 kB"
+    },
+    {
+      "cat": "pgAdmin",
+      "test": "  table size: enrichment_results",
+      "status": "INFO",
+      "detail": "368 kB"
+    },
+    {
+      "cat": "pgAdmin",
+      "test": "  table size: companies",
+      "status": "INFO",
+      "detail": "304 kB"
+    },
+    {
+      "cat": "pgAdmin",
+      "test": "  table size: processing_log",
+      "status": "INFO",
+      "detail": "8192 bytes"
+    }
+  ]
+}

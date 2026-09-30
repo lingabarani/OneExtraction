@@ -4,19 +4,29 @@ Export verified safe emails to CSV
 
 import sqlite3
 import csv
+import sys
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).parent))
+try:
+    from db_connector import get_connection, get_cursor, db_info
+    _USE_CONNECTOR = True
+except ImportError:
+    _USE_CONNECTOR = False
 
 def export_verified_emails():
     """Export verified safe emails to CSV"""
-    db_path = "output/us/api/oneextraction.db"
     output_file = "output/exports/verified_emails.csv"
-    
-    # Create output directory if needed
     Path(output_file).parent.mkdir(parents=True, exist_ok=True)
-    
-    conn = sqlite3.connect(db_path)
-    conn.row_factory = sqlite3.Row
-    cursor = conn.cursor()
+
+    if _USE_CONNECTOR:
+        conn   = get_connection()
+        cursor = get_cursor(conn)
+        print(f"Connected to: {db_info()}")
+    else:
+        conn   = sqlite3.connect("output/us/api/oneextraction.db")
+        conn.row_factory = sqlite3.Row
+        cursor = conn.cursor()
     
     # Get verified safe emails
     cursor.execute("""

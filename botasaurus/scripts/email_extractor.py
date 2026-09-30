@@ -8,12 +8,23 @@ import sqlite3
 import re
 import time
 import logging
+import sys
+import os
 from pathlib import Path
 from typing import List, Dict, Tuple, Optional, Set
 from datetime import datetime, timezone
 import requests
 from urllib.parse import urljoin, urlparse
 import json
+
+# ── DB connector: supports both SQLite and PostgreSQL ──────────────────────────
+sys.path.insert(0, str(Path(__file__).parent.parent))
+try:
+    from db_connector import get_connection, get_cursor, placeholder, db_info, DB_TYPE
+    _USE_CONNECTOR = True
+except ImportError:
+    _USE_CONNECTOR = False
+    DB_TYPE = "sqlite"
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
@@ -38,10 +49,14 @@ class EmailExtractor:
         }
     
     def connect(self):
-        """Connect to database"""
-        self.conn = sqlite3.connect(self.db_path)
-        self.conn.row_factory = sqlite3.Row
-        logger.info(f"Connected to {self.db_path}")
+        """Connect to database (PostgreSQL or SQLite via db_connector)"""
+        if _USE_CONNECTOR:
+            self.conn = get_connection()
+            logger.info(f"Connected to {db_info()}")
+        else:
+            self.conn = sqlite3.connect(self.db_path)
+            self.conn.row_factory = sqlite3.Row
+            logger.info(f"Connected to {self.db_path}")
     
     def disconnect(self):
         """Close database connection"""
@@ -230,37 +245,35 @@ class EmailExtractor:
         }
     
     def save_extracted_email(self, company_id: str, email_data: Dict):
-        """Save extracted email to database"""
+        """Save extracted email to database (PostgreSQL + SQLite compatible)"""
         if not email_data['email']:
             return False
-        
+
         cur = self.conn.cursor()
-        
+        ph  = placeholder()
+
         try:
-            cur.execute("""
-            UPDATE companies
-            SET 
-                email = ?,
-                updated_at = ?
-            WHERE id = ?
-            """, (
-                email_data['email'],
-                datetime.now(timezone.utc).isoformat(),
-                company_id
-            ))
-            
-            # Also create enrichment record
-            cur.execute("""
-            INSERT OR REPLACE INTO enrichment_results (
-                id, company_id, email, email_verified, email_status
-            ) VALUES (?, ?, ?, ?, ?)
-            """, (
-                f"{company_id}_email",
-                company_id,
-                email_data['email'],
-                False,  # Not yet verified
-                'EXTRACTED'
-            ))
+            cur.execute(
+                f"UPDATE companies SET email = {ph}, updated_at = {ph} WHERE id = {ph}",
+                (email_data['email'], datetime.now(timezone.utc).isoformat(), company_id)
+            )
+
+            if DB_TYPE == "postgresql":
+                cur.execute(f"""
+                    INSERT INTO enrichment_results
+                        (id, company_id, email, email_verified, email_status)
+                    VALUES ({ph},{ph},{ph},{ph},{ph})
+                    ON CONFLICT (id) DO UPDATE SET
+                        email        = EXCLUDED.email,
+                        email_status = EXCLUDED.email_status,
+                        updated_at   = NOW()
+                """, (f"{company_id}_email", company_id, email_data['email'], False, 'EXTRACTED'))
+            else:
+                cur.execute(f"""
+                    INSERT OR REPLACE INTO enrichment_results
+                        (id, company_id, email, email_verified, email_status)
+                    VALUES ({ph},{ph},{ph},{ph},{ph})
+                """, (f"{company_id}_email", company_id, email_data['email'], False, 'EXTRACTED'))
             
             self.conn.commit()
             return True

@@ -11,9 +11,19 @@ import smtplib
 import time
 import logging
 import re
+import sys
 from pathlib import Path
 from typing import List, Dict, Optional
 from datetime import datetime, timezone
+
+# ── DB connector: supports both SQLite and PostgreSQL ──────────────────────────
+sys.path.insert(0, str(Path(__file__).parent.parent))
+try:
+    from db_connector import get_connection, get_cursor, placeholder, db_info, DB_TYPE
+    _USE_CONNECTOR = True
+except ImportError:
+    _USE_CONNECTOR = False
+    DB_TYPE = "sqlite"
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
@@ -48,9 +58,13 @@ class EmailValidator:
         }
     
     def connect(self):
-        """Connect to database"""
-        self.conn = sqlite3.connect(self.db_path)
-        self.conn.row_factory = sqlite3.Row
+        """Connect to database (PostgreSQL or SQLite via db_connector)"""
+        if _USE_CONNECTOR:
+            self.conn = get_connection()
+            logger.info(f"Connected to {db_info()}")
+        else:
+            self.conn = sqlite3.connect(self.db_path)
+            self.conn.row_factory = sqlite3.Row
     
     def disconnect(self):
         """Close database connection"""
@@ -224,39 +238,52 @@ class EmailValidator:
         return result
     
     def save_validation_result(self, company_id: str, email_data: Dict):
-        """Save validation result to database"""
+        """Save validation result to database (PostgreSQL + SQLite compatible)"""
         cur = self.conn.cursor()
-        
+        ph  = placeholder()   # %s for PG, ? for SQLite
+
         try:
-            # Update company if status is good
             if email_data['status'] in ['VERIFIED_SAFE', 'LIKELY_VALID']:
-                cur.execute("""
-                UPDATE companies
-                SET updated_at = ?
-                WHERE id = ?
+                cur.execute(
+                    f"UPDATE companies SET updated_at = {ph} WHERE id = {ph}",
+                    (datetime.now(timezone.utc).isoformat(), company_id)
+                )
+
+            # PostgreSQL uses INSERT ... ON CONFLICT; SQLite uses INSERT OR REPLACE
+            if DB_TYPE == "postgresql":
+                cur.execute(f"""
+                    INSERT INTO enrichment_results
+                        (id, company_id, email, email_verified, email_status)
+                    VALUES ({ph},{ph},{ph},{ph},{ph})
+                    ON CONFLICT (id) DO UPDATE SET
+                        email          = EXCLUDED.email,
+                        email_verified = EXCLUDED.email_verified,
+                        email_status   = EXCLUDED.email_status,
+                        updated_at     = NOW()
                 """, (
-                    datetime.now(timezone.utc).isoformat(),
-                    company_id
+                    f"{company_id}_validated", company_id,
+                    email_data['email'],
+                    email_data['status'] in ['VERIFIED_SAFE', 'LIKELY_VALID'],
+                    email_data['status']
                 ))
-            
-            # Save enrichment result
-            cur.execute("""
-            INSERT OR REPLACE INTO enrichment_results (
-                id, company_id, email, email_verified, email_status
-            ) VALUES (?, ?, ?, ?, ?)
-            """, (
-                f"{company_id}_validated",
-                company_id,
-                email_data['email'],
-                email_data['status'] in ['VERIFIED_SAFE', 'LIKELY_VALID'],
-                email_data['status']
-            ))
-            
+            else:
+                cur.execute(f"""
+                    INSERT OR REPLACE INTO enrichment_results
+                        (id, company_id, email, email_verified, email_status)
+                    VALUES ({ph},{ph},{ph},{ph},{ph})
+                """, (
+                    f"{company_id}_validated", company_id,
+                    email_data['email'],
+                    email_data['status'] in ['VERIFIED_SAFE', 'LIKELY_VALID'],
+                    email_data['status']
+                ))
+
             self.conn.commit()
             return True
-        
+
         except Exception as e:
             logger.error(f"Error saving validation for {company_id}: {e}")
+            self.conn.rollback() if DB_TYPE == "postgresql" else None
             return False
     
     def run_validation(self, limit: int = 1000, batch_size: int = 50):
