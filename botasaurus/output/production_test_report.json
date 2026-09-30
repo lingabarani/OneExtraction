@@ -1,0 +1,498 @@
+{
+  "generated_at": "2026-09-30T11:26:27.869095",
+  "score": 94,
+  "summary": {
+    "total": 81,
+    "passed": 76,
+    "failed": 0,
+    "warnings": 0
+  },
+  "results": [
+    {
+      "category": "FileSystem",
+      "test": "Database",
+      "status": "PASS",
+      "detail": "2220.0 KB"
+    },
+    {
+      "category": "FileSystem",
+      "test": "Companies JSON",
+      "status": "PASS",
+      "detail": "25.9 KB"
+    },
+    {
+      "category": "FileSystem",
+      "test": "People JSON",
+      "status": "PASS",
+      "detail": "618.3 KB"
+    },
+    {
+      "category": "FileSystem",
+      "test": "Email Extractor",
+      "status": "PASS",
+      "detail": "11.2 KB"
+    },
+    {
+      "category": "FileSystem",
+      "test": "Email Validator",
+      "status": "PASS",
+      "detail": "11.7 KB"
+    },
+    {
+      "category": "FileSystem",
+      "test": "Data Loader",
+      "status": "PASS",
+      "detail": "13.6 KB"
+    },
+    {
+      "category": "FileSystem",
+      "test": "Domain Populator",
+      "status": "PASS",
+      "detail": "4.3 KB"
+    },
+    {
+      "category": "FileSystem",
+      "test": "Industry Classifier",
+      "status": "PASS",
+      "detail": "10.4 KB"
+    },
+    {
+      "category": "FileSystem",
+      "test": "MCP Server",
+      "status": "PASS",
+      "detail": "5.6 KB"
+    },
+    {
+      "category": "FileSystem",
+      "test": "Exports Dir",
+      "status": "PASS",
+      "detail": "12 files inside"
+    },
+    {
+      "category": "FileSystem",
+      "test": "Export CSV files",
+      "status": "PASS",
+      "detail": "12 files, 12.0 MB total"
+    },
+    {
+      "category": "Database",
+      "test": "Connect to SQLite",
+      "status": "PASS",
+      "detail": "output/us/api/oneextraction.db"
+    },
+    {
+      "category": "Database",
+      "test": "Table: companies",
+      "status": "PASS",
+      "detail": "1,145 rows"
+    },
+    {
+      "category": "Database",
+      "test": "Table: people",
+      "status": "PASS",
+      "detail": "2,370 rows"
+    },
+    {
+      "category": "Database",
+      "test": "Table: enrichment_results",
+      "status": "PASS",
+      "detail": "2,000 rows"
+    },
+    {
+      "category": "Database",
+      "test": "Indexes present",
+      "status": "PASS",
+      "detail": "13 indexes found"
+    },
+    {
+      "category": "Database",
+      "test": "Database file size",
+      "status": "PASS",
+      "detail": "2.17 MB"
+    },
+    {
+      "category": "Database",
+      "test": "Journal mode",
+      "status": "INFO",
+      "detail": "delete"
+    },
+    {
+      "category": "Database",
+      "test": "Integrity check",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "category": "DataQuality",
+      "test": "Total companies loaded",
+      "status": "PASS",
+      "detail": "1,145"
+    },
+    {
+      "category": "DataQuality",
+      "test": "Companies with name",
+      "status": "PASS",
+      "detail": "1,145 (100.0%)"
+    },
+    {
+      "category": "DataQuality",
+      "test": "Companies with domain",
+      "status": "PASS",
+      "detail": "1,145 (100.0%)"
+    },
+    {
+      "category": "DataQuality",
+      "test": "Companies with email",
+      "status": "PASS",
+      "detail": "962 (84.0%)"
+    },
+    {
+      "category": "DataQuality",
+      "test": "Companies with industry",
+      "status": "PASS",
+      "detail": "1,145 (100.0%)"
+    },
+    {
+      "category": "DataQuality",
+      "test": "Companies with state",
+      "status": "PASS",
+      "detail": "1,145 (100.0%)"
+    },
+    {
+      "category": "DataQuality",
+      "test": "Avg data quality score",
+      "status": "PASS",
+      "detail": "60.5/100"
+    },
+    {
+      "category": "DataQuality",
+      "test": "Total executives loaded",
+      "status": "PASS",
+      "detail": "2,370"
+    },
+    {
+      "category": "DataQuality",
+      "test": "Executives per company (avg)",
+      "status": "PASS",
+      "detail": "2.1x (1,145 companies covered)"
+    },
+    {
+      "category": "DataQuality",
+      "test": "Executives with title",
+      "status": "PASS",
+      "detail": "2,370 (100.0%)"
+    },
+    {
+      "category": "DataQuality",
+      "test": "Unique industries",
+      "status": "PASS",
+      "detail": "126 industries"
+    },
+    {
+      "category": "DataQuality",
+      "test": "States covered",
+      "status": "PASS",
+      "detail": "52/52 states"
+    },
+    {
+      "category": "DataQuality",
+      "test": "Duplicate company names",
+      "status": "PASS",
+      "detail": "0 duplicates found"
+    },
+    {
+      "category": "EmailExtraction",
+      "test": "Emails in companies table",
+      "status": "PASS",
+      "detail": "962 / 1,145 (84.0%)"
+    },
+    {
+      "category": "EmailExtraction",
+      "test": "Emails in enrichment_results",
+      "status": "PASS",
+      "detail": "2,000 records"
+    },
+    {
+      "category": "EmailExtraction",
+      "test": "Emails passing syntax check",
+      "status": "PASS",
+      "detail": "500/500 (100.0%)"
+    },
+    {
+      "category": "EmailExtraction",
+      "test": "Companies with domain populated",
+      "status": "PASS",
+      "detail": "1,145"
+    },
+    {
+      "category": "EmailExtraction",
+      "test": "Email pattern variety",
+      "status": "PASS",
+      "detail": "24 unique prefixes found"
+    },
+    {
+      "category": "EmailExtraction",
+      "test": "Status: EXTRACTED",
+      "status": "PASS",
+      "detail": "1,000 emails"
+    },
+    {
+      "category": "EmailExtraction",
+      "test": "Status: INVALID",
+      "status": "INFO",
+      "detail": "711 emails"
+    },
+    {
+      "category": "EmailExtraction",
+      "test": "Status: LIKELY_VALID",
+      "status": "PASS",
+      "detail": "289 emails"
+    },
+    {
+      "category": "EmailValidation",
+      "test": "Total emails processed",
+      "status": "PASS",
+      "detail": "2,000"
+    },
+    {
+      "category": "EmailValidation",
+      "test": "Emails verified (email_verified=1)",
+      "status": "PASS",
+      "detail": "289 (14.4% of processed)"
+    },
+    {
+      "category": "EmailValidation",
+      "test": "  \u2192 EXTRACTED",
+      "status": "PASS",
+      "detail": "1,000"
+    },
+    {
+      "category": "EmailValidation",
+      "test": "  \u2192 INVALID",
+      "status": "INFO",
+      "detail": "711"
+    },
+    {
+      "category": "EmailValidation",
+      "test": "  \u2192 LIKELY_VALID",
+      "status": "INFO",
+      "detail": "289"
+    },
+    {
+      "category": "EmailValidation",
+      "test": "Validator script exists",
+      "status": "PASS",
+      "detail": "scripts/batch_email_validator.py"
+    },
+    {
+      "category": "EmailValidation",
+      "test": "  Import: dns.resolver",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "category": "EmailValidation",
+      "test": "  Import: smtplib",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "category": "EmailValidation",
+      "test": "  Import: sqlite3",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "category": "EmailValidation",
+      "test": "  Import: re",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "category": "EmailValidation",
+      "test": "DNS resolver (gmail.com MX)",
+      "status": "PASS",
+      "detail": "5 MX records returned"
+    },
+    {
+      "category": "EmailValidation",
+      "test": "SMTP port 25 reachable",
+      "status": "PASS",
+      "detail": "gmail-smtp-in.l.google.com:25"
+    },
+    {
+      "category": "Export",
+      "test": "Export directory exists",
+      "status": "PASS",
+      "detail": "output/exports"
+    },
+    {
+      "category": "Export",
+      "test": "Number of CSV exports",
+      "status": "PASS",
+      "detail": "12 CSV files"
+    },
+    {
+      "category": "Export",
+      "test": "  01_manufacturing.csv",
+      "status": "PASS",
+      "detail": "4,190 rows, 1050.2 KB"
+    },
+    {
+      "category": "Export",
+      "test": "  02_corporate_services.csv",
+      "status": "PASS",
+      "detail": "7,305 rows, 1854.3 KB"
+    },
+    {
+      "category": "Export",
+      "test": "  03_wholesale_distribution.csv",
+      "status": "PASS",
+      "detail": "5,644 rows, 1412.7 KB"
+    },
+    {
+      "category": "Export",
+      "test": "  04_chemicals_plastics.csv",
+      "status": "PASS",
+      "detail": "5,389 rows, 1330.7 KB"
+    },
+    {
+      "category": "Export",
+      "test": "  05_logistics_freight.csv",
+      "status": "PASS",
+      "detail": "4,021 rows, 984.0 KB"
+    },
+    {
+      "category": "Export",
+      "test": "  06_construction_real_estate.csv",
+      "status": "PASS",
+      "detail": "4,142 rows, 1049.4 KB"
+    },
+    {
+      "category": "Export",
+      "test": "  07_technology_it.csv",
+      "status": "PASS",
+      "detail": "4,115 rows, 1018.2 KB"
+    },
+    {
+      "category": "Export",
+      "test": "  08_pharma_healthcare.csv",
+      "status": "PASS",
+      "detail": "2,726 rows, 680.0 KB"
+    },
+    {
+      "category": "Export",
+      "test": "  09_food_agribusiness.csv",
+      "status": "PASS",
+      "detail": "1,381 rows, 339.9 KB"
+    },
+    {
+      "category": "Export",
+      "test": "  10_automotive_aerospace.csv",
+      "status": "PASS",
+      "detail": "4,019 rows, 974.9 KB"
+    },
+    {
+      "category": "Export",
+      "test": "  11_energy_mining.csv",
+      "status": "PASS",
+      "detail": "1,428 rows, 325.1 KB"
+    },
+    {
+      "category": "Export",
+      "test": "  12_general_commercial.csv",
+      "status": "PASS",
+      "detail": "5,602 rows, 1310.5 KB"
+    },
+    {
+      "category": "Export",
+      "test": "Total export rows across all CSVs",
+      "status": "PASS",
+      "detail": "49,962 total rows"
+    },
+    {
+      "category": "Export",
+      "test": "CSV headers present (01_manufacturing.csv)",
+      "status": "PASS",
+      "detail": "12 columns: \ufeffindustry, company_name, company_domain, full_name, standardized_title..."
+    },
+    {
+      "category": "Export",
+      "test": "Sample row populated fields",
+      "status": "PASS",
+      "detail": "12/12 fields filled"
+    },
+    {
+      "category": "Export",
+      "test": "JSON export files",
+      "status": "INFO",
+      "detail": "None yet (CSV only)"
+    },
+    {
+      "category": "Export",
+      "test": "Source companies JSON valid",
+      "status": "PASS",
+      "detail": "25 records"
+    },
+    {
+      "category": "Export",
+      "test": "Companies JSON schema fields",
+      "status": "PASS",
+      "detail": "28 fields: company_id, legal_name, trade_name, normalized_name, ein..."
+    },
+    {
+      "category": "Export",
+      "test": "Source people JSON valid",
+      "status": "PASS",
+      "detail": "200 records"
+    },
+    {
+      "category": "MCP",
+      "test": "MCP server file exists",
+      "status": "PASS",
+      "detail": "src/us_b2b/mcp_server.py"
+    },
+    {
+      "category": "MCP",
+      "test": "MCP transport (stdio/json)",
+      "status": "PASS",
+      "detail": "found"
+    },
+    {
+      "category": "MCP",
+      "test": "Tool definitions (@tool)",
+      "status": "PASS",
+      "detail": "found"
+    },
+    {
+      "category": "MCP",
+      "test": "search_companies tool",
+      "status": "PASS",
+      "detail": "found"
+    },
+    {
+      "category": "MCP",
+      "test": "Database connection",
+      "status": "PASS",
+      "detail": "found"
+    },
+    {
+      "category": "MCP",
+      "test": "Error handling (try/exc)",
+      "status": "PASS",
+      "detail": "found"
+    },
+    {
+      "category": "MCP",
+      "test": "MCP module importable",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "category": "MCP",
+      "test": "STDIO transport variant",
+      "status": "PASS",
+      "detail": "src/us_b2b/mcp_server_stdio.py"
+    }
+  ]
+}
