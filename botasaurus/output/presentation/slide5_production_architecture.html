@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0a0e17;
+      --card: #121824;
+      --card-alt: #172033;
+      --border: rgba(255, 255, 255, 0.08);
+      --primary: #3b82f6;
+      --emerald: #10b981;
+      --amber: #f59e0b;
+      --purple: #8b5cf6;
+      --text: #f8fafc;
+      --muted: #94a3b8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: radial-gradient(circle at 85% 15%, rgba(59, 130, 246, 0.12), transparent 45%),
+                  radial-gradient(circle at 15% 85%, rgba(16, 185, 129, 0.08), transparent 45%),
+                  var(--bg);
+      color: var(--text);
+      width: 1600px;
+      height: 900px;
+      overflow: hidden;
+      padding: 55px 75px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .slide-header { display: flex; justify-content: space-between; align-items: center; }
+    .badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(59, 130, 246, 0.15); border: 1px solid rgba(59, 130, 246, 0.3);
+      color: #60a5fa; padding: 6px 14px; border-radius: 9999px;
+      font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;
+    }
+    .slide-num { font-size: 14px; color: var(--muted); font-weight: 600; }
+    .title-area h2 {
+      font-size: 42px; font-weight: 800; letter-spacing: -0.02em; margin-top: 14px;
+      background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .title-area p { font-size: 17px; color: var(--muted); margin-top: 8px; }
+    .slide-footer {
+      display: flex; justify-content: space-between; border-top: 1px solid var(--border);
+      padding-top: 18px; font-size: 13px; color: #64748b;
+    }
+  </style>
+
+  <style>
+    .arch-container { display: flex; gap: 20px; align-items: center; margin-top: 50px; }
+    .arch-card { flex: 1; background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 36px 26px; text-align: center; }
+    .arch-card.highlight { border-color: #3b82f6; background: rgba(59, 130, 246, 0.08); box-shadow: 0 0 30px rgba(59, 130, 246, 0.15); }
+    .arch-tier { font-size: 13px; font-weight: 700; text-transform: uppercase; color: #60a5fa; letter-spacing: 0.05em; margin-bottom: 8px; }
+    .arch-title { font-size: 20px; font-weight: 800; color: #fff; margin-bottom: 14px; }
+    .arch-desc { font-size: 13px; color: var(--muted); line-height: 1.6; }
+    .arch-sep { font-size: 28px; color: var(--muted); font-weight: bold; }
+    .cost-box {
+      margin-top: 36px; background: rgba(255,255,255,0.02); border: 1px solid var(--border);
+      border-radius: 12px; padding: 18px 28px; display: flex; justify-content: space-around; align-items: center;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <div class="slide-header">
+      <div class="badge">Blueprint — Slide 05</div>
+      <div class="slide-num">Production Scaling & Cost Architecture</div>
+    </div>
+    <div class="title-area">
+      <h2>Enterprise Production Architecture (4-Tier Blueprint)</h2>
+      <p>Scales from POC to 5.52M national establishments and 2M+ decision-makers at an estimated ~$1,490/mo operating cost.</p>
+    </div>
+    <div class="arch-container">
+      <div class="arch-card">
+        <div class="arch-tier">Tier 1</div>
+        <div class="arch-title">Government Foundation</div>
+        <div class="arch-desc">INEGI DENUE Bulk (5.52M establishments), SAT 69-B Blacklists, CompraNet Suppliers (380k). Streaming ingest in ~2.5 mins.</div>
+      </div>
+      <div class="arch-sep">➔</div>
+      <div class="arch-card">
+        <div class="arch-tier">Tier 2</div>
+        <div class="arch-title">Directory Enrichment</div>
+        <div class="arch-desc">COSMOS, QuimiNet, AMCHAM, CANACINTRA scraped via Botasaurus CDP with Mexican residential proxies.</div>
+      </div>
+      <div class="arch-sep">➔</div>
+      <div class="arch-card highlight">
+        <div class="arch-tier">Tier 3</div>
+        <div class="arch-title">Golden Entity Resolution</div>
+        <div class="arch-desc">6-Stage Waterfall dedup engine, SAT Modulo 11 check, RFC checksum verification, and Quality Trust Scoring.</div>
+      </div>
+      <div class="arch-sep">➔</div>
+      <div class="arch-card">
+        <div class="arch-tier">Tier 4</div>
+        <div class="arch-title">Enterprise Serving</div>
+        <div class="arch-desc">PostgreSQL 16 (State Partitioned) + OpenSearch Cluster for sub-second B2B intelligence queries.</div>
+      </div>
+    </div>
+    <div class="cost-box">
+      <div><b>PostgreSQL 16 (RDS):</b> <span style="color: #60a5fa;">$480/mo</span></div>
+      <div><b>OpenSearch Cluster:</b> <span style="color: #60a5fa;">$290/mo</span></div>
+      <div><b>Botasaurus Scraper Nodes:</b> <span style="color: #60a5fa;">$140/mo</span></div>
+      <div><b>Mexican Residential Proxies:</b> <span style="color: #60a5fa;">$420/mo</span></div>
+      <div style="font-size: 16px; font-weight: 800; color: #34d399;">Total Monthly Run Rate: ~$1,490 / mo</div>
+    </div>
+  </div>
+  <div class="slide-footer">
+    <span>Estimated Timeline: 8–10 Weeks to Full Production Deployment</span>
+    <span>Confidential & Proprietary — Prepared for CEO</span>
+  </div>
+</body>
+</html>

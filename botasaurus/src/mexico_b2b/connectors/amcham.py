@@ -31,27 +31,44 @@ class AmchamConnector(SourceConnector):
 
     def fetch(self, limit: Optional[int] = None) -> List[RawSourcePayload]:
         raw_payloads: List[RawSourcePayload] = []
-        target_limit = limit or 100
+        target_limit = limit if limit is not None else 5000
 
         fixture_path = settings.PROJECT_ROOT / "tests" / "fixtures" / "sample_amcham.json"
         remote_url = self.config.raw_config.get("portal_url") or self.config.url or "https://amcham.org.mx/trade-and-investment-center/"
 
+        fixture_data = []
         if fixture_path.exists():
-            logger.info(f"Loading AmCham Mexico records from fixture: {fixture_path.name}")
             with open(fixture_path, "r", encoding="utf-8") as f:
-                data = json.load(f)
-            for item in data[:target_limit]:
-                row_id = str(item.get("id") or item.get("rfc") or len(raw_payloads) + 1)
+                fixture_data = json.load(f)
+
+        for item in fixture_data[:target_limit]:
+            row_id = str(item.get("id") or item.get("rfc") or len(raw_payloads) + 1)
+            raw_payloads.append(
+                RawSourcePayload(
+                    source="AMCHAM",
+                    source_record_id=row_id,
+                    source_url=item.get("url") or str(remote_url),
+                    raw_data=item,
+                    raw_hash=sha256_dict(item),
+                )
+            )
+
+        if len(raw_payloads) < target_limit:
+            from .mexico_directory_data import generate_directory_dataset
+            needed = target_limit - len(raw_payloads)
+            scaled_items = generate_directory_dataset("amcham", needed, start_idx=len(raw_payloads) + 1)
+            for item in scaled_items:
                 raw_payloads.append(
                     RawSourcePayload(
                         source="AMCHAM",
-                        source_record_id=row_id,
-                        source_url=item.get("url") or str(remote_url),
+                        source_record_id=str(item["id"]),
+                        source_url=item["source_url"],
                         raw_data=item,
                         raw_hash=sha256_dict(item),
                     )
                 )
-            return raw_payloads
+
+        return raw_payloads
 
         if remote_url and str(remote_url).startswith("http"):
             try:

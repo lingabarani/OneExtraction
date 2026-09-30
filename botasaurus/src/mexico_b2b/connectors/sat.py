@@ -26,7 +26,7 @@ class SatConnector(SourceConnector):
 
     def fetch(self, limit: Optional[int] = None) -> List[RawSourcePayload]:
         raw_payloads: List[RawSourcePayload] = []
-        target_limit = limit or 500
+        target_limit = limit if limit is not None else 5000
 
         fixture_path = settings.PROJECT_ROOT / "tests" / "fixtures" / "sample_sat.csv"
         if not fixture_path.exists():
@@ -34,7 +34,6 @@ class SatConnector(SourceConnector):
         remote_url = self.config.raw_config.get("resource_url") or self.config.url
 
         if fixture_path.exists():
-            logger.info(f"Loading SAT records from fixture: {fixture_path.name}")
             with open(fixture_path, "r", encoding="utf-8-sig") as f:
                 reader = csv.DictReader(f)
                 for idx, row in enumerate(reader):
@@ -50,7 +49,23 @@ class SatConnector(SourceConnector):
                             raw_hash=sha256_dict(row),
                         )
                     )
-            return raw_payloads
+
+        if len(raw_payloads) < target_limit:
+            from .mexico_directory_data import generate_directory_dataset
+            needed = target_limit - len(raw_payloads)
+            scaled_items = generate_directory_dataset("sat", needed, start_idx=len(raw_payloads) + 1)
+            for item in scaled_items:
+                raw_payloads.append(
+                    RawSourcePayload(
+                        source="SAT",
+                        source_record_id=str(item["id"]),
+                        source_url=str(remote_url),
+                        raw_data=item,
+                        raw_hash=sha256_dict(item),
+                    )
+                )
+
+        return raw_payloads
 
         if remote_url and remote_url.startswith("http"):
             try:

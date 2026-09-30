@@ -1,0 +1,19 @@
+{
+  "run_id": "us_20260918_122340",
+  "total_raw_ingested": 1000,
+  "total_after_dedup": 1000,
+  "total_valid_companies": 1000,
+  "total_exported_companies": 1000,
+  "total_decision_makers": 2000,
+  "duplicate_records_removed": 0,
+  "avg_quality_score": 32.0,
+  "elapsed_seconds": 1.1,
+  "sources_used": [
+    "SEC_EDGAR"
+  ],
+  "export_formats": [
+    "json"
+  ],
+  "real_data_only": true,
+  "status": "COMPLETE"
+}

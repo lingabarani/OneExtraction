@@ -1,5 +1,6 @@
 """
-Source configuration loader and registry for Mexican open-data sources.
+Source configuration loader and registry for Mexican open-data sources and web directories.
+Supports categorization into API and Public-Directory Scraping channels.
 """
 
 import yaml
@@ -15,7 +16,9 @@ class SourceConfig:
     name: str
     description: str
     enabled: bool
-    type: str  # 'api', 'csv', 'json', 'web', 'file'
+    type: str  # 'api', 'csv', 'json', 'web', 'file', 'directory'
+    category: str = "api"  # 'api' or 'scraping'
+    source_type: str = "official_api"  # 'official_api' or 'public_directory'
     priority: int = 50
     url: Optional[str] = None
     base_url: Optional[str] = None
@@ -52,11 +55,16 @@ class SourceRegistry:
         raw_sources = data.get("sources", {})
 
         for source_key, cfg in raw_sources.items():
+            category_val = cfg.get("category", "api" if cfg.get("type") in ("api", "csv", "json") else "scraping")
+            source_type_val = cfg.get("source_type", "official_api" if category_val == "api" else "public_directory")
+
             self.sources[source_key] = SourceConfig(
                 name=cfg.get("name", source_key),
                 description=cfg.get("description", ""),
                 enabled=cfg.get("enabled", True),
                 type=cfg.get("type", "csv"),
+                category=category_val,
+                source_type=source_type_val,
                 priority=cfg.get("priority", 50),
                 url=cfg.get("url"),
                 base_url=cfg.get("base_url"),
@@ -76,6 +84,14 @@ class SourceRegistry:
 
     def get_enabled_sources(self) -> Dict[str, SourceConfig]:
         return {k: v for k, v in self.sources.items() if v.enabled}
+
+    def get_api_sources(self) -> Dict[str, SourceConfig]:
+        """Returns all enabled API sources."""
+        return {k: v for k, v in self.get_enabled_sources().items() if v.category == "api"}
+
+    def get_scraping_sources(self) -> Dict[str, SourceConfig]:
+        """Returns all enabled public-directory scraping sources."""
+        return {k: v for k, v in self.get_enabled_sources().items() if v.category == "scraping"}
 
 
 sources_registry = SourceRegistry()

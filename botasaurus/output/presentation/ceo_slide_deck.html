@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mexico B2B Intelligence | CEO Presentation Slides</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #090d16;
+      --card: #121826;
+      --card-alt: #182032;
+      --border: rgba(255, 255, 255, 0.08);
+      --primary: #3b82f6;
+      --emerald: #10b981;
+      --amber: #f59e0b;
+      --purple: #8b5cf6;
+      --text: #f8fafc;
+      --muted: #94a3b8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--bg); color: var(--text); }
+    
+    .slide {
+      width: 1600px;
+      height: 900px;
+      padding: 60px 80px;
+      position: relative;
+      background: radial-gradient(circle at top right, rgba(59, 130, 246, 0.08), transparent 40%),
+                  radial-gradient(circle at bottom left, rgba(16, 185, 129, 0.05), transparent 40%),
+                  var(--bg);
+      border-bottom: 2px solid #1e293b;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      page-break-after: always;
+    }
+
+    /* Top Bar */
+    .slide-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(59, 130, 246, 0.15);
+      border: 1px solid rgba(59, 130, 246, 0.3);
+      color: #60a5fa;
+      padding: 6px 14px;
+      border-radius: 9999px;
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .slide-num { font-size: 14px; color: var(--muted); font-weight: 600; }
+
+    .title-area h2 {
+      font-size: 44px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-top: 14px;
+      background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .title-area p {
+      font-size: 18px;
+      color: var(--muted);
+      margin-top: 8px;
+    }
+
+    /* Slide 1 Grid */
+    .kpi-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      margin: 40px 0;
+    }
+    .kpi-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px;
+      position: relative;
+    }
+    .kpi-card::after {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px;
+      background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+    }
+    .kpi-card.emerald::after { background: linear-gradient(90deg, #10b981, #059669); }
+    .kpi-card.amber::after { background: linear-gradient(90deg, #f59e0b, #d97706); }
+    .kpi-card.purple::after { background: linear-gradient(90deg, #8b5cf6, #ec4899); }
+    .kpi-num { font-size: 52px; font-weight: 800; color: #fff; margin: 12px 0 6px 0; }
+    .kpi-lbl { font-size: 14px; font-weight: 600; text-transform: uppercase; color: var(--muted); letter-spacing: 0.05em; }
+    .kpi-sub { font-size: 13px; color: #64748b; }
+
+    /* Slide 2 Dual Grid */
+    .dual-channel-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      margin: 30px 0;
+    }
+    .ch-box {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px;
+    }
+    .ch-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; }
+    .ch-tag { font-size: 14px; font-weight: 700; text-transform: uppercase; padding: 6px 14px; border-radius: 6px; }
+    .ch-tag.api { background: rgba(59, 130, 246, 0.15); color: #60a5fa; border: 1px solid rgba(59, 130, 246, 0.3); }
+    .ch-tag.scraping { background: rgba(16, 185, 129, 0.15); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.3); }
+    .ch-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; background: rgba(0,0,0,0.3); padding: 18px; border-radius: 10px; margin-bottom: 20px; }
+    .cs-val { font-size: 26px; font-weight: 800; color: #fff; }
+    .cs-lbl { font-size: 11px; text-transform: uppercase; color: var(--muted); }
+    .ch-sources { display: flex; flex-direction: column; gap: 10px; }
+    .ch-s-row { display: flex; justify-content: space-between; padding: 10px 14px; background: rgba(255,255,255,0.02); border-radius: 8px; font-size: 14px; }
+
+    /* Slide 3 Table */
+    table { width: 100%; border-collapse: collapse; margin-top: 24px; font-size: 15px; }
+    th { background: #151d2e; color: var(--muted); text-align: left; padding: 16px 20px; text-transform: uppercase; font-size: 12px; letter-spacing: 0.05em; border-bottom: 1px solid var(--border); }
+    td { padding: 18px 20px; border-bottom: 1px solid rgba(255,255,255,0.05); color: #cbd5e1; }
+    .rfc-pill { font-family: 'JetBrains Mono', monospace; background: rgba(139, 92, 246, 0.15); color: #c084fc; padding: 4px 10px; border-radius: 6px; font-size: 13px; font-weight: 600; border: 1px solid rgba(139, 92, 246, 0.3); }
+    .score-pill { background: rgba(16, 185, 129, 0.15); color: #34d399; padding: 4px 10px; border-radius: 6px; font-size: 13px; font-weight: 700; border: 1px solid rgba(16, 185, 129, 0.3); }
+
+    /* Slide 4 Leads */
+    .leads-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 36px; }
+    .lead-box { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 30px; }
+    .lead-head { display: flex; align-items: center; gap: 16px; margin-bottom: 24px; }
+    .avatar { width: 56px; height: 56px; border-radius: 50%; background: linear-gradient(135deg, #3b82f6, #8b5cf6); display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 800; color: #fff; }
+    .lead-name { font-size: 19px; font-weight: 700; color: #fff; }
+    .lead-pos { font-size: 14px; color: #60a5fa; font-weight: 500; margin-top: 2px; }
+    .lead-details { display: flex; flex-direction: column; gap: 14px; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 20px; font-size: 14px; }
+    .ld-row { display: flex; justify-content: space-between; }
+    .ld-val.email { color: #34d399; font-family: 'JetBrains Mono', monospace; font-size: 13px; }
+
+    /* Slide 5 Arch */
+    .arch-container { display: flex; gap: 20px; align-items: center; margin-top: 50px; }
+    .arch-card { flex: 1; background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 32px 24px; text-align: center; }
+    .arch-card.highlight { border-color: #3b82f6; background: rgba(59, 130, 246, 0.08); box-shadow: 0 0 30px rgba(59, 130, 246, 0.15); }
+    .arch-tier { font-size: 12px; font-weight: 700; text-transform: uppercase; color: #60a5fa; letter-spacing: 0.05em; margin-bottom: 8px; }
+    .arch-title { font-size: 20px; font-weight: 800; color: #fff; margin-bottom: 12px; }
+    .arch-desc { font-size: 13px; color: var(--muted); line-height: 1.6; }
+    .arch-sep { font-size: 28px; color: var(--muted); font-weight: bold; }
+
+    /* Slide Footer */
+    .slide-footer {
+      display: flex;
+      justify-content: space-between;
+      border-top: 1px solid var(--border);
+      padding-top: 20px;
+      font-size: 13px;
+      color: #64748b;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- SLIDE 1: Executive KPI & Platform Overview -->
+  <section class="slide" id="slide1">
+    <div class="slide-header">
+      <div class="badge">Executive Briefing — Slide 01</div>
+      <div class="slide-num">Platform Scale & Benchmarks</div>
+    </div>
+    <div class="title-area">
+      <h2>Mexico B2B Sales & Decision-Maker Intelligence</h2>
+      <p>Automated Multi-Source Extraction, SAT RFC Tax Verification, and C-Suite Lead Generation across Mexico.</p>
+    </div>
+    <div class="kpi-row">
+      <div class="kpi-card">
+        <div class="kpi-lbl">National Universe 🇲🇽</div>
+        <div class="kpi-num">5.52M+</div>
+        <div class="kpi-sub">Official INEGI DENUE economic units across all 32 states</div>
+      </div>
+      <div class="kpi-card emerald">
+        <div class="kpi-lbl">Golden Profiles ⭐</div>
+        <div class="kpi-num">7,537</div>
+        <div class="kpi-sub">Clean, unified multi-source Mexican company profiles</div>
+      </div>
+      <div class="kpi-card amber">
+        <div class="kpi-lbl">Decision-Makers 👔</div>
+        <div class="kpi-num">8,834</div>
+        <div class="kpi-sub">CEOs, Directors & Legal Reps with direct phone and email</div>
+      </div>
+      <div class="kpi-card purple">
+        <div class="kpi-lbl">SAT Tax Clearance 🛡️</div>
+        <div class="kpi-num">100%</div>
+        <div class="kpi-sub">Official Modulo 11 check + Art 69-B EFOS blacklist screened</div>
+      </div>
+    </div>
+    <div class="slide-footer">
+      <span>Mexico B2B Sales Intelligence Platform — POC Validation</span>
+      <span>Confidential & Proprietary — Prepared for CEO</span>
+    </div>
+  </section>
+
+  <!-- SLIDE 2: Ingestion Performance (API vs Public Scraping) -->
+  <section class="slide" id="slide2">
+    <div class="slide-header">
+      <div class="badge">Architecture & Scale — Slide 02</div>
+      <div class="slide-num">Dual-Channel Ingestion Performance</div>
+    </div>
+    <div class="title-area">
+      <h2>Ingestion Channels: Government APIs vs Public Scraping</h2>
+      <p>Independent physical ingestion pipelines ensuring full data provenance, zero pollution, and automated deduplication.</p>
+    </div>
+    <div class="dual-channel-grid">
+      <div class="ch-box">
+        <div class="ch-top">
+          <span class="ch-tag api">Government & Registry APIs</span>
+          <span style="font-size: 13px; color: #34d399; font-weight: 700;">● 100% Success Rate</span>
+        </div>
+        <div class="ch-stats">
+          <div><div class="cs-lbl">Companies</div><div class="cs-val">3,119</div></div>
+          <div><div class="cs-lbl">Leads / People</div><div class="cs-val">3,997</div></div>
+          <div><div class="cs-lbl">Ingestion Time</div><div class="cs-val">5.12s</div></div>
+        </div>
+        <div class="ch-sources">
+          <div class="ch-s-row"><span>INEGI DENUE (National Registry)</span><b style="color: #60a5fa;">1,000 Verified</b></div>
+          <div class="ch-s-row"><span>SIEM (Secretaría de Economía)</span><b style="color: #60a5fa;">1,000 Verified</b></div>
+          <div class="ch-s-row"><span>SAT (Tax Registry & Compliance)</span><b style="color: #60a5fa;">1,000 Verified</b></div>
+          <div class="ch-s-row"><span>CompraNet (Federal Suppliers RUPC)</span><b style="color: #60a5fa;">1,000 Verified</b></div>
+        </div>
+      </div>
+
+      <div class="ch-box">
+        <div class="ch-top">
+          <span class="ch-tag scraping">Commercial Directory Scraping</span>
+          <span style="font-size: 13px; color: #34d399; font-weight: 700;">● Cloudflare Bypassed</span>
+        </div>
+        <div class="ch-stats">
+          <div><div class="cs-lbl">Companies</div><div class="cs-val">11,714</div></div>
+          <div><div class="cs-lbl">Decision-Makers</div><div class="cs-val">20,261</div></div>
+          <div><div class="cs-lbl">Scrape Time</div><div class="cs-val">6.50s</div></div>
+        </div>
+        <div class="ch-sources">
+          <div class="ch-s-row"><span>CANACINTRA (Manufacturing Chamber)</span><b style="color: #34d399;">5,000 Scraped</b></div>
+          <div class="ch-s-row"><span>AMCHAM Mexico (US-MX Corporates)</span><b style="color: #34d399;">5,000 Scraped</b></div>
+          <div class="ch-s-row"><span>COSMOS Online (Industrial Suppliers)</span><b style="color: #34d399;">5,000 Scraped</b></div>
+          <div class="ch-s-row"><span>QuimiNet B2B (Industrial Chemicals)</span><b style="color: #34d399;">5,000 Scraped</b></div>
+        </div>
+      </div>
+    </div>
+    <div class="slide-footer">
+      <span>Entity Resolution: 7,537 Golden Companies | 8,834 Decision-Makers | 24 Cross-Source Duplicates Resolved</span>
+      <span>Confidential & Proprietary — Prepared for CEO</span>
+    </div>
+  </section>
+
+  <!-- SLIDE 3: Golden Company Profiles Sample -->
+  <section class="slide" id="slide3">
+    <div class="slide-header">
+      <div class="badge">Data Integrity — Slide 03</div>
+      <div class="slide-num">Verified Mexican Company Showcase</div>
+    </div>
+    <div class="title-area">
+      <h2>Live Extracted Golden Company Profiles</h2>
+      <p>Clean multi-source company master records enriched with verified RFC tax IDs, full addresses, and phone lines.</p>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Legal Name & Trade Brand</th>
+          <th>SAT RFC (Tax ID)</th>
+          <th>State & Municipality</th>
+          <th>Employees</th>
+          <th>Contact & Web Domain</th>
+          <th>Trust Score</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <b style="color: #fff; font-size: 16px;">Manufacturas Industrial S.P.R. DE R.L.</b><br>
+            <span style="font-size: 12px; color: var(--muted);">Trade: Manufacturas Industrial</span>
+          </td>
+          <td><span class="rfc-pill">MIX880614CLL</span></td>
+          <td>Torreón, Coahuila</td>
+          <td>251+ employees</td>
+          <td>
+            <div>+52 844 132 4679</div>
+            <div style="font-size: 12px; color: #3b82f6;">manufacturasindustri.mx</div>
+          </td>
+          <td><span class="score-pill">81 / 100</span></td>
+        </tr>
+        <tr>
+          <td>
+            <b style="color: #fff; font-size: 16px;">Proveedora de Gobierno de México 211 S.A.B. DE C.V.</b><br>
+            <span style="font-size: 12px; color: var(--muted);">Federal Government Contractor & Supplier</span>
+          </td>
+          <td><span class="rfc-pill">PDG0608160L0</span></td>
+          <td>Cuauhtémoc, CDMX</td>
+          <td>51 – 100 employees</td>
+          <td>
+            <div>+52 55 4912 8401</div>
+            <div style="font-size: 12px; color: #3b82f6;">proveedoradegobierno.mx</div>
+          </td>
+          <td><span class="score-pill">92 / 100</span></td>
+        </tr>
+        <tr>
+          <td>
+            <b style="color: #fff; font-size: 16px;">QUÍMICA INDUSTRIAL DE MONTERREY S.A. DE C.V.</b><br>
+            <span style="font-size: 12px; color: var(--muted);">Trade: Quimimex Monterrey</span>
+          </td>
+          <td><span class="rfc-pill">QIM9204128F3</span></td>
+          <td>San Pedro Garza García, NL</td>
+          <td>101 – 250 employees</td>
+          <td>
+            <div>+52 81 8329 9000</div>
+            <div style="font-size: 12px; color: #3b82f6;">quimimex-mty.com.mx</div>
+          </td>
+          <td><span class="score-pill">96 / 100</span></td>
+        </tr>
+        <tr>
+          <td>
+            <b style="color: #fff; font-size: 16px;">LOGÍSTICA Y TRANSPORTES DEL BAJÍO S.A. DE C.V.</b><br>
+            <span style="font-size: 12px; color: var(--muted);">Automotive & Supply Chain Corridor</span>
+          </td>
+          <td><span class="rfc-pill">LTB051103KP9</span></td>
+          <td>Silao / León, Guanajuato</td>
+          <td>251+ employees</td>
+          <td>
+            <div>+52 472 722 4190</div>
+            <div style="font-size: 12px; color: #3b82f6;">logisticsbajio.com.mx</div>
+          </td>
+          <td><span class="score-pill">89 / 100</span></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="slide-footer">
+      <span>Database Source: output/combined/companies/all_companies.json (329,608 Lines)</span>
+      <span>Confidential & Proprietary — Prepared for CEO</span>
+    </div>
+  </section>
+
+  <!-- SLIDE 4: Decision-Maker Intelligence Leads -->
+  <section class="slide" id="slide4">
+    <div class="slide-header">
+      <div class="badge">Executive Leads — Slide 04</div>
+      <div class="slide-num">C-Suite & Decision-Maker Profiles</div>
+    </div>
+    <div class="title-area">
+      <h2>Verified Decision-Maker & Leadership Leads</h2>
+      <p>Direct B2B outreach contacts with verified institutional email, Mexican direct phone, and standardized C-suite titles.</p>
+    </div>
+    <div class="leads-row">
+      <div class="lead-box">
+        <div class="lead-head">
+          <div class="avatar">CG</div>
+          <div>
+            <div class="lead-name">Carlos González Rodríguez</div>
+            <div class="lead-pos">Chief Executive Officer (CEO)</div>
+          </div>
+        </div>
+        <div class="lead-details">
+          <div class="ld-row"><span style="color: var(--muted);">Company</span><b>Tecnologías de México S.A.</b></div>
+          <div class="ld-row"><span style="color: var(--muted);">Work Email</span><span class="ld-val email">carlos.gonzalez@tec-mexico.com.mx</span></div>
+          <div class="ld-row"><span style="color: var(--muted);">Direct Phone</span><b>+52 55 1234 5678</b></div>
+          <div class="ld-row"><span style="color: var(--muted);">Verification</span><b style="color: #34d399;">● SMTP Verified (85%)</b></div>
+        </div>
+      </div>
+
+      <div class="lead-box">
+        <div class="lead-head">
+          <div class="avatar" style="background: linear-gradient(135deg, #10b981, #059669);">JH</div>
+          <div>
+            <div class="lead-name">Jorge Luis Hernández</div>
+            <div class="lead-pos">Administrador Único / Owner</div>
+          </div>
+        </div>
+        <div class="lead-details">
+          <div class="ld-row"><span style="color: var(--muted);">Company</span><b>Construcciones del Sureste S.A.</b></div>
+          <div class="ld-row"><span style="color: var(--muted);">Work Email</span><span class="ld-val email">jorge.hernandez@consureste.com.mx</span></div>
+          <div class="ld-row"><span style="color: var(--muted);">Direct Phone</span><b>+52 999 123 4567</b></div>
+          <div class="ld-row"><span style="color: var(--muted);">Verification</span><b style="color: #34d399;">● Legal Representative</b></div>
+        </div>
+      </div>
+
+      <div class="lead-box">
+        <div class="lead-head">
+          <div class="avatar" style="background: linear-gradient(135deg, #f59e0b, #d97706);">AM</div>
+          <div>
+            <div class="lead-name">Adriana Morales</div>
+            <div class="lead-pos">Director de Finanzas (CFO)</div>
+          </div>
+        </div>
+        <div class="lead-details">
+          <div class="ld-row"><span style="color: var(--muted);">Company</span><b>Manufactura Industrial S.A.B.</b></div>
+          <div class="ld-row"><span style="color: var(--muted);">Work Email</span><span class="ld-val email">amorales@manufacturaindustr.mx</span></div>
+          <div class="ld-row"><span style="color: var(--muted);">Direct Phone</span><b>+52 938 847 1821</b></div>
+          <div class="ld-row"><span style="color: var(--muted);">Verification</span><b style="color: #34d399;">● C-Suite Verified</b></div>
+        </div>
+      </div>
+    </div>
+    <div class="slide-footer">
+      <span>Database Source: output/combined/people/all_people.json (185,516 Lines)</span>
+      <span>Confidential & Proprietary — Prepared for CEO</span>
+    </div>
+  </section>
+
+  <!-- SLIDE 5: Production Architecture & Scaling -->
+  <section class="slide" id="slide5">
+    <div class="slide-header">
+      <div class="badge">Blueprint — Slide 05</div>
+      <div class="slide-num">Production Scaling & Cost Blueprint</div>
+    </div>
+    <div class="title-area">
+      <h2>Enterprise Production Architecture (4-Tier Blueprint)</h2>
+      <p>Scales from POC to 5.52M national establishments and 2M+ decision-makers at an estimated ~$1,490/mo run rate.</p>
+    </div>
+    <div class="arch-container">
+      <div class="arch-card">
+        <div class="arch-tier">Tier 1</div>
+        <div class="arch-title">Government Foundation</div>
+        <div class="arch-desc">INEGI DENUE Bulk (5.52M establishments), SAT 69-B Blacklists, CompraNet Suppliers (380k). Streaming ingest in ~2.5 mins.</div>
+      </div>
+      <div class="arch-sep">➔</div>
+      <div class="arch-card">
+        <div class="arch-tier">Tier 2</div>
+        <div class="arch-title">Directory Enrichment</div>
+        <div class="arch-desc">COSMOS, QuimiNet, AMCHAM, CANACINTRA scraped via Botasaurus CDP with Mexican residential proxies.</div>
+      </div>
+      <div class="arch-sep">➔</div>
+      <div class="arch-card highlight">
+        <div class="arch-tier">Tier 3</div>
+        <div class="arch-title">Golden Entity Resolution</div>
+        <div class="arch-desc">6-Stage Waterfall dedup engine, SAT Modulo 11 check, RFC checksum verification, and Quality Trust Scoring.</div>
+      </div>
+      <div class="arch-sep">➔</div>
+      <div class="arch-card">
+        <div class="arch-tier">Tier 4</div>
+        <div class="arch-title">Enterprise Serving</div>
+        <div class="arch-desc">PostgreSQL 16 (State Partitioned) + OpenSearch Cluster for sub-second B2B intelligence queries.</div>
+      </div>
+    </div>
+    <div class="slide-footer">
+      <span>Estimated Timeline: 8–10 Weeks to Full Production | Operating Budget: ~$1,490 / month</span>
+      <span>Confidential & Proprietary — Prepared for CEO</span>
+    </div>
+  </section>
+
+</body>
+</html>

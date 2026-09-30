@@ -1,0 +1,20 @@
+{
+  "run_id": "us_20260917_085510",
+  "total_raw_ingested": 4246,
+  "total_after_dedup": 3783,
+  "total_valid_companies": 1657,
+  "total_exported_companies": 1657,
+  "total_decision_makers": 0,
+  "duplicate_records_removed": 0,
+  "avg_quality_score": 59.52926976463488,
+  "elapsed_seconds": 65.33,
+  "sources_used": [
+    "SEC_EDGAR",
+    "PROPUBLICA_990",
+    "USASPENDING"
+  ],
+  "export_formats": [
+    "json"
+  ],
+  "status": "COMPLETE"
+}

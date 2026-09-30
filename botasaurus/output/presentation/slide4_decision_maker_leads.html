@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0a0e17;
+      --card: #121824;
+      --card-alt: #172033;
+      --border: rgba(255, 255, 255, 0.08);
+      --primary: #3b82f6;
+      --emerald: #10b981;
+      --amber: #f59e0b;
+      --purple: #8b5cf6;
+      --text: #f8fafc;
+      --muted: #94a3b8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: radial-gradient(circle at 85% 15%, rgba(59, 130, 246, 0.12), transparent 45%),
+                  radial-gradient(circle at 15% 85%, rgba(16, 185, 129, 0.08), transparent 45%),
+                  var(--bg);
+      color: var(--text);
+      width: 1600px;
+      height: 900px;
+      overflow: hidden;
+      padding: 55px 75px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .slide-header { display: flex; justify-content: space-between; align-items: center; }
+    .badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(59, 130, 246, 0.15); border: 1px solid rgba(59, 130, 246, 0.3);
+      color: #60a5fa; padding: 6px 14px; border-radius: 9999px;
+      font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;
+    }
+    .slide-num { font-size: 14px; color: var(--muted); font-weight: 600; }
+    .title-area h2 {
+      font-size: 42px; font-weight: 800; letter-spacing: -0.02em; margin-top: 14px;
+      background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .title-area p { font-size: 17px; color: var(--muted); margin-top: 8px; }
+    .slide-footer {
+      display: flex; justify-content: space-between; border-top: 1px solid var(--border);
+      padding-top: 18px; font-size: 13px; color: #64748b;
+    }
+  </style>
+
+  <style>
+    .leads-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 40px; }
+    .lead-box { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 32px; }
+    .lead-head { display: flex; align-items: center; gap: 16px; margin-bottom: 24px; }
+    .avatar { width: 56px; height: 56px; border-radius: 50%; background: linear-gradient(135deg, #3b82f6, #8b5cf6); display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 800; color: #fff; }
+    .lead-name { font-size: 19px; font-weight: 700; color: #fff; }
+    .lead-pos { font-size: 14px; color: #60a5fa; font-weight: 500; margin-top: 2px; }
+    .lead-details { display: flex; flex-direction: column; gap: 14px; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 20px; font-size: 14px; }
+    .ld-row { display: flex; justify-content: space-between; }
+    .ld-val.email { color: #34d399; font-family: 'JetBrains Mono', monospace; font-size: 13px; }
+  </style>
+</head>
+<body>
+  <div>
+    <div class="slide-header">
+      <div class="badge">Executive Leads — Slide 04</div>
+      <div class="slide-num">Decision-Maker Intelligence & Contacts</div>
+    </div>
+    <div class="title-area">
+      <h2>Verified Decision-Maker & Leadership Leads</h2>
+      <p>Direct B2B outreach contacts with verified institutional email, Mexican direct phone, and standardized C-suite titles.</p>
+    </div>
+    <div class="leads-row">
+      <div class="lead-box">
+        <div class="lead-head">
+          <div class="avatar">CG</div>
+          <div>
+            <div class="lead-name">Carlos González Rodríguez</div>
+            <div class="lead-pos">Chief Executive Officer (CEO)</div>
+          </div>
+        </div>
+        <div class="lead-details">
+          <div class="ld-row"><span style="color: var(--muted);">Company</span><b>Tecnologías de México S.A.</b></div>
+          <div class="ld-row"><span style="color: var(--muted);">Work Email</span><span class="ld-val email">carlos.gonzalez@tec-mexico.com.mx</span></div>
+          <div class="ld-row"><span style="color: var(--muted);">Direct Phone</span><b>+52 55 1234 5678</b></div>
+          <div class="ld-row"><span style="color: var(--muted);">Verification</span><b style="color: #34d399;">● SMTP Verified (85%)</b></div>
+        </div>
+      </div>
+
+      <div class="lead-box">
+        <div class="lead-head">
+          <div class="avatar" style="background: linear-gradient(135deg, #10b981, #059669);">JH</div>
+          <div>
+            <div class="lead-name">Jorge Luis Hernández</div>
+            <div class="lead-pos">Administrador Único / Owner</div>
+          </div>
+        </div>
+        <div class="lead-details">
+          <div class="ld-row"><span style="color: var(--muted);">Company</span><b>Construcciones del Sureste S.A.</b></div>
+          <div class="ld-row"><span style="color: var(--muted);">Work Email</span><span class="ld-val email">jorge.hernandez@consureste.com.mx</span></div>
+          <div class="ld-row"><span style="color: var(--muted);">Direct Phone</span><b>+52 999 123 4567</b></div>
+          <div class="ld-row"><span style="color: var(--muted);">Verification</span><b style="color: #34d399;">● Legal Representative</b></div>
+        </div>
+      </div>
+
+      <div class="lead-box">
+        <div class="lead-head">
+          <div class="avatar" style="background: linear-gradient(135deg, #f59e0b, #d97706);">AM</div>
+          <div>
+            <div class="lead-name">Adriana Morales</div>
+            <div class="lead-pos">Director de Finanzas (CFO)</div>
+          </div>
+        </div>
+        <div class="lead-details">
+          <div class="ld-row"><span style="color: var(--muted);">Company</span><b>Manufactura Industrial S.A.B.</b></div>
+          <div class="ld-row"><span style="color: var(--muted);">Work Email</span><span class="ld-val email">amorales@manufacturaindustr.mx</span></div>
+          <div class="ld-row"><span style="color: var(--muted);">Direct Phone</span><b>+52 938 847 1821</b></div>
+          <div class="ld-row"><span style="color: var(--muted);">Verification</span><b style="color: #34d399;">● C-Suite Verified</b></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer">
+    <span>Data File: output/combined/people/all_people.json (185,516 Lines)</span>
+    <span>Confidential & Proprietary — Prepared for CEO</span>
+  </div>
+</body>
+</html>

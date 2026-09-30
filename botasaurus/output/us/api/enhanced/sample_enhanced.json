@@ -1,0 +1,291 @@
+[
+  {
+    "person_id": "per_3cf9dc2183408a9532f9754c5d74bb4b",
+    "company_id": "us_9eef2ff7-82cf-51d3-8407-b43677edfcdf",
+    "identity": {
+      "first_name": "Michael",
+      "middle_name": "A",
+      "last_name": "Johnson",
+      "full_name": "Michael A. Johnson",
+      "linkedin_url": "https://www.linkedin.com/in/michael-johnson-5494"
+    },
+    "employment": {
+      "official_filing_title": "Chief Executive Officer (CEO)",
+      "standardized_title": "Chief Executive Officer (CEO)",
+      "seniority_level": "C_SUITE",
+      "department": "EXECUTIVE",
+      "is_current": true
+    },
+    "tenure_and_history": {
+      "joined_date": "2022-01-10",
+      "appointment_source": "SEC_8K_ITEM_502",
+      "source_document_url": "https://www.sec.gov/Archives/edgar/data/0001894521/000189452122000012/form8k.htm",
+      "years_at_company": 4.7,
+      "career_history": [
+        {
+          "company_name": "Digital Dynamics Corp",
+          "role": "Chief Operating Officer",
+          "start_date": "2016-10-02",
+          "end_date": "2021-10-01",
+          "is_current": false
+        },
+        {
+          "company_name": "InnovateTech Partners",
+          "role": "President",
+          "start_date": "2017-08-28",
+          "end_date": "2021-08-27",
+          "is_current": false
+        },
+        {
+          "company_name": "NIAGARA UNIVERSITY",
+          "role": "Chief Executive Officer (CEO)",
+          "start_date": "2022-01-10",
+          "end_date": null,
+          "is_current": true
+        }
+      ]
+    },
+    "contact": {
+      "work_email": "michael.johnson@niagarauniversity.com",
+      "email_pattern": "{first}.{last}@{domain}",
+      "email_verification": {
+        "status": "VERIFIED",
+        "total_confidence_score": 95,
+        "score_breakdown": {
+          "syntax_check": {
+            "weight": 20,
+            "awarded": 20,
+            "status": "PASSED_RFC_5322"
+          },
+          "mx_record_check": {
+            "weight": 20,
+            "awarded": 20,
+            "status": "PASSED_ROUTABLE_MX",
+            "mx_provider": "Google Workspace"
+          },
+          "smtp_handshake": {
+            "weight": 30,
+            "awarded": 30,
+            "status": "PASSED_250_OK",
+            "raw_response": "250 2.1.5 Recipient michael.johnson@niagarauniversity.com OK"
+          },
+          "catch_all_analysis": {
+            "weight": 20,
+            "awarded": 20,
+            "is_catch_all": false,
+            "status": "STRICT_REJECTION_CONFIRMED"
+          },
+          "domain_reputation": {
+            "weight": 10,
+            "awarded": 10,
+            "status": "CLEAN_SPF_DMARC_NO_BLACKLIST"
+          }
+        },
+        "last_validated_at": "2026-09-18T05:31:02.874758+00:00"
+      },
+      "direct_phone": {
+        "phone_number": "+16859913644",
+        "extension": "542",
+        "phone_type": "DIRECT_DESK",
+        "carrier": "T-Mobile",
+        "is_active": true
+      }
+    },
+    "metadata": {
+      "extracted_at": "2026-09-18T05:31:02.874758+00:00",
+      "source_registry": "SEC",
+      "compliance_flags": {
+        "is_business_contact": true,
+        "opt_out_requested": false
+      }
+    }
+  },
+  {
+    "person_id": "per_1040e58dc68d1b87f39966022de504da",
+    "company_id": "us_9eef2ff7-82cf-51d3-8407-b43677edfcdf",
+    "identity": {
+      "first_name": "James",
+      "middle_name": "A",
+      "last_name": "Wilson",
+      "full_name": "James A. Wilson",
+      "linkedin_url": "https://www.linkedin.com/in/james-wilson-7792"
+    },
+    "employment": {
+      "official_filing_title": "Chief Financial Officer (CFO)",
+      "standardized_title": "Chief Financial Officer (CFO)",
+      "seniority_level": "C_SUITE",
+      "department": "FINANCE",
+      "is_current": true
+    },
+    "tenure_and_history": {
+      "joined_date": "2024-07-23",
+      "appointment_source": "SEC_8K_ITEM_502",
+      "source_document_url": "https://www.sec.gov/Archives/edgar/data/0001894521/000189452122000012/form8k.htm",
+      "years_at_company": 2.2,
+      "career_history": [
+        {
+          "company_name": "Apex Automation Systems LLC",
+          "role": "Senior Financial Analyst",
+          "start_date": "2022-05-16",
+          "end_date": "2024-05-15",
+          "is_current": false
+        },
+        {
+          "company_name": "NIAGARA UNIVERSITY",
+          "role": "Chief Financial Officer (CFO)",
+          "start_date": "2024-07-23",
+          "end_date": null,
+          "is_current": true
+        }
+      ]
+    },
+    "contact": {
+      "work_email": "james.wilson@niagarauniversity.com",
+      "email_pattern": "{first}.{last}@{domain}",
+      "email_verification": {
+        "status": "VERIFIED",
+        "total_confidence_score": 95,
+        "score_breakdown": {
+          "syntax_check": {
+            "weight": 20,
+            "awarded": 20,
+            "status": "PASSED_RFC_5322"
+          },
+          "mx_record_check": {
+            "weight": 20,
+            "awarded": 20,
+            "status": "PASSED_ROUTABLE_MX",
+            "mx_provider": "Google Workspace"
+          },
+          "smtp_handshake": {
+            "weight": 30,
+            "awarded": 30,
+            "status": "PASSED_250_OK",
+            "raw_response": "250 2.1.5 Recipient james.wilson@niagarauniversity.com OK"
+          },
+          "catch_all_analysis": {
+            "weight": 20,
+            "awarded": 20,
+            "is_catch_all": false,
+            "status": "STRICT_REJECTION_CONFIRMED"
+          },
+          "domain_reputation": {
+            "weight": 10,
+            "awarded": 10,
+            "status": "CLEAN_SPF_DMARC_NO_BLACKLIST"
+          }
+        },
+        "last_validated_at": "2026-09-18T05:31:02.874758+00:00"
+      },
+      "direct_phone": {
+        "phone_number": "+13611082235",
+        "extension": "503",
+        "phone_type": "DIRECT_DESK",
+        "carrier": "AT&T",
+        "is_active": true
+      }
+    },
+    "metadata": {
+      "extracted_at": "2026-09-18T05:31:02.874758+00:00",
+      "source_registry": "SEC",
+      "compliance_flags": {
+        "is_business_contact": true,
+        "opt_out_requested": false
+      }
+    }
+  },
+  {
+    "person_id": "per_5d4fa49676988061de2852858156224b",
+    "company_id": "us_1a1740c9-78f8-517e-baf5-61cfabb4062a",
+    "identity": {
+      "first_name": "Robert",
+      "middle_name": "A",
+      "last_name": "Johnson",
+      "full_name": "Robert A. Johnson",
+      "linkedin_url": "https://www.linkedin.com/in/robert-johnson-1173"
+    },
+    "employment": {
+      "official_filing_title": "Chief Executive Officer (CEO)",
+      "standardized_title": "Chief Executive Officer (CEO)",
+      "seniority_level": "C_SUITE",
+      "department": "EXECUTIVE",
+      "is_current": true
+    },
+    "tenure_and_history": {
+      "joined_date": "2023-03-16",
+      "appointment_source": "SEC_8K_ITEM_502",
+      "source_document_url": "https://www.sec.gov/Archives/edgar/data/0001894521/000189452122000012/form8k.htm",
+      "years_at_company": 3.5,
+      "career_history": [
+        {
+          "company_name": "Apex Automation Systems LLC",
+          "role": "Managing Partner",
+          "start_date": "2020-11-22",
+          "end_date": "2022-11-22",
+          "is_current": false
+        },
+        {
+          "company_name": "UNIVERSITY OF MISSISSIPPI",
+          "role": "Chief Executive Officer (CEO)",
+          "start_date": "2023-03-16",
+          "end_date": null,
+          "is_current": true
+        }
+      ]
+    },
+    "contact": {
+      "work_email": "robert.johnson@universityofmississippi.com",
+      "email_pattern": "{first}.{last}@{domain}",
+      "email_verification": {
+        "status": "VERIFIED",
+        "total_confidence_score": 95,
+        "score_breakdown": {
+          "syntax_check": {
+            "weight": 20,
+            "awarded": 20,
+            "status": "PASSED_RFC_5322"
+          },
+          "mx_record_check": {
+            "weight": 20,
+            "awarded": 20,
+            "status": "PASSED_ROUTABLE_MX",
+            "mx_provider": "Google Workspace"
+          },
+          "smtp_handshake": {
+            "weight": 30,
+            "awarded": 30,
+            "status": "PASSED_250_OK",
+            "raw_response": "250 2.1.5 Recipient robert.johnson@universityofmississippi.com OK"
+          },
+          "catch_all_analysis": {
+            "weight": 20,
+            "awarded": 20,
+            "is_catch_all": false,
+            "status": "STRICT_REJECTION_CONFIRMED"
+          },
+          "domain_reputation": {
+            "weight": 10,
+            "awarded": 10,
+            "status": "CLEAN_SPF_DMARC_NO_BLACKLIST"
+          }
+        },
+        "last_validated_at": "2026-09-18T05:31:02.875763+00:00"
+      },
+      "direct_phone": {
+        "phone_number": "+16569807727",
+        "extension": "987",
+        "phone_type": "DIRECT_DESK",
+        "carrier": "Verizon Wireless",
+        "is_active": true
+      }
+    },
+    "metadata": {
+      "extracted_at": "2026-09-18T05:31:02.875763+00:00",
+      "source_registry": "SEC",
+      "compliance_flags": {
+        "is_business_contact": true,
+        "opt_out_requested": false
+      }
+    }
+  }
+]

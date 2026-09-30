@@ -1,0 +1,14 @@
+{
+  "combined_at": "2026-09-17T12:28:01.028055+00:00",
+  "duration_seconds": 0.0,
+  "total_api_companies": 17,
+  "total_scraped_companies": 25,
+  "total_api_people": 17,
+  "total_scraped_people": 19,
+  "cross_source_duplicates": 0,
+  "golden_company_profiles": 42,
+  "final_unique_companies": 42,
+  "final_unique_people": 36,
+  "average_quality_score": 81.0,
+  "review_queue_candidates": 0
+}

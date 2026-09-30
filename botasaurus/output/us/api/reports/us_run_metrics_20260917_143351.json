@@ -1,0 +1,22 @@
+{
+  "run_id": "us_20260917_085803",
+  "total_raw_ingested": 20920,
+  "total_after_dedup": 18431,
+  "total_valid_companies": 9937,
+  "total_exported_companies": 9937,
+  "total_decision_makers": 0,
+  "duplicate_records_removed": 2026,
+  "avg_quality_score": 59.584884774076684,
+  "elapsed_seconds": 347.03,
+  "sources_used": [
+    "SAM_GOV",
+    "SEC_EDGAR",
+    "PROPUBLICA_990",
+    "USASPENDING",
+    "OPENCORPORATES"
+  ],
+  "export_formats": [
+    "json"
+  ],
+  "status": "COMPLETE"
+}

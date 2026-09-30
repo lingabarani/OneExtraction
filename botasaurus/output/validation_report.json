@@ -1,120 +1,98 @@
 {
   "summary_metrics": {
-    "total_raw_records": 1018,
-    "valid_records": 1018,
-    "invalid_records": 0,
-    "duplicates": 41,
-    "merged_records": 977,
-    "total_decision_makers": 1009,
-    "c_suite_executives": 902,
-    "founders_and_owners": 106,
-    "hr_and_people_leads": 133,
-    "deliverable_work_emails": 1009,
-    "microsoft_365_outlook_domains": 0,
-    "google_workspace_domains": 0,
-    "records_in_review_queue": 28,
-    "records_per_source": {
-      "DENUE": 1000,
-      "SIEM": 3,
-      "DATOS_GOB": 0,
-      "SAT": 2,
-      "SUPPLIER_REGISTRY": 3,
-      "CANACINTRA": 2,
-      "AMCHAM": 2,
-      "COSMOS": 2,
-      "QUIMINET": 2,
-      "SECCION_AMARILLA": 2
-    },
-    "records_with_email": 977,
-    "records_with_phone": 977,
-    "records_with_website": 977,
-    "records_with_rfc": 975,
-    "records_with_coordinates": 964,
-    "average_quality_score": 96.97,
-    "total_duration_seconds": 4.08,
-    "timestamp": "2026-09-06T14:49:28.044668+00:00"
+    "total_raw_records": 23,
+    "valid_records": 21,
+    "merged_records": 21,
+    "total_decision_makers": 18,
+    "c_suite_executives": 16,
+    "average_quality_score": 63.67,
+    "total_duration_seconds": 0
   },
   "source_statuses": {
     "DENUE": {
       "status": "SUCCESS",
-      "records_ingested": 1000,
-      "invalid_records": 0,
-      "duration_seconds": 0.11,
-      "error": null,
-      "timestamp": "2026-09-06T14:49:24.075460+00:00"
+      "records_received": 3,
+      "companies": 3,
+      "people": 0,
+      "validation_passed": 3,
+      "validation_warnings": 0,
+      "validation_rejected": 0,
+      "duration_seconds": 0.0,
+      "error": null
     },
     "SIEM": {
       "status": "SUCCESS",
-      "records_ingested": 3,
-      "invalid_records": 0,
+      "records_received": 10,
+      "companies": 10,
+      "people": 10,
+      "validation_passed": 10,
+      "validation_warnings": 0,
+      "validation_rejected": 0,
       "duration_seconds": 0.0,
-      "error": null,
-      "timestamp": "2026-09-06T14:49:24.075460+00:00"
-    },
-    "DATOS_GOB": {
-      "status": "SUCCESS",
-      "records_ingested": 0,
-      "invalid_records": 0,
-      "duration_seconds": 3.85,
-      "error": null,
-      "timestamp": "2026-09-06T14:49:27.924908+00:00"
+      "error": null
     },
     "SAT": {
       "status": "SUCCESS",
-      "records_ingested": 2,
-      "invalid_records": 0,
-      "duration_seconds": 0.02,
-      "error": null,
-      "timestamp": "2026-09-06T14:49:27.947132+00:00"
-    },
-    "SUPPLIER_REGISTRY": {
-      "status": "SUCCESS",
-      "records_ingested": 3,
-      "invalid_records": 0,
+      "records_received": 10,
+      "companies": 10,
+      "people": 8,
+      "validation_passed": 10,
+      "validation_warnings": 0,
+      "validation_rejected": 0,
       "duration_seconds": 0.0,
-      "error": null,
-      "timestamp": "2026-09-06T14:49:27.951408+00:00"
-    },
-    "CANACINTRA": {
-      "status": "SUCCESS",
-      "records_ingested": 2,
-      "invalid_records": 0,
-      "duration_seconds": 0.0,
-      "error": null,
-      "timestamp": "2026-09-06T14:49:27.956279+00:00"
-    },
-    "AMCHAM": {
-      "status": "SUCCESS",
-      "records_ingested": 2,
-      "invalid_records": 0,
-      "duration_seconds": 0.0,
-      "error": null,
-      "timestamp": "2026-09-06T14:49:27.959406+00:00"
-    },
-    "COSMOS": {
-      "status": "SUCCESS",
-      "records_ingested": 2,
-      "invalid_records": 0,
-      "duration_seconds": 0.0,
-      "error": null,
-      "timestamp": "2026-09-06T14:49:27.959406+00:00"
-    },
-    "QUIMINET": {
-      "status": "SUCCESS",
-      "records_ingested": 2,
-      "invalid_records": 0,
-      "duration_seconds": 0.01,
-      "error": null,
-      "timestamp": "2026-09-06T14:49:27.967674+00:00"
-    },
-    "SECCION_AMARILLA": {
-      "status": "SUCCESS",
-      "records_ingested": 2,
-      "invalid_records": 0,
-      "duration_seconds": 0.01,
-      "error": null,
-      "timestamp": "2026-09-06T14:49:27.972865+00:00"
+      "error": null
     }
   },
-  "invalid_records_sample": []
+  "reports": {
+    "run_id": "api_20260917_122754",
+    "channel": "api",
+    "summary_metrics": {
+      "companies": 21,
+      "people": 18,
+      "records_received": 23,
+      "records_rejected": 0,
+      "records_with_warnings": 0,
+      "duplicates_resolved": 2,
+      "average_quality_score": 63.67,
+      "request_count": 3,
+      "successful_requests": 3,
+      "failed_requests": 0
+    },
+    "source_statuses": {
+      "DENUE": {
+        "status": "SUCCESS",
+        "records_received": 3,
+        "companies": 3,
+        "people": 0,
+        "validation_passed": 3,
+        "validation_warnings": 0,
+        "validation_rejected": 0,
+        "duration_seconds": 0.0,
+        "error": null
+      },
+      "SIEM": {
+        "status": "SUCCESS",
+        "records_received": 10,
+        "companies": 10,
+        "people": 10,
+        "validation_passed": 10,
+        "validation_warnings": 0,
+        "validation_rejected": 0,
+        "duration_seconds": 0.0,
+        "error": null
+      },
+      "SAT": {
+        "status": "SUCCESS",
+        "records_received": 10,
+        "companies": 10,
+        "people": 8,
+        "validation_passed": 10,
+        "validation_warnings": 0,
+        "validation_rejected": 0,
+        "duration_seconds": 0.0,
+        "error": null
+      }
+    },
+    "invalid_records_sample": []
+  }
 }

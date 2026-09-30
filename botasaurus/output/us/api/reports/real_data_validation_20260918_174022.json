@@ -1,0 +1,16 @@
+{
+  "timestamp": "2026-09-18T17:40:22.674543",
+  "validation_passed": true,
+  "total_errors": 0,
+  "total_warnings": 0,
+  "synthetic_detections": 0,
+  "stats": {
+    "total_records": 0,
+    "with_emails": 0,
+    "with_phone": 0,
+    "with_real_names": 0,
+    "synthetic_detections": 0
+  },
+  "errors": [],
+  "warnings": []
+}

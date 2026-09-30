@@ -1,82 +1,35 @@
 {
   "DENUE": {
     "status": "SUCCESS",
-    "records_ingested": 1000,
-    "invalid_records": 0,
-    "duration_seconds": 0.11,
-    "error": null,
-    "timestamp": "2026-09-06T14:49:24.075460+00:00"
+    "records_received": 3,
+    "companies": 3,
+    "people": 0,
+    "validation_passed": 3,
+    "validation_warnings": 0,
+    "validation_rejected": 0,
+    "duration_seconds": 0.0,
+    "error": null
   },
   "SIEM": {
     "status": "SUCCESS",
-    "records_ingested": 3,
-    "invalid_records": 0,
+    "records_received": 10,
+    "companies": 10,
+    "people": 10,
+    "validation_passed": 10,
+    "validation_warnings": 0,
+    "validation_rejected": 0,
     "duration_seconds": 0.0,
-    "error": null,
-    "timestamp": "2026-09-06T14:49:24.075460+00:00"
-  },
-  "DATOS_GOB": {
-    "status": "SUCCESS",
-    "records_ingested": 0,
-    "invalid_records": 0,
-    "duration_seconds": 3.85,
-    "error": null,
-    "timestamp": "2026-09-06T14:49:27.924908+00:00"
+    "error": null
   },
   "SAT": {
     "status": "SUCCESS",
-    "records_ingested": 2,
-    "invalid_records": 0,
-    "duration_seconds": 0.02,
-    "error": null,
-    "timestamp": "2026-09-06T14:49:27.947132+00:00"
-  },
-  "SUPPLIER_REGISTRY": {
-    "status": "SUCCESS",
-    "records_ingested": 3,
-    "invalid_records": 0,
+    "records_received": 10,
+    "companies": 10,
+    "people": 8,
+    "validation_passed": 10,
+    "validation_warnings": 0,
+    "validation_rejected": 0,
     "duration_seconds": 0.0,
-    "error": null,
-    "timestamp": "2026-09-06T14:49:27.951408+00:00"
-  },
-  "CANACINTRA": {
-    "status": "SUCCESS",
-    "records_ingested": 2,
-    "invalid_records": 0,
-    "duration_seconds": 0.0,
-    "error": null,
-    "timestamp": "2026-09-06T14:49:27.956279+00:00"
-  },
-  "AMCHAM": {
-    "status": "SUCCESS",
-    "records_ingested": 2,
-    "invalid_records": 0,
-    "duration_seconds": 0.0,
-    "error": null,
-    "timestamp": "2026-09-06T14:49:27.959406+00:00"
-  },
-  "COSMOS": {
-    "status": "SUCCESS",
-    "records_ingested": 2,
-    "invalid_records": 0,
-    "duration_seconds": 0.0,
-    "error": null,
-    "timestamp": "2026-09-06T14:49:27.959406+00:00"
-  },
-  "QUIMINET": {
-    "status": "SUCCESS",
-    "records_ingested": 2,
-    "invalid_records": 0,
-    "duration_seconds": 0.01,
-    "error": null,
-    "timestamp": "2026-09-06T14:49:27.967674+00:00"
-  },
-  "SECCION_AMARILLA": {
-    "status": "SUCCESS",
-    "records_ingested": 2,
-    "invalid_records": 0,
-    "duration_seconds": 0.01,
-    "error": null,
-    "timestamp": "2026-09-06T14:49:27.972865+00:00"
+    "error": null
   }
 }

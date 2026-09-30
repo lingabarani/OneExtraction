@@ -1,0 +1,77 @@
+{
+  "run_id": "api_20260917_122758",
+  "channel": "api",
+  "ingestion_method": "api",
+  "started_at": "2026-09-17T12:27:58.453921+00:00",
+  "completed_at": "2026-09-17T12:28:00.993109+00:00",
+  "duration_seconds": 2.54,
+  "sources": {
+    "DENUE": {
+      "status": "SUCCESS",
+      "records_received": 5,
+      "companies": 5,
+      "people": 5,
+      "validation_passed": 5,
+      "validation_warnings": 0,
+      "validation_rejected": 0,
+      "duration_seconds": 0.0,
+      "error": null
+    },
+    "SIEM": {
+      "status": "SUCCESS",
+      "records_received": 5,
+      "companies": 5,
+      "people": 5,
+      "validation_passed": 5,
+      "validation_warnings": 0,
+      "validation_rejected": 0,
+      "duration_seconds": 0.0,
+      "error": null
+    },
+    "DATOS_GOB": {
+      "status": "SUCCESS",
+      "records_received": 0,
+      "companies": 0,
+      "people": 0,
+      "validation_passed": 0,
+      "validation_warnings": 0,
+      "validation_rejected": 0,
+      "duration_seconds": 2.52,
+      "error": null
+    },
+    "SAT": {
+      "status": "SUCCESS",
+      "records_received": 5,
+      "companies": 5,
+      "people": 3,
+      "validation_passed": 5,
+      "validation_warnings": 0,
+      "validation_rejected": 0,
+      "duration_seconds": 0.0,
+      "error": null
+    },
+    "SUPPLIER_REGISTRY": {
+      "status": "SUCCESS",
+      "records_received": 5,
+      "companies": 5,
+      "people": 4,
+      "validation_passed": 5,
+      "validation_warnings": 0,
+      "validation_rejected": 0,
+      "duration_seconds": 0.0,
+      "error": null
+    }
+  },
+  "totals": {
+    "companies": 17,
+    "people": 17,
+    "records_received": 20,
+    "records_rejected": 0,
+    "records_with_warnings": 0,
+    "duplicates_resolved": 3,
+    "average_quality_score": 79.65,
+    "request_count": 5,
+    "successful_requests": 5,
+    "failed_requests": 0
+  }
+}

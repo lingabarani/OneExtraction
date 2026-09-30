@@ -1,0 +1,43 @@
+Traceback (most recent call last):
+  File "D:\Data Scraping Project POC\OneExtraction\botasaurus\botasaurus\request_decorator.py", line 111, in run_task
+    result = func(reqs, data)
+             ^^^^^^^^^^^^^^^^
+  File "D:\Data Scraping Project POC\OneExtraction\botasaurus\src\us_b2b\connectors\usaspending_client.py", line 38, in fetch_usaspending_awards_botasaurus
+    response = request.post(AWARD_SEARCH_URL, json=payload, headers=headers)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lingabarini M\AppData\Local\Programs\Python\Python312\Lib\site-packages\botasaurus_requests\request_class.py", line 192, in post
+    return reqs.post(url, **self._merge_kwargs(kwargs))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lingabarini M\AppData\Local\Programs\Python\Python312\Lib\site-packages\botasaurus_requests\reqs.py", line 380, in post
+    return retry_on_network_error(lambda: _post(url, *args, **add_redirects(kwargs, True)))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lingabarini M\AppData\Local\Programs\Python\Python312\Lib\site-packages\botasaurus_requests\reqs.py", line 348, in retry_on_network_error
+    raise e
+  File "C:\Users\Lingabarini M\AppData\Local\Programs\Python\Python312\Lib\site-packages\botasaurus_requests\reqs.py", line 341, in retry_on_network_error
+    return func()
+           ^^^^^^
+  File "C:\Users\Lingabarini M\AppData\Local\Programs\Python\Python312\Lib\site-packages\botasaurus_requests\reqs.py", line 380, in <lambda>
+    return retry_on_network_error(lambda: _post(url, *args, **add_redirects(kwargs, True)))
+                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lingabarini M\AppData\Local\Programs\Python\Python312\Lib\site-packages\botasaurus_requests\reqs.py", line 249, in request
+    req.send()
+  File "C:\Users\Lingabarini M\AppData\Local\Programs\Python\Python312\Lib\site-packages\botasaurus_requests\reqs.py", line 136, in send
+    raise e
+  File "C:\Users\Lingabarini M\AppData\Local\Programs\Python\Python312\Lib\site-packages\botasaurus_requests\reqs.py", line 133, in send
+    self.response = self.session.request(self.method, self.url, **merged_kwargs)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lingabarini M\AppData\Local\Programs\Python\Python312\Lib\site-packages\botasaurus_requests\session.py", line 192, in request
+    proc.send()
+  File "C:\Users\Lingabarini M\AppData\Local\Programs\Python\Python312\Lib\site-packages\botasaurus_requests\response.py", line 64, in send
+    self.response = self.execute_request()
+                    ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lingabarini M\AppData\Local\Programs\Python\Python312\Lib\site-packages\botasaurus_requests\response.py", line 69, in execute_request
+    resp = self.session.execute_request(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lingabarini M\AppData\Local\Programs\Python\Python312\Lib\site-packages\botasaurus_requests\client.py", line 482, in execute_request
+    request_payload, headers = self.build_request(method, url, headers, *args, **kwargs)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lingabarini M\AppData\Local\Programs\Python\Python312\Lib\site-packages\botasaurus_requests\client.py", line 332, in build_request
+    json = dumps(json).decode('utf-8')
+           ^^^^^^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'decode'. Did you mean: 'encode'?

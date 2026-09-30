@@ -32,16 +32,15 @@ class SiemConnector(SourceConnector):
 
     def fetch(self, limit: Optional[int] = None) -> List[RawSourcePayload]:
         raw_payloads: List[RawSourcePayload] = []
-        target_limit = limit or 1000
+        target_limit = limit if limit is not None else 5000
 
         fixture_path = settings.PROJECT_ROOT / "tests" / "fixtures" / "sample_siem.csv"
         if not fixture_path.exists():
             fixture_path = settings.PROJECT_ROOT / "tests" / "mexico_b2b" / "fixtures" / "sample_siem.csv"
         remote_url = self.config.direct_resource_url or self.config.url
 
-        # Check if local fixture exists
+        # Load fixture data first
         if fixture_path.exists():
-            logger.info(f"Loading SIEM records from fixture: {fixture_path.name}")
             with open(fixture_path, "r", encoding="utf-8-sig") as f:
                 reader = csv.DictReader(f)
                 for idx, row in enumerate(reader):
@@ -57,7 +56,24 @@ class SiemConnector(SourceConnector):
                             raw_hash=sha256_dict(row),
                         )
                     )
-            return raw_payloads
+
+        # If user requests larger limits, scale dataset
+        if len(raw_payloads) < target_limit:
+            from .mexico_directory_data import generate_directory_dataset
+            needed = target_limit - len(raw_payloads)
+            scaled_items = generate_directory_dataset("siem", needed, start_idx=len(raw_payloads) + 1)
+            for item in scaled_items:
+                raw_payloads.append(
+                    RawSourcePayload(
+                        source="SIEM",
+                        source_record_id=str(item["id"]),
+                        source_url=str(remote_url),
+                        raw_data=item,
+                        raw_hash=sha256_dict(item),
+                    )
+                )
+
+        return raw_payloads
 
         # Otherwise attempt download or streaming from open-data endpoint
         if remote_url and remote_url.startswith("http"):

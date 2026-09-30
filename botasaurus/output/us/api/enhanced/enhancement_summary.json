@@ -1,0 +1,13 @@
+[
+  {
+    "enhancement_date": "2026-09-18T05:31:02.900964+00:00",
+    "total_enhanced_executives": 200,
+    "companies_with_enhanced_executives": 100,
+    "executive_roles": {
+      "CEO": 100,
+      "CFO": 100,
+      "CTO": 0,
+      "CMO": 0
+    }
+  }
+]

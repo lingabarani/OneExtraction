@@ -1,0 +1,19 @@
+Traceback (most recent call last):
+  File "C:\Users\Lingabarini M\AppData\Local\Programs\Python\Python312\Lib\site-packages\botasaurus\request_decorator.py", line 111, in run_task
+    result = func(reqs, data)
+             ^^^^^^^^^^^^^^^^
+  File "D:\Data Scraping Project POC\OneExtraction\botasaurus\src\us_b2b\connectors\fcc_uls_client.py", line 34, in fetch_fcc_licenses_botasaurus
+    return response.json()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Lingabarini M\AppData\Local\Programs\Python\Python312\Lib\site-packages\botasaurus_requests\response.py", line 183, in json
+    return loads(self.content, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lingabarini M\AppData\Local\Programs\Python\Python312\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lingabarini M\AppData\Local\Programs\Python\Python312\Lib\json\decoder.py", line 338, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lingabarini M\AppData\Local\Programs\Python\Python312\Lib\json\decoder.py", line 356, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)

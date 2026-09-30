@@ -114,6 +114,86 @@ class CanonicalCompany:
         }
         return d
 
+    def to_channel_dict(
+        self,
+        ingestion_method: str = "api",
+        record_index: int = 1,
+        validation_flags: Optional[Dict[str, bool]] = None,
+        include_personal_contacts: bool = True,
+    ) -> Dict[str, Any]:
+        """
+        Converts model to exact channel-specific specification JSON
+        (output/api/companies/api_companies.json or output/scraping/companies/scraped_companies.json).
+        """
+        prefix = "API-COMP" if ingestion_method == "api" else "SCRP-COMP"
+        record_id = f"{prefix}-{record_index:06d}"
+        
+        primary_source = self.source_records[0].source if self.source_records else ("DENUE" if ingestion_method == "api" else "CANACINTRA")
+        source_type = "official_api" if ingestion_method == "api" else "public_directory"
+        source_record_id = self.source_records[0].source_record_id if self.source_records else None
+        source_url = self.source_records[0].source_url if self.source_records else (self.website or None)
+
+        addr_dict = self.address.to_dict() if isinstance(self.address, Address) else (self.address or {})
+        
+        # Build employee range string if available
+        emp_range = None
+        if self.employee_count_min is not None and self.employee_count_max is not None:
+            emp_range = f"{self.employee_count_min}-{self.employee_count_max}"
+        elif self.employee_count_min is not None:
+            emp_range = f"{self.employee_count_min}+"
+        elif self.employee_count_source:
+            emp_range = str(self.employee_count_source)
+
+        val_flags = validation_flags or {
+            "name_valid": bool(self.legal_name or self.trade_name),
+            "rfc_valid": bool(self.rfc),
+            "phone_valid": bool(self.phone),
+            "postal_code_valid": bool(addr_dict.get("postal_code")),
+            "domain_valid": bool(self.domain and "." in str(self.domain)),
+            "email_syntax_valid": bool(self.email and "@" in str(self.email)),
+            "dns_mx_valid": bool(self.domain and "." in str(self.domain)),
+        }
+
+        d = {
+            "record_id": record_id,
+            "data_type": "company",
+            "ingestion_method": ingestion_method,
+            "source": primary_source,
+            "source_type": source_type,
+            "source_record_id": source_record_id,
+            "legal_name": self.legal_name,
+            "trade_name": self.trade_name,
+            "rfc": self.rfc,
+            "industry": self.industry,
+        }
+
+        if ingestion_method == "api":
+            d["scian_code"] = self.industry_code
+            d["employee_range"] = emp_range
+        else:
+            d["source_url"] = source_url
+
+        d.update({
+            "website": self.website,
+            "domain": self.domain,
+            "phone": self.phone if include_personal_contacts else None,
+            "email": self.email if include_personal_contacts else None,
+            "address": {
+                "street": addr_dict.get("street"),
+                "municipality": addr_dict.get("municipality"),
+                "state": addr_dict.get("state"),
+                "postal_code": addr_dict.get("postal_code"),
+                "country": addr_dict.get("country", "Mexico"),
+            },
+            "latitude": self.latitude,
+            "longitude": self.longitude,
+            "validation": val_flags,
+            "quality_score": self.data_quality_score,
+            "collected_at": self.created_at,
+            "processed_at": self.updated_at,
+        })
+        return d
+
     def to_flat_dict(self, include_personal_contacts: bool = True) -> Dict[str, Any]:
         """Flattened dictionary for CSV and Excel tabular export."""
         addr = self.address if isinstance(self.address, Address) else Address(**(self.address or {}))

@@ -1,0 +1,23 @@
+{
+  "run_id": "us_20260917_124820",
+  "total_raw_ingested": 1720,
+  "total_after_dedup": 1458,
+  "total_valid_companies": 704,
+  "total_exported_companies": 60,
+  "total_decision_makers": 120,
+  "duplicate_records_removed": 0,
+  "avg_quality_score": 58.25,
+  "elapsed_seconds": 35.52,
+  "sources_used": [
+    "CMS_NPI",
+    "SEC_EDGAR",
+    "PROPUBLICA_990",
+    "SAM_GOV",
+    "USASPENDING",
+    "FCC_ULS"
+  ],
+  "export_formats": [
+    "json"
+  ],
+  "status": "COMPLETE"
+}

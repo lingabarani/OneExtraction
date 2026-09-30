@@ -1,0 +1,237 @@
+2026-09-17 13:05:03 INFO Starting ProPublica 990 ingestion
+2026-09-17 13:05:05 INFO ProPublica query='university' count=50
+2026-09-17 13:05:06 INFO ProPublica query='hospital' count=50
+2026-09-17 13:05:08 INFO ProPublica query='foundation' count=50
+2026-09-17 13:05:09 INFO ProPublica query='healthcare' count=50
+2026-09-17 13:05:11 INFO ProPublica query='research' count=50
+2026-09-17 13:05:12 INFO ProPublica query='community' count=50
+2026-09-17 13:05:14 INFO ProPublica query='services' count=50
+2026-09-17 13:05:15 INFO ProPublica query='technology' count=50
+2026-09-17 13:05:17 INFO ProPublica query='education' count=50
+2026-09-17 13:05:18 INFO ProPublica query='housing' count=50
+2026-09-17 13:05:18 INFO ProPublica 990 ingestion complete total=500
+2026-09-17 14:17:50 INFO Starting ProPublica 990 ingestion
+2026-09-17 14:17:51 INFO ProPublica query='university' count=50
+2026-09-17 14:17:52 INFO ProPublica query='hospital' count=50
+2026-09-17 14:17:52 INFO ProPublica query='foundation' count=50
+2026-09-17 14:17:53 INFO ProPublica query='healthcare' count=50
+2026-09-17 14:17:54 INFO ProPublica query='research' count=50
+2026-09-17 14:17:55 INFO ProPublica query='community' count=50
+2026-09-17 14:17:56 INFO ProPublica query='services' count=50
+2026-09-17 14:17:57 INFO ProPublica query='technology' count=50
+2026-09-17 14:17:58 INFO ProPublica query='education' count=50
+2026-09-17 14:17:59 INFO ProPublica query='housing' count=50
+2026-09-17 14:17:59 INFO ProPublica 990 ingestion complete total=500
+2026-09-17 14:25:12 INFO Starting ProPublica 990 ingestion
+2026-09-17 14:25:17 INFO ProPublica query='university' count=166
+2026-09-17 14:25:22 INFO ProPublica query='hospital' count=166
+2026-09-17 14:25:26 INFO ProPublica query='foundation' count=166
+2026-09-17 14:25:31 INFO ProPublica query='healthcare' count=166
+2026-09-17 14:25:36 INFO ProPublica query='research' count=166
+2026-09-17 14:25:41 INFO ProPublica query='community' count=166
+2026-09-17 14:25:46 INFO ProPublica query='services' count=166
+2026-09-17 14:25:51 INFO ProPublica query='technology' count=166
+2026-09-17 14:25:56 INFO ProPublica query='education' count=166
+2026-09-17 14:26:01 INFO ProPublica query='housing' count=166
+2026-09-17 14:26:01 INFO ProPublica 990 ingestion complete total=1660
+2026-09-17 14:26:30 INFO Starting ProPublica 990 ingestion
+2026-09-17 14:26:31 INFO ProPublica query='university' count=50
+2026-09-17 14:26:31 INFO ProPublica query='hospital' count=50
+2026-09-17 14:26:32 INFO ProPublica query='foundation' count=50
+2026-09-17 14:26:33 INFO ProPublica query='healthcare' count=50
+2026-09-17 14:26:34 INFO ProPublica query='research' count=50
+2026-09-17 14:26:35 INFO ProPublica query='community' count=50
+2026-09-17 14:26:36 INFO ProPublica query='services' count=50
+2026-09-17 14:26:37 INFO ProPublica query='technology' count=50
+2026-09-17 14:26:39 INFO ProPublica query='education' count=50
+2026-09-17 14:26:40 INFO ProPublica query='housing' count=50
+2026-09-17 14:26:40 INFO ProPublica 990 ingestion complete total=500
+2026-09-17 14:27:20 INFO Starting ProPublica 990 ingestion
+2026-09-17 14:27:21 INFO ProPublica query='university' count=50
+2026-09-17 14:27:22 INFO ProPublica query='hospital' count=50
+2026-09-17 14:27:23 INFO ProPublica query='foundation' count=50
+2026-09-17 14:27:24 INFO ProPublica query='healthcare' count=50
+2026-09-17 14:27:25 INFO ProPublica query='research' count=50
+2026-09-17 14:27:25 INFO ProPublica query='community' count=50
+2026-09-17 14:27:26 INFO ProPublica query='services' count=50
+2026-09-17 14:27:27 INFO ProPublica query='technology' count=50
+2026-09-17 14:27:28 INFO ProPublica query='education' count=50
+2026-09-17 14:27:29 INFO ProPublica query='housing' count=50
+2026-09-17 14:27:29 INFO ProPublica 990 ingestion complete total=500
+2026-09-17 14:28:19 INFO Starting ProPublica 990 ingestion
+2026-09-17 14:28:50 INFO ProPublica query='university' count=1000
+2026-09-17 14:29:18 INFO ProPublica query='hospital' count=1000
+2026-09-17 14:29:47 INFO ProPublica query='foundation' count=1000
+2026-09-17 14:30:18 INFO ProPublica query='healthcare' count=1000
+2026-09-17 14:30:47 INFO ProPublica query='research' count=1000
+2026-09-17 14:31:19 INFO ProPublica query='community' count=1000
+2026-09-17 14:31:49 INFO ProPublica query='services' count=1000
+2026-09-17 14:32:18 INFO ProPublica query='technology' count=1000
+2026-09-17 14:32:45 INFO ProPublica query='education' count=1000
+2026-09-17 14:33:13 INFO ProPublica query='housing' count=1000
+2026-09-17 14:33:13 INFO ProPublica 990 ingestion complete total=10000
+2026-09-17 14:36:38 INFO Starting ProPublica 990 ingestion
+2026-09-17 14:36:39 INFO ProPublica query='university' count=50
+2026-09-17 14:36:40 INFO ProPublica query='hospital' count=50
+2026-09-17 14:36:41 INFO ProPublica query='foundation' count=50
+2026-09-17 14:36:42 INFO ProPublica query='healthcare' count=50
+2026-09-17 14:36:43 INFO ProPublica query='research' count=50
+2026-09-17 14:36:44 INFO ProPublica query='community' count=50
+2026-09-17 14:36:44 INFO ProPublica query='services' count=50
+2026-09-17 14:36:45 INFO ProPublica query='technology' count=50
+2026-09-17 14:36:46 INFO ProPublica query='education' count=50
+2026-09-17 14:36:47 INFO ProPublica query='housing' count=50
+2026-09-17 14:36:47 INFO ProPublica 990 ingestion complete total=500
+2026-09-17 18:12:15 INFO Starting ProPublica 990 ingestion
+2026-09-17 18:12:16 INFO ProPublica query='university' count=50
+2026-09-17 18:12:16 INFO ProPublica query='hospital' count=50
+2026-09-17 18:12:17 INFO ProPublica query='foundation' count=50
+2026-09-17 18:12:18 INFO ProPublica query='healthcare' count=50
+2026-09-17 18:12:19 INFO ProPublica query='research' count=50
+2026-09-17 18:12:20 INFO ProPublica query='community' count=50
+2026-09-17 18:12:20 INFO ProPublica query='services' count=50
+2026-09-17 18:12:21 INFO ProPublica query='technology' count=50
+2026-09-17 18:12:22 INFO ProPublica query='education' count=50
+2026-09-17 18:12:23 INFO ProPublica query='housing' count=50
+2026-09-17 18:12:23 INFO ProPublica 990 ingestion complete total=500
+2026-09-17 18:18:34 INFO Starting ProPublica 990 ingestion
+2026-09-17 18:18:35 INFO ProPublica query='university' count=50
+2026-09-17 18:18:36 INFO ProPublica query='hospital' count=50
+2026-09-17 18:18:37 INFO ProPublica query='foundation' count=50
+2026-09-17 18:18:37 INFO ProPublica query='healthcare' count=50
+2026-09-17 18:18:38 INFO ProPublica query='research' count=50
+2026-09-17 18:18:39 INFO ProPublica query='community' count=50
+2026-09-17 18:18:40 INFO ProPublica query='services' count=50
+2026-09-17 18:18:40 INFO ProPublica query='technology' count=50
+2026-09-17 18:18:41 INFO ProPublica query='education' count=50
+2026-09-17 18:18:42 INFO ProPublica query='housing' count=50
+2026-09-17 18:18:42 INFO ProPublica 990 ingestion complete total=500
+2026-09-17 18:21:05 INFO Starting ProPublica 990 ingestion
+2026-09-17 18:24:50 INFO ProPublica query='university' count=7142
+2026-09-17 18:27:53 INFO ProPublica query='hospital' count=6118
+2026-09-17 18:30:56 INFO ProPublica query='foundation' count=7142
+2026-09-17 18:32:36 INFO ProPublica query='healthcare' count=3195
+2026-09-17 18:36:14 INFO ProPublica query='research' count=7142
+2026-09-17 18:40:08 INFO ProPublica query='community' count=7142
+2026-09-17 18:44:04 INFO ProPublica query='services' count=7142
+2026-09-17 18:45:11 INFO ProPublica query='technology' count=2678
+2026-09-18 10:07:32 INFO Starting ProPublica 990 ingestion
+2026-09-18 10:07:34 INFO ProPublica query='university' count=50
+2026-09-18 10:07:37 INFO ProPublica query='hospital' count=50
+2026-09-18 10:07:38 INFO ProPublica query='foundation' count=50
+2026-09-18 10:07:39 INFO ProPublica query='healthcare' count=50
+2026-09-18 10:07:40 INFO ProPublica query='research' count=50
+2026-09-18 10:07:41 INFO ProPublica query='community' count=50
+2026-09-18 10:07:41 INFO ProPublica query='services' count=50
+2026-09-18 10:07:42 INFO ProPublica query='technology' count=50
+2026-09-18 10:07:43 INFO ProPublica query='education' count=50
+2026-09-18 10:07:44 INFO ProPublica query='housing' count=50
+2026-09-18 10:07:44 INFO ProPublica 990 ingestion complete total=500
+2026-09-18 10:25:11 INFO Starting ProPublica 990 ingestion
+2026-09-18 10:27:31 INFO ProPublica query='university' count=6250
+2026-09-18 10:29:52 INFO ProPublica query='hospital' count=6118
+2026-09-18 10:32:02 INFO ProPublica query='foundation' count=6250
+2026-09-18 10:33:13 INFO ProPublica query='healthcare' count=3195
+2026-09-18 10:35:25 INFO ProPublica query='research' count=6250
+2026-09-18 10:37:40 INFO ProPublica query='community' count=6250
+2026-09-18 10:39:48 INFO ProPublica query='services' count=6250
+2026-09-18 10:40:39 INFO ProPublica query='technology' count=2678
+2026-09-18 10:43:46 INFO Starting ProPublica 990 ingestion
+2026-09-18 10:43:48 INFO ProPublica query='university' count=125
+2026-09-18 10:43:51 INFO ProPublica query='hospital' count=125
+2026-09-18 10:43:54 INFO ProPublica query='foundation' count=125
+2026-09-18 10:43:56 INFO ProPublica query='healthcare' count=125
+2026-09-18 10:43:58 INFO ProPublica query='research' count=125
+2026-09-18 10:44:02 INFO ProPublica query='community' count=125
+2026-09-18 10:44:04 INFO ProPublica query='services' count=125
+2026-09-18 10:44:10 INFO ProPublica query='technology' count=125
+2026-09-18 10:44:12 INFO ProPublica query='education' count=125
+2026-09-18 10:44:14 INFO ProPublica query='housing' count=125
+2026-09-18 10:44:14 INFO ProPublica 990 ingestion complete total=1250
+2026-09-18 10:44:28 INFO ProPublica query='education' count=6250
+2026-09-18 10:48:28 INFO ProPublica query='housing' count=6250
+2026-09-18 10:48:28 INFO ProPublica 990 ingestion complete total=55741
+2026-09-18 11:13:43 INFO Starting ProPublica 990 ingestion
+2026-09-18 11:13:45 INFO ProPublica query='university' count=62
+2026-09-18 11:13:46 INFO ProPublica query='hospital' count=62
+2026-09-18 11:13:48 INFO ProPublica query='foundation' count=62
+2026-09-18 11:13:50 INFO ProPublica query='healthcare' count=62
+2026-09-18 11:13:51 INFO ProPublica query='research' count=62
+2026-09-18 11:13:53 INFO ProPublica query='community' count=62
+2026-09-18 11:13:57 INFO ProPublica query='services' count=62
+2026-09-18 11:13:59 INFO ProPublica query='technology' count=62
+2026-09-18 11:14:00 INFO ProPublica query='education' count=62
+2026-09-18 11:14:02 INFO ProPublica query='housing' count=62
+2026-09-18 11:14:02 INFO ProPublica 990 ingestion complete total=620
+2026-09-18 11:22:06 INFO Starting ProPublica 990 ingestion
+2026-09-18 11:22:07 INFO ProPublica query='university' count=50
+2026-09-18 11:22:08 INFO ProPublica query='hospital' count=50
+2026-09-18 11:22:08 INFO ProPublica query='foundation' count=50
+2026-09-18 11:22:09 INFO ProPublica query='healthcare' count=50
+2026-09-18 11:22:10 INFO ProPublica query='research' count=50
+2026-09-18 11:22:11 INFO ProPublica query='community' count=50
+2026-09-18 11:22:11 INFO ProPublica query='services' count=50
+2026-09-18 11:22:12 INFO ProPublica query='technology' count=50
+2026-09-18 11:22:13 INFO ProPublica query='education' count=50
+2026-09-18 11:22:14 INFO ProPublica query='housing' count=50
+2026-09-18 11:22:14 INFO ProPublica 990 ingestion complete total=500
+2026-09-18 13:25:27 INFO Starting ProPublica 990 ingestion
+2026-09-18 13:25:33 INFO ProPublica query='university' count=250
+2026-09-18 13:25:38 INFO ProPublica query='hospital' count=250
+2026-09-18 13:25:42 INFO ProPublica query='foundation' count=250
+2026-09-18 13:25:46 INFO ProPublica query='healthcare' count=250
+2026-09-18 13:25:55 INFO ProPublica query='research' count=250
+2026-09-18 13:26:00 INFO ProPublica query='community' count=250
+2026-09-18 13:26:05 INFO ProPublica query='services' count=250
+2026-09-18 13:26:11 INFO ProPublica query='technology' count=250
+2026-09-18 13:26:20 INFO ProPublica query='education' count=250
+2026-09-18 13:26:25 INFO ProPublica query='housing' count=250
+2026-09-18 13:26:25 INFO ProPublica 990 ingestion complete total=2500
+2026-09-18 15:14:12 INFO Starting ProPublica 990 ingestion
+2026-09-18 15:14:13 INFO ProPublica query='university' count=50
+2026-09-18 15:14:14 INFO ProPublica query='hospital' count=50
+2026-09-18 15:14:15 INFO ProPublica query='foundation' count=50
+2026-09-18 15:14:15 INFO ProPublica query='healthcare' count=50
+2026-09-18 15:14:16 INFO ProPublica query='research' count=50
+2026-09-18 15:14:17 INFO ProPublica query='community' count=50
+2026-09-18 15:14:18 INFO ProPublica query='services' count=50
+2026-09-18 15:14:19 INFO ProPublica query='technology' count=50
+2026-09-18 15:14:19 INFO ProPublica query='education' count=50
+2026-09-18 15:14:23 INFO ProPublica query='housing' count=50
+2026-09-18 15:14:23 INFO ProPublica 990 ingestion complete total=500
+2026-09-18 15:49:40 INFO Starting ProPublica 990 ingestion
+2026-09-18 15:49:41 INFO ProPublica query='university' count=50
+2026-09-18 15:49:42 INFO ProPublica query='hospital' count=50
+2026-09-18 15:49:43 INFO ProPublica query='foundation' count=50
+2026-09-18 15:49:43 INFO ProPublica query='healthcare' count=50
+2026-09-18 15:49:44 INFO ProPublica query='research' count=50
+2026-09-18 15:49:45 INFO ProPublica query='community' count=50
+2026-09-18 15:49:46 INFO ProPublica query='services' count=50
+2026-09-18 15:49:46 INFO ProPublica query='technology' count=50
+2026-09-18 15:49:47 INFO ProPublica query='education' count=50
+2026-09-18 15:49:51 INFO ProPublica query='housing' count=50
+2026-09-18 15:49:51 INFO ProPublica 990 ingestion complete total=500
+2026-09-18 17:37:13 INFO Starting ProPublica 990 ingestion
+2026-09-18 17:37:16 INFO ProPublica query='university' count=83
+2026-09-18 17:37:17 INFO ProPublica query='hospital' count=83
+2026-09-18 17:37:22 INFO ProPublica query='foundation' count=83
+2026-09-18 17:37:24 INFO ProPublica query='healthcare' count=83
+2026-09-18 17:37:25 INFO ProPublica query='research' count=83
+2026-09-18 17:37:27 INFO ProPublica query='community' count=83
+2026-09-18 17:37:28 INFO ProPublica query='services' count=83
+2026-09-18 17:37:30 INFO ProPublica query='technology' count=83
+2026-09-18 17:37:32 INFO ProPublica query='education' count=83
+2026-09-18 17:37:33 INFO ProPublica query='housing' count=83
+2026-09-18 17:37:33 INFO ProPublica 990 ingestion complete total=830
+2026-09-18 17:52:42 INFO Starting ProPublica 990 ingestion
+2026-09-18 17:52:43 INFO ProPublica query='university' count=50
+2026-09-18 17:52:44 INFO ProPublica query='hospital' count=50
+2026-09-18 17:52:45 INFO ProPublica query='foundation' count=50
+2026-09-18 17:52:46 INFO ProPublica query='healthcare' count=50
+2026-09-18 17:52:47 INFO ProPublica query='research' count=50
+2026-09-18 17:52:47 INFO ProPublica query='community' count=50
+2026-09-18 17:52:51 INFO ProPublica query='services' count=50
+2026-09-18 17:52:52 INFO ProPublica query='technology' count=50
+2026-09-18 17:52:53 INFO ProPublica query='education' count=50
+2026-09-18 17:52:54 INFO ProPublica query='housing' count=50
+2026-09-18 17:52:54 INFO ProPublica 990 ingestion complete total=500

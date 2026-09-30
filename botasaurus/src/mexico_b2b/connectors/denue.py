@@ -53,7 +53,7 @@ class DenueConnector(SourceConnector):
         If no bulk file and API fails, falls back to local sample fixture.
         """
         raw_payloads: List[RawSourcePayload] = []
-        target_limit = limit or 50
+        target_limit = limit if limit is not None else 10_000_000
 
         # 1. Check for raw bulk CSV files in data/raw/denue/ or data/raw/
         raw_denue_dir = settings.RAW_DATA_DIR / "denue"
@@ -63,24 +63,29 @@ class DenueConnector(SourceConnector):
         raw_candidates.extend(list(settings.RAW_DATA_DIR.glob("*denue*.csv")))
         raw_candidates.extend(list(settings.RAW_DATA_DIR.glob("*bulk*.csv")))
 
+        # Sort by file size descending so the full dataset (e.g. 13.6MB 30k+ records) is read first
+        raw_candidates = sorted(list(set(raw_candidates)), key=lambda p: p.stat().st_size, reverse=True)
+
         if raw_candidates:
-            bulk_csv_path = raw_candidates[0]
-            logger.info(f"Streaming DENUE records from bulk file: {bulk_csv_path.name}", limit=target_limit)
-            with open(bulk_csv_path, "r", encoding="utf-8-sig", errors="ignore") as f:
-                reader = csv.DictReader(f)
-                for idx, row in enumerate(reader):
-                    if len(raw_payloads) >= target_limit:
-                        break
-                    row_id = str(row.get("clee") or row.get("id") or row.get("Id") or f"denue_{idx+1}")
-                    raw_payloads.append(
-                        RawSourcePayload(
-                            source="DENUE",
-                            source_record_id=row_id,
-                            source_url=f"file://{bulk_csv_path.name}",
-                            raw_data=dict(row),
-                            raw_hash=sha256_dict(row),
+            for bulk_csv_path in raw_candidates:
+                if len(raw_payloads) >= target_limit:
+                    break
+                logger.info(f"Streaming DENUE records from bulk file: {bulk_csv_path.name}", limit=target_limit, current_count=len(raw_payloads))
+                with open(bulk_csv_path, "r", encoding="utf-8-sig", errors="ignore") as f:
+                    reader = csv.DictReader(f)
+                    for idx, row in enumerate(reader):
+                        if len(raw_payloads) >= target_limit:
+                            break
+                        row_id = str(row.get("clee") or row.get("id") or row.get("Id") or f"denue_{idx+1}")
+                        raw_payloads.append(
+                            RawSourcePayload(
+                                source="DENUE",
+                                source_record_id=row_id,
+                                source_url=f"file://{bulk_csv_path.name}",
+                                raw_data=dict(row),
+                                raw_hash=sha256_dict(row),
+                            )
                         )
-                    )
             return raw_payloads
 
         # 2. Check if local test fixture exists and limit is small (e.g. unit tests)

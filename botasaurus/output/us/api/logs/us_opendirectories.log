@@ -1,0 +1,10 @@
+2026-09-17 17:41:35 INFO Starting OpenDirectories ingestion
+2026-09-17 18:12:40 INFO Starting OpenDirectories ingestion
+2026-09-18 10:08:51 INFO Starting OpenDirectories ingestion
+2026-09-18 10:49:28 INFO Starting OpenDirectories ingestion
+2026-09-18 11:15:14 INFO Starting OpenDirectories ingestion
+2026-09-18 16:17:59 INFO OpenDirectories directory=us-healthcare count=0
+2026-09-18 16:17:59 INFO OpenDirectories directory=us-nonprofits count=0
+2026-09-18 16:17:59 INFO OpenDirectories directory=us-carriers count=0
+2026-09-18 16:17:59 INFO OpenDirectories directory=us-schools count=0
+2026-09-18 16:17:59 INFO OpenDirectories ingestion complete total=0

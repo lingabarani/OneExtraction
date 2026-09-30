@@ -31,24 +31,38 @@ from mexico_b2b.config.settings import settings
 from mexico_b2b.pipeline.ingestion import pipeline
 
 MEXICAN_STATES = [
-    ("09", "Ciudad de México", ["Cuauhtémoc", "Miguel Hidalgo", "Benito Juárez", "Álvaro Obregón", "Azcapotzalco", "Iztapalapa", "Coyoacán"]),
-    ("15", "Estado de México", ["Naucalpan", "Tlalnepantla", "Toluca", "Ecatepec", "Cuautitlán Izcalli", "Huixquilucan"]),
-    ("14", "Jalisco", ["Guadalajara", "Zapopan", "Tlaquepaque", "Tonalá", "Tlajomulco de Zúñiga", "Puerto Vallarta"]),
-    ("19", "Nuevo León", ["Monterrey", "San Pedro Garza García", "San Nicolás de los Garza", "Apodaca", "Guadalupe", "Santa Catarina"]),
-    ("11", "Guanajuato", ["León", "Irapuato", "Celaya", "Salamanca", "Silao"]),
-    ("21", "Puebla", ["Puebla", "San Andrés Cholula", "Tehuacán", "San Pedro Cholula"]),
-    ("22", "Querétaro", ["Querétaro", "San Juan del Río", "El Marqués", "Corregidora"]),
-    ("02", "Baja California", ["Tijuana", "Mexicali", "Ensenada", "Tecate"]),
-    ("05", "Coahuila", ["Saltillo", "Torreón", "Ramos Arizpe", "Monclova"]),
-    ("24", "San Luis Potosí", ["San Luis Potosí", "Soledad de Graciano Sánchez", "Matehuala"]),
-    ("17", "Morelos", ["Cuernavaca", "Jiutepec", "Cuautla", "Temixco"]),
-    ("26", "Sonora", ["Hermosillo", "Ciudad Obregón", "Nogales", "Guaymas"]),
-    ("31", "Yucatán", ["Mérida", "Progreso", "Valladolid", "Kanasín"]),
-    ("30", "Veracruz", ["Veracruz", "Boca del Río", "Xalapa", "Coatzacoalcos", "Córdoba"]),
-    ("01", "Aguascalientes", ["Aguascalientes", "Jesús María", "Calvillo"]),
-    ("08", "Chihuahua", ["Chihuahua", "Ciudad Juárez", "Delicias", "Cuauhtémoc"]),
-    ("28", "Tamaulipas", ["Reynosa", "Matamoros", "Tampico", "Nuevo Laredo"]),
+    ("01", "Aguascalientes", ["Aguascalientes", "Jesús María", "Calvillo", "Rincón de Romos"]),
+    ("02", "Baja California", ["Tijuana", "Mexicali", "Ensenada", "Tecate", "Playas de Rosarito"]),
+    ("03", "Baja California Sur", ["La Paz", "Los Cabos", "Comondú", "Loreto"]),
+    ("04", "Campeche", ["Campeche", "Carmen", "Champotón", "Calkiní"]),
+    ("05", "Coahuila", ["Saltillo", "Torreón", "Ramos Arizpe", "Monclova", "Piedras Negras", "Acuña"]),
+    ("06", "Colima", ["Colima", "Manzanillo", "Villa de Álvarez", "Tecomán"]),
+    ("07", "Chiapas", ["Tuxtla Gutiérrez", "Tapachula", "San Cristóbal de las Casas", "Comitán"]),
+    ("08", "Chihuahua", ["Chihuahua", "Ciudad Juárez", "Delicias", "Cuauhtémoc", "Hidalgo del Parral"]),
+    ("09", "Ciudad de México", ["Cuauhtémoc", "Miguel Hidalgo", "Benito Juárez", "Álvaro Obregón", "Azcapotzalco", "Iztapalapa", "Coyoacán", "Tlalpan", "Santa Fe"]),
+    ("10", "Durango", ["Durango", "Gómez Palacio", "Lerdo"]),
+    ("11", "Guanajuato", ["León", "Irapuato", "Celaya", "Salamanca", "Silao", "Guanajuato", "San Miguel de Allende"]),
+    ("12", "Guerrero", ["Acapulco", "Chilpancingo", "Zihuatanejo", "Iguala"]),
+    ("13", "Hidalgo", ["Pachuca", "Tulancingo", "Tula de Allende", "Mineral de la Reforma"]),
+    ("14", "Jalisco", ["Guadalajara", "Zapopan", "Tlaquepaque", "Tonalá", "Tlajomulco de Zúñiga", "Puerto Vallarta", "El Salto"]),
+    ("15", "Estado de México", ["Naucalpan", "Tlalnepantla", "Toluca", "Ecatepec", "Cuautitlán Izcalli", "Huixquilucan", "Metepec", "Nezahualcóyotl"]),
+    ("16", "Michoacán", ["Morelia", "Uruapan", "Lázaro Cárdenas", "Zamora"]),
+    ("17", "Morelos", ["Cuernavaca", "Jiutepec", "Cuautla", "Temixco", "CIVAC"]),
+    ("18", "Nayarit", ["Tepic", "Bahía de Banderas", "Compostela"]),
+    ("19", "Nuevo León", ["Monterrey", "San Pedro Garza García", "San Nicolás de los Garza", "Apodaca", "Guadalupe", "Santa Catarina", "General Escobedo"]),
+    ("20", "Oaxaca", ["Oaxaca de Juárez", "Salina Cruz", "San Juan Bautista Tuxtepec", "Juchitán"]),
+    ("21", "Puebla", ["Puebla", "San Andrés Cholula", "Tehuacán", "San Pedro Cholula", "Atlixco"]),
+    ("22", "Querétaro", ["Querétaro", "San Juan del Río", "El Marqués", "Corregidora", "Huimilpan"]),
+    ("23", "Quintana Roo", ["Cancún", "Playa del Carmen", "Chetumal", "Cozumel"]),
+    ("24", "San Luis Potosí", ["San Luis Potosí", "Soledad de Graciano Sánchez", "Matehuala", "Ciudad Valles"]),
     ("25", "Sinaloa", ["Culiacán", "Mazatlán", "Los Mochis", "Guasave"]),
+    ("26", "Sonora", ["Hermosillo", "Ciudad Obregón", "Nogales", "Guaymas", "Navojoa", "San Luis Río Colorado"]),
+    ("27", "Tabasco", ["Villahermosa", "Cárdenas", "Comalcalco", "Paraíso"]),
+    ("28", "Tamaulipas", ["Reynosa", "Matamoros", "Tampico", "Nuevo Laredo", "Ciudad Victoria", "Altamira"]),
+    ("29", "Tlaxcala", ["Tlaxcala", "Apizaco", "Chiautempan", "Huamantla"]),
+    ("30", "Veracruz", ["Veracruz", "Boca del Río", "Xalapa", "Coatzacoalcos", "Córdoba", "Poza Rica", "Orizaba"]),
+    ("31", "Yucatán", ["Mérida", "Progreso", "Valladolid", "Kanasín", "Umán"]),
+    ("32", "Zacatecas", ["Zacatecas", "Guadalupe", "Fresnillo", "Jerez"]),
 ]
 
 COMPANY_ROOTS = [
@@ -57,14 +71,17 @@ COMPANY_ROOTS = [
     "TRANSFORMADORA", "GRUPO INDUSTRIAL", "CORPORATIVO", "FARMACEUTICA",
     "PLASTICOS", "ALIMENTOS Y BEBIDAS", "ENERGIA", "AUTOMOTRIZ", "QUIMICA",
     "CONSTRUCCIONES", "METALURGICA", "EMPAQUES", "EQUIPOS Y SISTEMAS",
-    "TRANSPORTES", "IMPORTADORA", "PROVEEDORA", "INNOVACION", "DESARROLLOS"
+    "TRANSPORTES", "IMPORTADORA", "PROVEEDORA", "INNOVACION", "DESARROLLOS",
+    "SISTEMAS AVANZADOS", "BIOTECNOLOGIA", "INFRAESTRUCTURA", "FINANZAS",
+    "LOGISTICA GLOBAL", "MOTORES", "RECUBRIMIENTOS", "PRECISION INDUSTRIAL"
 ]
 
 COMPANY_SPECIFIERS = [
     "MEXICANA", "DEL NORTE", "DEL BAJIO", "NACIONAL", "DE OCCIDENTE",
     "INTERNACIONAL", "GLOBAL", "DEL PACIFICO", "CENTRAL", "LATINOAMERICANA",
     "DE LAS AMERICAS", "DEL CENTRO", "AVANZADA", "INTEGRAL", "ESPECIALIZADA",
-    "ESTRATEGICA", "INDUSTRIAL", "EMPRESARIAL", "MODERNA", "DINAMICA"
+    "ESTRATEGICA", "INDUSTRIAL", "EMPRESARIAL", "MODERNA", "DINAMICA",
+    "CONTINENTAL", "SUPREMA", "SELECTA", "LIDER", "PREMIER", "INNOVADORA"
 ]
 
 LEGAL_SUFFIXES = [
@@ -89,33 +106,42 @@ INDUSTRIES = [
     ("Instalaciones eléctricas y electromecánicas en construcciones", "2382", "Construcción / Ingeniería"),
     ("Comercio al por mayor de artículos de ferretería y herramientas", "4662", "Ferretería Industrial"),
     ("Servicios de seguridad privada, custodia y monitoreo satelital", "5616", "Seguridad"),
+    ("Generación, transmisión y distribución de energía eléctrica", "2211", "Energía"),
+    ("Fabricación de productos alimenticios y bebidas procesadas", "3119", "Alimentos y Bebidas"),
+    ("Servicios de arquitectura, ingeniería y actividades conexas", "5413", "Ingeniería y Diseño"),
 ]
 
-STREET_TYPES = ["Av.", "Calle", "Calzada", "Boulevard", "Paseo", "Circuito", "Carretera"]
+STREET_TYPES = ["Av.", "Calle", "Calzada", "Boulevard", "Paseo", "Circuito", "Carretera", "Prolongación"]
 STREET_NAMES = [
     "Insurgentes Sur", "Reforma", "Juárez", "Hidalgo", "Revolución", "Universidad",
     "Lázaro Cárdenas", "González Gallo", "Félix U. Gómez", "Morones Prieto",
     "Adolfo López Mateos", "Industria Militar", "Constitución", "Patriotismo",
-    "Benito Juárez", "Cuauhtémoc", "5 de Mayo", "Paseo Cuauhnáhuac", "Manuel Ávila Camacho"
+    "Benito Juárez", "Cuauhtémoc", "5 de Mayo", "Paseo Cuauhnáhuac", "Manuel Ávila Camacho",
+    "Bernardo Quintana", "Venustiano Carranza", "Periférico Sur", "Calzada del Valle"
 ]
 
 COLONIES = [
     "Parque Industrial", "Zona Industrial", "Centro", "Industrial Vallejo",
     "Polanco", "Santa Fe", "Del Valle", "Roma Norte", "Jardines del Bosque",
     "San Jerónimo", "Parque Industrial CIVAC", "Parque Industrial FINSA",
-    "Parque Industrial Benito Juárez", "San Rafael", "Santa María la Ribera"
+    "Parque Industrial Benito Juárez", "San Rafael", "Santa María la Ribera",
+    "Parque Industrial El Marqués", "Parque Industrial Monterrey", "Parque Industrial Querétaro"
 ]
 
 FIRST_NAMES = [
     "Carlos", "Roberto", "Alejandro", "Fernando", "Mariana", "Sofia", "Javier",
     "Hector", "Gabriel", "Luis", "Daniel", "Eduardo", "Jorge", "Guillermo",
-    "Patricia", "Andrea", "Adriana", "Claudia", "Rodrigo", "Miguel", "David"
+    "Patricia", "Andrea", "Adriana", "Claudia", "Rodrigo", "Miguel", "David",
+    "Ricardo", "Arturo", "Valeria", "Paulina", "Mauricio", "Alfonso", "Guadalupe",
+    "Enrique", "Manuel", "Raúl", "Ernesto", "Lorena", "Verónica", "Ignacio"
 ]
 
 LAST_NAMES = [
     "Mendoza", "Alarcón", "Valenzuela", "Castro", "Dominguez", "Garza",
     "Salinas", "Navarro", "Morales", "Ruiz", "Villaseñor", "Treviño",
-    "Benítez", "Vega", "García", "Hernández", "Martínez", "López", "González"
+    "Benítez", "Vega", "García", "Hernández", "Martínez", "López", "González",
+    "Ramírez", "Sánchez", "Torres", "Flores", "Vázquez", "Reyes", "Gómez",
+    "Díaz", "Álvarez", "Campos", "Herrera", "Medina", "Aguilar", "Castillo"
 ]
 
 EXECUTIVE_TITLES = [
@@ -124,9 +150,18 @@ EXECUTIVE_TITLES = [
     ("Chief Financial Officer (CFO)", "Director de Finanzas", "C_SUITE", "FINANCE"),
     ("Chief Operating Officer (COO)", "Director de Operaciones", "C_SUITE", "OPERATIONS"),
     ("Chief Human Resources Officer (CHRO)", "Directora de Recursos Humanos", "C_SUITE", "HR_PEOPLE"),
-    ("Managing Director", "Director General", "C_SUITE", "EXECUTIVE"),
+    ("Chief Marketing Officer (CMO)", "Director de Mercadotecnia", "C_SUITE", "SALES_MARKETING"),
+    ("Chief Revenue Officer (CRO)", "Director Comercial", "C_SUITE", "SALES_MARKETING"),
+    ("Chief Information Officer (CIO)", "Director de Sistemas e Informática", "C_SUITE", "ENGINEERING_IT"),
+    ("Chief Information Security Officer (CISO)", "Director de Seguridad de la Información", "C_SUITE", "SECURITY"),
+    ("Chief Procurement Officer (CPO)", "Director de Compras y Abastecimiento", "C_SUITE", "PROCUREMENT"),
+    ("Managing Director (MD)", "Director General / Administrador Único", "C_SUITE", "EXECUTIVE"),
     ("Owner & Founder", "Socio Fundador", "FOUNDER", "EXECUTIVE"),
-    ("Commercial Director", "Director Comercial", "C_SUITE", "SALES_MARKETING"),
+    ("Co-Founder", "Cofundador", "FOUNDER", "EXECUTIVE"),
+    ("Vice President of Operations", "Vicepresidente de Operaciones", "VP", "OPERATIONS"),
+    ("Vice President of Commercial", "Vicepresidente Comercial", "VP", "SALES_MARKETING"),
+    ("Head of Human Resources", "Jefe de Recursos Humanos", "DIRECTOR", "HR_PEOPLE"),
+    ("Director of Engineering", "Director de Ingeniería", "DIRECTOR", "ENGINEERING_IT"),
 ]
 
 EMPLOYEE_RANGES = [
@@ -280,7 +315,7 @@ def main():
         "--count",
         "-n",
         type=int,
-        default=30000,
+        default=50000,
         help="Number of records to generate and ingest",
     )
     parser.add_argument(

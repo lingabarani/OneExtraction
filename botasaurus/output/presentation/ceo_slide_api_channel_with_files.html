@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0a0e17;
+      --card: #121824;
+      --card-alt: #172033;
+      --border: rgba(255, 255, 255, 0.08);
+      --primary: #3b82f6;
+      --emerald: #10b981;
+      --amber: #f59e0b;
+      --purple: #8b5cf6;
+      --text: #f8fafc;
+      --muted: #94a3b8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: radial-gradient(circle at 85% 15%, rgba(59, 130, 246, 0.12), transparent 45%),
+                  radial-gradient(circle at 15% 85%, rgba(16, 185, 129, 0.08), transparent 45%),
+                  var(--bg);
+      color: var(--text);
+      width: 1600px;
+      height: 1000px;
+      overflow: hidden;
+      padding: 45px 65px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .slide-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+    .badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(59, 130, 246, 0.15); border: 1px solid rgba(59, 130, 246, 0.3);
+      color: #60a5fa; padding: 5px 12px; border-radius: 9999px;
+      font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;
+    }
+    .badge.emerald { background: rgba(16, 185, 129, 0.15); color: #34d399; border-color: rgba(16, 185, 129, 0.3); }
+    .badge.amber { background: rgba(245, 158, 11, 0.15); color: #fbbf24; border-color: rgba(245, 158, 11, 0.3); }
+    .slide-num { font-size: 13px; color: var(--muted); font-weight: 600; }
+    .title-area h2 {
+      font-size: 34px; font-weight: 800; letter-spacing: -0.02em;
+      background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .title-area p { font-size: 15px; color: var(--muted); margin-top: 4px; }
+    .file-bar {
+      display: flex; justify-content: space-between; align-items: center;
+      background: #0d121d; border: 1px solid rgba(59, 130, 246, 0.25);
+      border-radius: 8px; padding: 8px 14px; font-size: 12px; margin-bottom: 10px;
+    }
+    .file-path { font-family: 'JetBrains Mono', monospace; color: #93c5fd; font-size: 11px; }
+    .file-meta { color: #34d399; font-weight: 600; font-size: 11px; }
+    .content-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 18px; margin-top: 14px; }
+    .code-box {
+      background: #080c14; border: 1px solid var(--border); border-radius: 10px;
+      padding: 14px; font-family: 'JetBrains Mono', monospace; font-size: 11px;
+      color: #cbd5e1; line-height: 1.5; overflow: hidden; height: 320px;
+    }
+    .terminal-box {
+      background: #060910; border: 1px solid rgba(255,255,255,0.08); border-radius: 10px;
+      padding: 14px; font-family: 'JetBrains Mono', monospace; font-size: 11px;
+      color: #94a3b8; height: 260px; overflow: hidden; line-height: 1.6;
+    }
+    .k-blue { color: #60a5fa; }
+    .s-green { color: #34d399; }
+    .n-amber { color: #fbbf24; }
+    .b-purple { color: #c084fc; }
+    .slide-footer {
+      display: flex; justify-content: space-between; border-top: 1px solid var(--border);
+      padding-top: 14px; font-size: 12px; color: #64748b; margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div>
+    <div class="slide-header">
+      <div class="badge">Architecture & Data Files — Slide 02A</div>
+      <div class="slide-num">Official Government API Channel Inspection</div>
+    </div>
+    <div class="title-area">
+      <h2>Government & Registry API Channel: Companies, People & Logs</h2>
+      <p>Physical isolation of official government records with zero cross-contamination and complete audit logging.</p>
+    </div>
+
+    <div class="content-grid" style="margin-top: 20px;">
+      <!-- Left Column: Companies & People Files -->
+      <div>
+        <div class="file-bar">
+          <div><b style="color: #60a5fa;">Company File: </b><span class="file-path">output/api/companies/api_companies.json</span></div>
+          <span class="file-meta">3,119 Companies | 121,643 Lines</span>
+        </div>
+        <div class="code-box" style="height: 250px; margin-bottom: 14px;">
+[
+  {
+    <span class="k-blue">"record_id"</span>: <span class="s-green">"API-COMP-000001"</span>,
+    <span class="k-blue">"data_type"</span>: <span class="s-green">"company"</span>,
+    <span class="k-blue">"ingestion_method"</span>: <span class="s-green">"api"</span>,
+    <span class="k-blue">"source"</span>: <span class="s-green">"SAT"</span>,
+    <span class="k-blue">"legal_name"</span>: <span class="s-green">"TECNOLOGIAS DE MEXICO SA DE CV"</span>,
+    <span class="k-blue">"rfc"</span>: <span class="s-green">"TME150115AB1"</span>,
+    <span class="k-blue">"website"</span>: <span class="s-green">"https://tec-mexico.com.mx"</span>,
+    <span class="k-blue">"phone"</span>: <span class="s-green">"+525555123456"</span>,
+    <span class="k-blue">"state"</span>: <span class="s-green">"Ciudad de México"</span>,
+    <span class="k-blue">"validation"</span>: { <span class="k-blue">"rfc_valid"</span>: <span class="b-purple">true</span>, <span class="k-blue">"dns_mx_valid"</span>: <span class="b-purple">true</span> },
+    <span class="k-blue">"quality_score"</span>: <span class="n-amber">96</span>
+  }
+]
+        </div>
+
+        <div class="file-bar">
+          <div><b style="color: #60a5fa;">People File: </b><span class="file-path">output/api/people/api_people.json</span></div>
+          <span class="file-meta">3,997 Decision-Makers | 123,909 Lines</span>
+        </div>
+        <div class="code-box" style="height: 230px;">
+[
+  {
+    <span class="k-blue">"record_id"</span>: <span class="s-green">"API-PERS-000001"</span>,
+    <span class="k-blue">"company_name"</span>: <span class="s-green">"TECNOLOGIAS DE MEXICO SA DE CV"</span>,
+    <span class="k-blue">"full_name"</span>: <span class="s-green">"Carlos Gonzalez Rodriguez"</span>,
+    <span class="k-blue">"title"</span>: <span class="s-green">"Chief Executive Officer (CEO)"</span>,
+    <span class="k-blue">"seniority_level"</span>: <span class="s-green">"C_SUITE"</span>,
+    <span class="k-blue">"email"</span>: <span class="s-green">"carlos.gonzalez@tec-mexico.com.mx"</span>,
+    <span class="k-blue">"phone"</span>: <span class="s-green">"+52 55 1234 5678"</span>,
+    <span class="k-blue">"quality_score"</span>: <span class="n-amber">85</span>
+  }
+]
+        </div>
+      </div>
+
+      <!-- Right Column: Live Logs & Execution Summary -->
+      <div>
+        <div class="file-bar">
+          <div><b style="color: #34d399;">Execution Log: </b><span class="file-path">output/api/logs/api_ingestion.log</span></div>
+          <span class="file-meta">5.12s Duration | 100% Success</span>
+        </div>
+        <div class="terminal-box" style="height: 520px;">
+<div style="color: #64748b; margin-bottom: 8px;">// Real-time API Channel Execution Stream</div>
+<div><span style="color: #64748b;">16:55:56</span> <span style="color: #60a5fa; font-weight: bold;">[INFO]</span> RUN_START run_id=api_20260907_112556 channel=api</div>
+<div><span style="color: #64748b;">16:55:56</span> <span style="color: #60a5fa; font-weight: bold;">[INFO]</span> API_REQUEST endpoint=DENUE status=CONNECTING</div>
+<div><span style="color: #64748b;">16:55:56</span> <span style="color: #34d399; font-weight: bold;">[SUCCESS]</span> Streaming DENUE records from bulk open file limit=1000</div>
+<div><span style="color: #64748b;">16:55:56</span> <span style="color: #34d399; font-weight: bold;">[SUCCESS]</span> Ingestion completed for DENUE valid=1000 invalid=0</div>
+<div><span style="color: #64748b;">16:55:57</span> <span style="color: #60a5fa; font-weight: bold;">[INFO]</span> API_REQUEST endpoint=SIEM status=CONNECTING</div>
+<div><span style="color: #64748b;">16:55:57</span> <span style="color: #34d399; font-weight: bold;">[SUCCESS]</span> Loading SIEM records valid=1000 invalid=0 duration=0.11s</div>
+<div><span style="color: #64748b;">16:55:58</span> <span style="color: #60a5fa; font-weight: bold;">[INFO]</span> API_REQUEST endpoint=SAT status=CONNECTING</div>
+<div><span style="color: #64748b;">16:55:58</span> <span style="color: #34d399; font-weight: bold;">[SUCCESS]</span> SAT Art 69-B non-compliant blacklist screening valid=1000 duration=0.08s</div>
+<div><span style="color: #64748b;">16:55:59</span> <span style="color: #60a5fa; font-weight: bold;">[INFO]</span> API_REQUEST endpoint=SUPPLIER_REGISTRY status=CONNECTING</div>
+<div><span style="color: #64748b;">16:55:59</span> <span style="color: #34d399; font-weight: bold;">[SUCCESS]</span> CompraNet / RUPC vendor records ingested valid=1000 duration=0.10s</div>
+<div><span style="color: #64748b;">16:56:00</span> <span style="color: #c084fc; font-weight: bold;">[DEDUP]</span> Deduplication completed total_input=4000 duplicates=881 final=3119</div>
+<div><span style="color: #64748b;">16:56:00</span> <span style="color: #34d399; font-weight: bold;">[OUTPUT]</span> Generated api_companies.json count=3119</div>
+<div><span style="color: #64748b;">16:56:00</span> <span style="color: #34d399; font-weight: bold;">[OUTPUT]</span> Generated api_people.json count=3997</div>
+<div><span style="color: #64748b;">16:56:00</span> <span style="color: #34d399; font-weight: bold;">[COMPLETE]</span> RUN_COMPLETE duration=5.12s avg_quality_score=69.91</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer">
+    <span>API Audit Log: output/api/logs/api_summary.json</span>
+    <span>Confidential & Proprietary — Prepared for CEO</span>
+  </div>
+</body>
+</html>

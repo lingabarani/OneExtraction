@@ -1,0 +1,112 @@
+2026-09-17 16:53:16 INFO Starting CMS NPI Healthcare ingestion
+2026-09-17 16:53:19 INFO CMS NPI city=New York count=50
+2026-09-17 16:53:20 INFO CMS NPI city=Los Angeles count=50
+2026-09-17 16:53:21 INFO CMS NPI city=Chicago count=50
+2026-09-17 16:53:23 INFO CMS NPI city=Houston count=50
+2026-09-17 16:53:24 INFO CMS NPI city=Phoenix count=50
+2026-09-17 16:53:24 INFO CMS NPI Healthcare ingestion complete total=250
+2026-09-17 16:54:43 INFO Starting CMS NPI Healthcare ingestion
+2026-09-17 16:54:43 INFO CMS NPI city=New York count=50
+2026-09-17 16:54:43 INFO CMS NPI city=Los Angeles count=50
+2026-09-17 16:54:43 INFO CMS NPI city=Chicago count=50
+2026-09-17 16:54:43 INFO CMS NPI city=Houston count=50
+2026-09-17 16:54:43 INFO CMS NPI city=Phoenix count=50
+2026-09-17 16:54:43 INFO CMS NPI Healthcare ingestion complete total=250
+2026-09-17 17:41:35 INFO Starting CMS NPI Healthcare ingestion
+2026-09-17 17:41:35 INFO CMS NPI city=New York count=50
+2026-09-17 17:41:35 INFO CMS NPI city=Los Angeles count=50
+2026-09-17 17:41:35 INFO CMS NPI city=Chicago count=50
+2026-09-17 17:41:35 INFO CMS NPI city=Houston count=50
+2026-09-17 17:41:35 INFO CMS NPI city=Phoenix count=50
+2026-09-17 17:41:35 INFO CMS NPI Healthcare ingestion complete total=250
+2026-09-17 18:12:33 INFO Starting CMS NPI Healthcare ingestion
+2026-09-17 18:12:33 INFO CMS NPI city=New York count=50
+2026-09-17 18:12:33 INFO CMS NPI city=Los Angeles count=50
+2026-09-17 18:12:33 INFO CMS NPI city=Chicago count=50
+2026-09-17 18:12:33 INFO CMS NPI city=Houston count=50
+2026-09-17 18:12:33 INFO CMS NPI city=Phoenix count=50
+2026-09-17 18:12:33 INFO CMS NPI Healthcare ingestion complete total=250
+2026-09-17 18:18:52 INFO Starting CMS NPI Healthcare ingestion
+2026-09-17 18:18:52 INFO CMS NPI city=New York count=50
+2026-09-17 18:18:52 INFO CMS NPI city=Los Angeles count=50
+2026-09-17 18:18:52 INFO CMS NPI city=Chicago count=50
+2026-09-17 18:18:52 INFO CMS NPI city=Houston count=50
+2026-09-17 18:18:52 INFO CMS NPI city=Phoenix count=50
+2026-09-17 18:18:52 INFO CMS NPI Healthcare ingestion complete total=250
+2026-09-18 10:08:45 INFO Starting CMS NPI Healthcare ingestion
+2026-09-18 10:08:45 INFO CMS NPI city=New York count=50
+2026-09-18 10:08:45 INFO CMS NPI city=Los Angeles count=50
+2026-09-18 10:08:45 INFO CMS NPI city=Chicago count=50
+2026-09-18 10:08:45 INFO CMS NPI city=Houston count=50
+2026-09-18 10:08:45 INFO CMS NPI city=Phoenix count=50
+2026-09-18 10:08:45 INFO CMS NPI Healthcare ingestion complete total=250
+2026-09-18 10:38:20 INFO Starting CMS NPI Healthcare ingestion
+2026-09-18 10:38:20 INFO CMS NPI city=New York count=50
+2026-09-18 10:38:20 INFO CMS NPI city=Los Angeles count=50
+2026-09-18 10:38:20 INFO CMS NPI city=Chicago count=50
+2026-09-18 10:38:20 INFO CMS NPI city=Houston count=50
+2026-09-18 10:38:20 INFO CMS NPI city=Phoenix count=50
+2026-09-18 10:38:20 INFO CMS NPI Healthcare ingestion complete total=250
+2026-09-18 10:44:39 INFO Starting CMS NPI Healthcare ingestion
+2026-09-18 10:44:41 INFO CMS NPI city=New York count=100
+2026-09-18 10:44:43 INFO CMS NPI city=Los Angeles count=100
+2026-09-18 10:44:44 INFO CMS NPI city=Chicago count=100
+2026-09-18 10:44:46 INFO CMS NPI city=Houston count=100
+2026-09-18 10:44:47 INFO CMS NPI city=Phoenix count=100
+2026-09-18 10:44:47 INFO CMS NPI Healthcare ingestion complete total=500
+2026-09-18 10:49:12 INFO Starting CMS NPI Healthcare ingestion
+2026-09-18 10:49:12 INFO CMS NPI city=New York count=100
+2026-09-18 10:49:12 INFO CMS NPI city=Los Angeles count=100
+2026-09-18 10:49:12 INFO CMS NPI city=Chicago count=100
+2026-09-18 10:49:12 INFO CMS NPI city=Houston count=100
+2026-09-18 10:49:12 INFO CMS NPI city=Phoenix count=100
+2026-09-18 10:49:12 INFO CMS NPI Healthcare ingestion complete total=500
+2026-09-18 11:14:55 INFO Starting CMS NPI Healthcare ingestion
+2026-09-18 11:14:57 INFO CMS NPI city=New York count=62
+2026-09-18 11:14:58 INFO CMS NPI city=Los Angeles count=62
+2026-09-18 11:14:59 INFO CMS NPI city=Chicago count=62
+2026-09-18 11:15:00 INFO CMS NPI city=Houston count=62
+2026-09-18 11:15:01 INFO CMS NPI city=Phoenix count=62
+2026-09-18 11:15:01 INFO CMS NPI Healthcare ingestion complete total=310
+2026-09-18 11:22:26 INFO Starting CMS NPI Healthcare ingestion
+2026-09-18 11:22:26 INFO CMS NPI city=New York count=50
+2026-09-18 11:22:26 INFO CMS NPI city=Los Angeles count=50
+2026-09-18 11:22:26 INFO CMS NPI city=Chicago count=50
+2026-09-18 11:22:26 INFO CMS NPI city=Houston count=50
+2026-09-18 11:22:26 INFO CMS NPI city=Phoenix count=50
+2026-09-18 11:22:26 INFO CMS NPI Healthcare ingestion complete total=250
+2026-09-18 13:26:37 INFO Starting CMS NPI Healthcare ingestion
+2026-09-18 13:26:37 INFO CMS NPI city=New York count=100
+2026-09-18 13:26:37 INFO CMS NPI city=Los Angeles count=100
+2026-09-18 13:26:37 INFO CMS NPI city=Chicago count=100
+2026-09-18 13:26:37 INFO CMS NPI city=Houston count=100
+2026-09-18 13:26:38 INFO CMS NPI city=Phoenix count=100
+2026-09-18 13:26:38 INFO CMS NPI Healthcare ingestion complete total=500
+2026-09-18 15:14:49 INFO Starting CMS NPI Healthcare ingestion
+2026-09-18 15:14:49 INFO CMS NPI city=New York count=50
+2026-09-18 15:14:49 INFO CMS NPI city=Los Angeles count=50
+2026-09-18 15:14:49 INFO CMS NPI city=Chicago count=50
+2026-09-18 15:14:49 INFO CMS NPI city=Houston count=50
+2026-09-18 15:14:49 INFO CMS NPI city=Phoenix count=50
+2026-09-18 15:14:49 INFO CMS NPI Healthcare ingestion complete total=250
+2026-09-18 15:50:01 INFO Starting CMS NPI Healthcare ingestion
+2026-09-18 15:50:01 INFO CMS NPI city=New York count=50
+2026-09-18 15:50:01 INFO CMS NPI city=Los Angeles count=50
+2026-09-18 15:50:01 INFO CMS NPI city=Chicago count=50
+2026-09-18 15:50:01 INFO CMS NPI city=Houston count=50
+2026-09-18 15:50:01 INFO CMS NPI city=Phoenix count=50
+2026-09-18 15:50:01 INFO CMS NPI Healthcare ingestion complete total=250
+2026-09-18 17:39:44 INFO Starting CMS NPI Healthcare ingestion
+2026-09-18 17:39:49 INFO CMS NPI city=New York count=83
+2026-09-18 17:39:50 INFO CMS NPI city=Los Angeles count=83
+2026-09-18 17:39:52 INFO CMS NPI city=Chicago count=83
+2026-09-18 17:39:53 INFO CMS NPI city=Houston count=83
+2026-09-18 17:39:55 INFO CMS NPI city=Phoenix count=83
+2026-09-18 17:39:55 INFO CMS NPI Healthcare ingestion complete total=415
+2026-09-18 17:53:36 INFO Starting CMS NPI Healthcare ingestion
+2026-09-18 17:53:36 INFO CMS NPI city=New York count=50
+2026-09-18 17:53:36 INFO CMS NPI city=Los Angeles count=50
+2026-09-18 17:53:36 INFO CMS NPI city=Chicago count=50
+2026-09-18 17:53:37 INFO CMS NPI city=Houston count=50
+2026-09-18 17:53:37 INFO CMS NPI city=Phoenix count=50
+2026-09-18 17:53:37 INFO CMS NPI Healthcare ingestion complete total=250

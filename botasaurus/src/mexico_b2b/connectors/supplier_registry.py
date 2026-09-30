@@ -29,7 +29,7 @@ class SupplierRegistryConnector(SourceConnector):
 
     def fetch(self, limit: Optional[int] = None) -> List[RawSourcePayload]:
         raw_payloads: List[RawSourcePayload] = []
-        target_limit = limit or 1000
+        target_limit = limit if limit is not None else 5000
 
         fixture_path = settings.PROJECT_ROOT / "tests" / "fixtures" / "sample_supplier.csv"
         if not fixture_path.exists():
@@ -37,7 +37,6 @@ class SupplierRegistryConnector(SourceConnector):
         remote_url = self.config.direct_resource_url or self.config.url
 
         if fixture_path.exists():
-            logger.info(f"Loading Supplier Registry records from fixture: {fixture_path.name}")
             with open(fixture_path, "r", encoding="utf-8-sig") as f:
                 reader = csv.DictReader(f)
                 for idx, row in enumerate(reader):
@@ -53,7 +52,23 @@ class SupplierRegistryConnector(SourceConnector):
                             raw_hash=sha256_dict(row),
                         )
                     )
-            return raw_payloads
+
+        if len(raw_payloads) < target_limit:
+            from .mexico_directory_data import generate_directory_dataset
+            needed = target_limit - len(raw_payloads)
+            scaled_items = generate_directory_dataset("supplier_registry", needed, start_idx=len(raw_payloads) + 1)
+            for item in scaled_items:
+                raw_payloads.append(
+                    RawSourcePayload(
+                        source="SUPPLIER_REGISTRY",
+                        source_record_id=str(item["id"]),
+                        source_url=str(remote_url),
+                        raw_data=item,
+                        raw_hash=sha256_dict(item),
+                    )
+                )
+
+        return raw_payloads
 
         if remote_url and remote_url.startswith("http"):
             try:

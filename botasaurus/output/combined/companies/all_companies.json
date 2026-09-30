@@ -1,0 +1,1846 @@
+[
+  {
+    "company_id": "mx_899f29b3-fbbb-8e57-9923-7adea4d9372f",
+    "legal_name": "TECNOLOGIAS DE MEXICO SA DE CV",
+    "trade_name": "TECNOLOGIAS DE MEXICO",
+    "normalized_name": "TECNOLOGIAS DE MEXICO",
+    "rfc": "TME150115AB1",
+    "rfc_type": "MORAL",
+    "website": "https://tec-mexico.com.mx",
+    "domain": "tec-mexico.com.mx",
+    "industry": "Servicios Profesionales",
+    "industry_code": "541510",
+    "employee_count_min": 25,
+    "employee_count_max": 25,
+    "employee_count_source": "25",
+    "phone": "+525555123456",
+    "phones": [
+      {
+        "value": "+525555123456",
+        "source": "SIEM",
+        "type": "OFFICE",
+        "verified": false
+      }
+    ],
+    "email": "contacto@tec-mexico.com.mx",
+    "emails": [
+      {
+        "value": "contacto@tec-mexico.com.mx",
+        "source": "SIEM",
+        "verified": false
+      },
+      {
+        "value": "compras@tec-mexico.com.mx",
+        "source": "SUPPLIER_REGISTRY",
+        "verified": false
+      }
+    ],
+    "address": {
+      "street": "Av. Insurgentes Sur",
+      "number": "1602 Int Piso 4",
+      "colony": "Credito Constructor",
+      "municipality": "Benito Juarez",
+      "state": "Ciudad de México",
+      "postal_code": "03940",
+      "country": "Mexico"
+    },
+    "latitude": null,
+    "longitude": null,
+    "source_count": 3,
+    "data_quality_score": 96,
+    "last_verified_at": "2026-09-17T12:28:00.991929+00:00"
+  },
+  {
+    "company_id": "mx_f36da3f1-76e9-d7cb-f6f2-503d4d3345b5",
+    "legal_name": "CONSTRUCCIONES DEL SURESTE SA DE CV",
+    "trade_name": "CONSTRUCCIONES SURESTE",
+    "normalized_name": "CONSTRUCCIONES DEL SURESTE",
+    "rfc": "CSO120405H89",
+    "rfc_type": "MORAL",
+    "website": "https://consureste.com.mx",
+    "domain": "consureste.com.mx",
+    "industry": null,
+    "industry_code": null,
+    "employee_count_min": null,
+    "employee_count_max": null,
+    "employee_count_source": null,
+    "phone": "+529999123456",
+    "phones": [
+      {
+        "value": "+529999123456",
+        "source": "SUPPLIER_REGISTRY",
+        "type": "OFFICE",
+        "verified": false
+      }
+    ],
+    "email": "contacto@consureste.com.mx",
+    "emails": [
+      {
+        "value": "contacto@consureste.com.mx",
+        "source": "SUPPLIER_REGISTRY",
+        "verified": false
+      }
+    ],
+    "address": {
+      "street": "Calle 60",
+      "number": "305",
+      "colony": "Centro",
+      "municipality": "Merida",
+      "state": "Yucatán",
+      "postal_code": "97000",
+      "country": "Mexico"
+    },
+    "latitude": null,
+    "longitude": null,
+    "source_count": 2,
+    "data_quality_score": 81,
+    "last_verified_at": "2026-09-17T12:28:00.991929+00:00"
+  },
+  {
+    "company_id": "mx_2f040c3d-bc7c-d8f1-9df9-b67aed2d1f32",
+    "legal_name": "QUIMICA NACIONAL S.A.B. DE C.V.",
+    "trade_name": "QUIMICA NACIONAL",
+    "normalized_name": "QUIMICA NACIONAL",
+    "rfc": "QUN960609Y5H",
+    "rfc_type": "MORAL",
+    "website": "https://www.quimicanacional.mx",
+    "domain": "quimicanacional.mx",
+    "industry": "Fabricación de productos farmacéuticos y medicamentos",
+    "industry_code": "3254",
+    "employee_count_min": 0,
+    "employee_count_max": 5,
+    "employee_count_source": "0 a 5 personas",
+    "phone": "+527994175233",
+    "phones": [
+      {
+        "value": "+527994175233",
+        "source": "DENUE",
+        "type": "OFFICE",
+        "verified": false
+      }
+    ],
+    "email": "contacto@quimicanacional.mx",
+    "emails": [
+      {
+        "value": "contacto@quimicanacional.mx",
+        "source": "DENUE",
+        "verified": false
+      }
+    ],
+    "address": {
+      "street": "Prolongación Reforma",
+      "number": "857 Int Piso 7",
+      "colony": "Polanco",
+      "municipality": "Tecomán",
+      "state": "Colima",
+      "postal_code": "06788",
+      "country": "Mexico"
+    },
+    "latitude": 24.203905,
+    "longitude": -99.453997,
+    "source_count": 1,
+    "data_quality_score": 97,
+    "last_verified_at": "2026-09-17T12:27:58.458159+00:00"
+  },
+  {
+    "company_id": "mx_11e944e9-361e-a2ef-dd05-b81be6344488",
+    "legal_name": "CORPORATIVO NACIONAL S. DE R.L. DE C.V.",
+    "trade_name": "CORPORATIVO NACIONAL",
+    "normalized_name": "CORPORATIVO NACIONAL",
+    "rfc": "CON9602206NX",
+    "rfc_type": "MORAL",
+    "website": "https://www.corporativonaciona.com",
+    "domain": "corporativonaciona.com",
+    "industry": "Fabricación de equipo de transporte y autopartes",
+    "industry_code": "3363",
+    "employee_count_min": 0,
+    "employee_count_max": 5,
+    "employee_count_source": "0 a 5 personas",
+    "phone": "+527936013836",
+    "phones": [
+      {
+        "value": "+527936013836",
+        "source": "DENUE",
+        "type": "OFFICE",
+        "verified": false
+      }
+    ],
+    "email": "contacto@corporativonaciona.com",
+    "emails": [
+      {
+        "value": "contacto@corporativonaciona.com",
+        "source": "DENUE",
+        "verified": false
+      }
+    ],
+    "address": {
+      "street": "Carretera 5 de Mayo",
+      "number": "2265",
+      "colony": "Parque Industrial",
+      "municipality": "Xalapa",
+      "state": "Veracruz",
+      "postal_code": "30650",
+      "country": "Mexico"
+    },
+    "latitude": 20.865006,
+    "longitude": -96.472099,
+    "source_count": 1,
+    "data_quality_score": 97,
+    "last_verified_at": "2026-09-17T12:27:58.458159+00:00"
+  },
+  {
+    "company_id": "mx_58b4b134-1b7f-a6f4-8387-234a0dd4f32f",
+    "legal_name": "DISTRIBUIDORA DEL PACIFICO S.A.P.I. DE C.V.",
+    "trade_name": "DISTRIBUIDORA DEL PACIFICO",
+    "normalized_name": "DISTRIBUIDORA DEL PACIFICO",
+    "rfc": "DID010515XGS",
+    "rfc_type": "MORAL",
+    "website": "https://www.distribuidoradelpa.com.mx",
+    "domain": "distribuidoradelpa.com.mx",
+    "industry": "Fabricación de estructuras metálicas y pailería industrial",
+    "industry_code": "3323",
+    "employee_count_min": 101,
+    "employee_count_max": 250,
+    "employee_count_source": "101 a 250 personas",
+    "phone": "+525588201131",
+    "phones": [
+      {
+        "value": "+525588201131",
+        "source": "DENUE",
+        "type": "OFFICE",
+        "verified": false
+      }
+    ],
+    "email": "contacto@distribuidoradelpa.com.mx",
+    "emails": [
+      {
+        "value": "contacto@distribuidoradelpa.com.mx",
+        "source": "DENUE",
+        "verified": false
+      }
+    ],
+    "address": {
+      "street": "Calle Venustiano Carranza",
+      "number": "659",
+      "colony": "Parque Industrial Querétaro",
+      "municipality": "Cuauhtémoc",
+      "state": "Ciudad de México",
+      "postal_code": "09590",
+      "country": "Mexico"
+    },
+    "latitude": 17.720293,
+    "longitude": -105.029694,
+    "source_count": 1,
+    "data_quality_score": 97,
+    "last_verified_at": "2026-09-17T12:27:58.458159+00:00"
+  },
+  {
+    "company_id": "mx_612a16ed-742e-182c-051b-49c777323b93",
+    "legal_name": "SERVICIOS INTEGRALES INNOVADORA S.A.P.I. DE C.V.",
+    "trade_name": "SERVICIOS INTEGRALES INNOVADORA",
+    "normalized_name": "SERVICIOS INTEGRALES INNOVADORA",
+    "rfc": "SEI960611U4Z",
+    "rfc_type": "MORAL",
+    "website": "https://www.serviciosintegrale.com.mx",
+    "domain": "serviciosintegrale.com.mx",
+    "industry": "Servicios de consultoría en administración y gestión empresarial",
+    "industry_code": "5416",
+    "employee_count_min": 6,
+    "employee_count_max": 10,
+    "employee_count_source": "6 a 10 personas",
+    "phone": "+528772652524",
+    "phones": [
+      {
+        "value": "+528772652524",
+        "source": "DENUE",
+        "type": "OFFICE",
+        "verified": false
+      }
+    ],
+    "email": "contacto@serviciosintegrale.com.mx",
+    "emails": [
+      {
+        "value": "contacto@serviciosintegrale.com.mx",
+        "source": "DENUE",
+        "verified": false
+      }
+    ],
+    "address": {
+      "street": "Paseo Paseo Cuauhnáhuac",
+      "number": "924",
+      "colony": "Roma Norte",
+      "municipality": "Ensenada",
+      "state": "Baja California",
+      "postal_code": "02773",
+      "country": "Mexico"
+    },
+    "latitude": 18.190531,
+    "longitude": -97.253098,
+    "source_count": 1,
+    "data_quality_score": 97,
+    "last_verified_at": "2026-09-17T12:27:58.458159+00:00"
+  },
+  {
+    "company_id": "mx_c564cc12-b42c-28ed-86e9-b0edf2cdea49",
+    "legal_name": "PLASTICOS CONTINENTAL S. DE R.L. DE C.V.",
+    "trade_name": "PLASTICOS CONTINENTAL",
+    "normalized_name": "PLASTICOS CONTINENTAL",
+    "rfc": "PLC220920V23",
+    "rfc_type": "MORAL",
+    "website": "https://www.plasticoscontinent.mx",
+    "domain": "plasticoscontinent.mx",
+    "industry": "Fabricación de productos químicos básicos y resinas sintéticas",
+    "industry_code": "3251",
+    "employee_count_min": 51,
+    "employee_count_max": 100,
+    "employee_count_source": "51 a 100 personas",
+    "phone": "+525910567163",
+    "phones": [
+      {
+        "value": "+525910567163",
+        "source": "DENUE",
+        "type": "OFFICE",
+        "verified": false
+      }
+    ],
+    "email": "contacto@plasticoscontinent.mx",
+    "emails": [
+      {
+        "value": "contacto@plasticoscontinent.mx",
+        "source": "DENUE",
+        "verified": false
+      }
+    ],
+    "address": {
+      "street": "Av. Constitución",
+      "number": "3227",
+      "colony": "Parque Industrial Monterrey",
+      "municipality": "Comitán",
+      "state": "Chiapas",
+      "postal_code": "07925",
+      "country": "Mexico"
+    },
+    "latitude": 16.548133,
+    "longitude": -99.795225,
+    "source_count": 1,
+    "data_quality_score": 97,
+    "last_verified_at": "2026-09-17T12:27:58.458159+00:00"
+  },
+  {
+    "company_id": "mx_a08c4620-69cf-8994-42c7-7c32ca2a58eb",
+    "legal_name": "LOGISTICA Y DISTRIBUCION OCCIDENTE S DE RL DE CV",
+    "trade_name": "LOGISTICA OCCIDENTE",
+    "normalized_name": "LOGISTICA Y DISTRIBUCION OCCIDENTE",
+    "rfc": "LDO180620XY9",
+    "rfc_type": "MORAL",
+    "website": "https://logisticaoccidente.com.mx",
+    "domain": "logisticaoccidente.com.mx",
+    "industry": "Transporte y Logistica",
+    "industry_code": "492110",
+    "employee_count_min": 75,
+    "employee_count_max": 75,
+    "employee_count_source": "75",
+    "phone": "+523336123456",
+    "phones": [
+      {
+        "value": "+523336123456",
+        "source": "SIEM",
+        "type": "OFFICE",
+        "verified": false
+      }
+    ],
+    "email": "atencion@logisticaoccidente.com.mx",
+    "emails": [
+      {
+        "value": "atencion@logisticaoccidente.com.mx",
+        "source": "SIEM",
+        "verified": false
+      }
+    ],
+    "address": {
+      "street": "Calz. Lazaro Cardenas",
+      "number": "2300",
+      "colony": "Las Torres",
+      "municipality": "Guadalajara",
+      "state": "Jalisco",
+      "postal_code": "44920",
+      "country": "Mexico"
+    },
+    "latitude": null,
+    "longitude": null,
+    "source_count": 1,
+    "data_quality_score": 93,
+    "last_verified_at": "2026-09-17T12:27:58.461151+00:00"
+  },
+  {
+    "company_id": "mx_8e7eb7a6-3dcc-b8b6-7907-570fc199772c",
+    "legal_name": "ALIMENTOS Y BEBIDAS DE PUEBLA SA DE CV",
+    "trade_name": "BEBIDAS DE PUEBLA",
+    "normalized_name": "ALIMENTOS Y BEBIDAS DE PUEBLA",
+    "rfc": "ALM050810JK3",
+    "rfc_type": "MORAL",
+    "website": "https://alimentosdelcentro.com.mx",
+    "domain": "alimentosdelcentro.com.mx",
+    "industry": "Manufactura de Alimentos",
+    "industry_code": "311900",
+    "employee_count_min": 40,
+    "employee_count_max": 40,
+    "employee_count_source": "40",
+    "phone": "+522222123456",
+    "phones": [
+      {
+        "value": "+522222123456",
+        "source": "SIEM",
+        "type": "OFFICE",
+        "verified": false
+      }
+    ],
+    "email": "ventas@alimentosdelcentro.com.mx",
+    "emails": [
+      {
+        "value": "ventas@alimentosdelcentro.com.mx",
+        "source": "SIEM",
+        "verified": false
+      }
+    ],
+    "address": {
+      "street": "Av Juarez",
+      "number": "1402",
+      "colony": "La Paz",
+      "municipality": "Puebla",
+      "state": "Puebla",
+      "postal_code": "72160",
+      "country": "Mexico"
+    },
+    "latitude": null,
+    "longitude": null,
+    "source_count": 1,
+    "data_quality_score": 93,
+    "last_verified_at": "2026-09-17T12:27:58.462111+00:00"
+  },
+  {
+    "company_id": "mx_b50da08c-3cb0-c2cf-c8d9-8b6439338ba4",
+    "legal_name": "Comercio y Servicios de México S.C.",
+    "trade_name": "Comercio y Servicios de México",
+    "normalized_name": "COMERCIO Y SERVICIOS DE MEXICO",
+    "rfc": "CYS8905053UU",
+    "rfc_type": "MORAL",
+    "website": "https://www.comercioyserviciosde.com.mx",
+    "domain": "comercioyserviciosde.com.mx",
+    "industry": "Comercio al por Mayor de Artículos Industriales",
+    "industry_code": null,
+    "employee_count_min": 51,
+    "employee_count_max": 100,
+    "employee_count_source": "51 a 100 personas",
+    "phone": "+524421031676",
+    "phones": [
+      {
+        "value": "+524421031676",
+        "source": "SIEM",
+        "type": "OFFICE",
+        "verified": false
+      }
+    ],
+    "email": "contacto@comercioyserviciosde.com.mx",
+    "emails": [
+      {
+        "value": "contacto@comercioyserviciosde.com.mx",
+        "source": "SIEM",
+        "verified": false
+      }
+    ],
+    "address": {
+      "street": "Circuito 5 de Mayo",
+      "number": "168",
+      "colony": "San Rafael",
+      "municipality": "Colón",
+      "state": "Querétaro",
+      "postal_code": "76004",
+      "country": "Mexico"
+    },
+    "latitude": null,
+    "longitude": null,
+    "source_count": 1,
+    "data_quality_score": 88,
+    "last_verified_at": "2026-09-17T12:27:58.462111+00:00"
+  },
+  {
+    "company_id": "mx_c32c7977-06ad-2a13-a98f-9e5c5f8917bc",
+    "legal_name": "Desarrolladora de México S.P.R. DE R.L.",
+    "trade_name": "Desarrolladora de México",
+    "normalized_name": "DESARROLLADORA DE MEXICO S P R DE R L",
+    "rfc": "DDM90060664J",
+    "rfc_type": "MORAL",
+    "website": "https://www.desarrolladorademéxi.mx",
+    "domain": "desarrolladorademéxi.mx",
+    "industry": "Fabricación de Bienes de Consumo",
+    "industry_code": null,
+    "employee_count_min": 101,
+    "employee_count_max": 250,
+    "employee_count_source": "101 a 250 personas",
+    "phone": "+522221039595",
+    "phones": [
+      {
+        "value": "+522221039595",
+        "source": "SIEM",
+        "type": "OFFICE",
+        "verified": false
+      }
+    ],
+    "email": null,
+    "emails": [],
+    "address": {
+      "street": "Paseo Manuel Ávila Camacho",
+      "number": "185",
+      "colony": "Roma Norte",
+      "municipality": "Puebla",
+      "state": "Puebla",
+      "postal_code": "72005",
+      "country": "Mexico"
+    },
+    "latitude": null,
+    "longitude": null,
+    "source_count": 1,
+    "data_quality_score": 78,
+    "last_verified_at": "2026-09-17T12:27:58.462111+00:00"
+  },
+  {
+    "company_id": "mx_207cf66a-17f1-2b25-eb9e-c832961d1daa",
+    "legal_name": "Inversiones Mexicana S.A.S.",
+    "trade_name": null,
+    "normalized_name": "INVERSIONES MEXICANA S",
+    "rfc": "IMX8804040J4",
+    "rfc_type": "MORAL",
+    "website": null,
+    "domain": null,
+    "industry": null,
+    "industry_code": null,
+    "employee_count_min": null,
+    "employee_count_max": null,
+    "employee_count_source": null,
+    "phone": null,
+    "phones": [],
+    "email": null,
+    "emails": [],
+    "address": {
+      "street": null,
+      "number": null,
+      "colony": null,
+      "municipality": null,
+      "state": null,
+      "postal_code": null,
+      "country": "Mexico"
+    },
+    "latitude": null,
+    "longitude": null,
+    "source_count": 1,
+    "data_quality_score": 32,
+    "last_verified_at": "2026-09-17T12:28:00.987810+00:00"
+  },
+  {
+    "company_id": "mx_4ada7557-8735-006f-9900-c91b46c2f159",
+    "legal_name": "Compañía Operadora Mexicana S.C.",
+    "trade_name": null,
+    "normalized_name": "COMPANIA OPERADORA MEXICANA",
+    "rfc": "COM8905053UU",
+    "rfc_type": "MORAL",
+    "website": null,
+    "domain": null,
+    "industry": null,
+    "industry_code": null,
+    "employee_count_min": null,
+    "employee_count_max": null,
+    "employee_count_source": null,
+    "phone": null,
+    "phones": [],
+    "email": null,
+    "emails": [],
+    "address": {
+      "street": null,
+      "number": null,
+      "colony": null,
+      "municipality": null,
+      "state": null,
+      "postal_code": null,
+      "country": "Mexico"
+    },
+    "latitude": null,
+    "longitude": null,
+    "source_count": 1,
+    "data_quality_score": 32,
+    "last_verified_at": "2026-09-17T12:28:00.987810+00:00"
+  },
+  {
+    "company_id": "mx_e98977af-e41a-06f7-d9b6-4f4c2cb5face",
+    "legal_name": "Corporación Fiscal Nacional S.P.R. DE R.L.",
+    "trade_name": null,
+    "normalized_name": "CORPORACION FISCAL NACIONAL S P R DE R L",
+    "rfc": "CFN90060664J",
+    "rfc_type": "MORAL",
+    "website": null,
+    "domain": null,
+    "industry": null,
+    "industry_code": null,
+    "employee_count_min": null,
+    "employee_count_max": null,
+    "employee_count_source": null,
+    "phone": null,
+    "phones": [],
+    "email": null,
+    "emails": [],
+    "address": {
+      "street": null,
+      "number": null,
+      "colony": null,
+      "municipality": null,
+      "state": null,
+      "postal_code": null,
+      "country": "Mexico"
+    },
+    "latitude": null,
+    "longitude": null,
+    "source_count": 1,
+    "data_quality_score": 32,
+    "last_verified_at": "2026-09-17T12:28:00.987810+00:00"
+  },
+  {
+    "company_id": "mx_adbfda30-d55c-4e78-c87e-17c4060b88d9",
+    "legal_name": "MANUFACTURA INDUSTRIAL DEL NORTE SAPI DE CV",
+    "trade_name": "MANUFACTURA NORTE",
+    "normalized_name": "MANUFACTURA INDUSTRIAL DEL NORTE",
+    "rfc": "MIN190310ZZ4",
+    "rfc_type": "MORAL",
+    "website": "https://www.manufacturanorte.com",
+    "domain": "manufacturanorte.com",
+    "industry": "Siderurgia y Metalmecanica",
+    "industry_code": null,
+    "employee_count_min": null,
+    "employee_count_max": null,
+    "employee_count_source": null,
+    "phone": "+528183123456",
+    "phones": [
+      {
+        "value": "+528183123456",
+        "source": "SUPPLIER_REGISTRY",
+        "type": "OFFICE",
+        "verified": false
+      }
+    ],
+    "email": "licitaciones@manufacturanorte.com",
+    "emails": [
+      {
+        "value": "licitaciones@manufacturanorte.com",
+        "source": "SUPPLIER_REGISTRY",
+        "verified": false
+      }
+    ],
+    "address": {
+      "street": "Diaz Ordaz",
+      "number": "100",
+      "colony": "Santa Maria",
+      "municipality": "Monterrey",
+      "state": "Nuevo León",
+      "postal_code": "64650",
+      "country": "Mexico"
+    },
+    "latitude": null,
+    "longitude": null,
+    "source_count": 1,
+    "data_quality_score": 88,
+    "last_verified_at": "2026-09-17T12:28:00.989808+00:00"
+  },
+  {
+    "company_id": "mx_c0caebfa-e091-81ba-99cb-a2958af73d36",
+    "legal_name": "Mantenimiento Vial de México S.C.",
+    "trade_name": "Mantenimiento Vial de México",
+    "normalized_name": "MANTENIMIENTO VIAL DE MEXICO",
+    "rfc": "MVD8905053UU",
+    "rfc_type": "MORAL",
+    "website": "https://www.mantenimientovialdem.com.mx",
+    "domain": "mantenimientovialdem.com.mx",
+    "industry": null,
+    "industry_code": null,
+    "employee_count_min": null,
+    "employee_count_max": null,
+    "employee_count_source": null,
+    "phone": "+524421031676",
+    "phones": [
+      {
+        "value": "+524421031676",
+        "source": "SUPPLIER_REGISTRY",
+        "type": "OFFICE",
+        "verified": false
+      }
+    ],
+    "email": "contacto@mantenimientovialdem.com.mx",
+    "emails": [
+      {
+        "value": "contacto@mantenimientovialdem.com.mx",
+        "source": "SUPPLIER_REGISTRY",
+        "verified": false
+      }
+    ],
+    "address": {
+      "street": "Circuito 5 de Mayo",
+      "number": "168",
+      "colony": "San Rafael",
+      "municipality": "Colón",
+      "state": "Querétaro",
+      "postal_code": "76004",
+      "country": "Mexico"
+    },
+    "latitude": null,
+    "longitude": null,
+    "source_count": 1,
+    "data_quality_score": 78,
+    "last_verified_at": "2026-09-17T12:28:00.989808+00:00"
+  },
+  {
+    "company_id": "mx_9783ae22-01d8-053d-1c2c-0b382bd6882f",
+    "legal_name": "Equipamiento Urbano de México S.P.R. DE R.L.",
+    "trade_name": "Equipamiento Urbano de México",
+    "normalized_name": "EQUIPAMIENTO URBANO DE MEXICO S P R DE R L",
+    "rfc": "EUD90060664J",
+    "rfc_type": "MORAL",
+    "website": "https://www.equipamientourbanode.mx",
+    "domain": "equipamientourbanode.mx",
+    "industry": null,
+    "industry_code": null,
+    "employee_count_min": null,
+    "employee_count_max": null,
+    "employee_count_source": null,
+    "phone": "+522221039595",
+    "phones": [
+      {
+        "value": "+522221039595",
+        "source": "SUPPLIER_REGISTRY",
+        "type": "OFFICE",
+        "verified": false
+      }
+    ],
+    "email": "contacto@equipamientourbanode.mx",
+    "emails": [
+      {
+        "value": "contacto@equipamientourbanode.mx",
+        "source": "SUPPLIER_REGISTRY",
+        "verified": false
+      }
+    ],
+    "address": {
+      "street": "Paseo Manuel Ávila Camacho",
+      "number": "185",
+      "colony": "Roma Norte",
+      "municipality": "Puebla",
+      "state": "Puebla",
+      "postal_code": "72005",
+      "country": "Mexico"
+    },
+    "latitude": null,
+    "longitude": null,
+    "source_count": 1,
+    "data_quality_score": 78,
+    "last_verified_at": "2026-09-17T12:28:00.989808+00:00"
+  },
+  {
+    "company_id": "mx_5c98341d-e215-e0a1-90f6-2b2b1e10aa45",
+    "legal_name": "INDUSTRIAS METALMECANICAS DE MORELOS S.A. DE C.V.",
+    "trade_name": "METALMECANICA MORELOS",
+    "normalized_name": "INDUSTRIAS METALMECANICAS DE MORELOS",
+    "rfc": "IMM980312AB3",
+    "rfc_type": "MORAL",
+    "website": "https://www.metalmecanicamorelos.com.mx",
+    "domain": "metalmecanicamorelos.com.mx",
+    "industry": "Fabricación de estructuras metálicas y maquinaria industrial",
+    "industry_code": null,
+    "employee_count_min": 51,
+    "employee_count_max": 100,
+    "employee_count_source": "51 a 100 personas",
+    "phone": "+527773221100",
+    "phones": [
+      {
+        "value": "+527773221100",
+        "source": "CANACINTRA",
+        "type": "OFFICE",
+        "verified": false
+      }
+    ],
+    "email": "contacto@metalmecanicamorelos.com.mx",
+    "emails": [
+      {
+        "value": "contacto@metalmecanicamorelos.com.mx",
+        "source": "CANACINTRA",
+        "verified": false
+      }
+    ],
+    "address": {
+      "street": "Av. Paseo Cuauhnáhuac",
+      "number": "1500 Int Bodega 4",
+      "colony": "Parque Industrial CIVAC",
+      "municipality": "Jiutepec",
+      "state": "Morelos",
+      "postal_code": "62578",
+      "country": "Mexico"
+    },
+    "latitude": null,
+    "longitude": null,
+    "source_count": 1,
+    "data_quality_score": 88,
+    "last_verified_at": "2026-09-17T12:28:01.002346+00:00"
+  },
+  {
+    "company_id": "mx_8b6288de-f75b-ddad-b829-6f764df3fc84",
+    "legal_name": "QUIMICA TRANSFORMADORA NACIONAL S.A. DE C.V.",
+    "trade_name": "QUIMITRANS",
+    "normalized_name": "QUIMICA TRANSFORMADORA NACIONAL",
+    "rfc": "QTN050819KJ9",
+    "rfc_type": "MORAL",
+    "website": "https://www.quimitrans.com.mx",
+    "domain": "quimitrans.com.mx",
+    "industry": "Fabricación de resinas y polímeros sintéticos",
+    "industry_code": null,
+    "employee_count_min": 101,
+    "employee_count_max": 250,
+    "employee_count_source": "101 a 250 personas",
+    "phone": "+525556781234",
+    "phones": [
+      {
+        "value": "+525556781234",
+        "source": "CANACINTRA",
+        "type": "OFFICE",
+        "verified": false
+      }
+    ],
+    "email": "ventas@quimitrans.com.mx",
+    "emails": [
+      {
+        "value": "ventas@quimitrans.com.mx",
+        "source": "CANACINTRA",
+        "verified": false
+      }
+    ],
+    "address": {
+      "street": "Calzada Vallejo",
+      "number": "850",
+      "colony": "Industrial Vallejo",
+      "municipality": "Azcapotzalco",
+      "state": "Ciudad de México",
+      "postal_code": "02300",
+      "country": "Mexico"
+    },
+    "latitude": null,
+    "longitude": null,
+    "source_count": 1,
+    "data_quality_score": 88,
+    "last_verified_at": "2026-09-17T12:28:01.002346+00:00"
+  },
+  {
+    "company_id": "mx_812a9b24-6e66-1e0b-a27f-ebfc32bb0378",
+    "legal_name": "Transformadora del Norte S.A.S.",
+    "trade_name": "Transformadora del Norte",
+    "normalized_name": "TRANSFORMADORA DEL NORTE S",
+    "rfc": "TDN8804040J4",
+    "rfc_type": "MORAL",
+    "website": "https://www.transformadoradelnor.mx",
+    "domain": "transformadoradelnor.mx",
+    "industry": "Fundición de Metales y Aleaciones",
+    "industry_code": null,
+    "employee_count_min": 31,
+    "employee_count_max": 50,
+    "employee_count_source": "31 a 50 personas",
+    "phone": "+527221023757",
+    "phones": [
+      {
+        "value": "+527221023757",
+        "source": "CANACINTRA",
+        "type": "OFFICE",
+        "verified": false
+      }
+    ],
+    "email": "contacto@transformadoradelnor.mx",
+    "emails": [
+      {
+        "value": "contacto@transformadoradelnor.mx",
+        "source": "CANACINTRA",
+        "verified": false
+      }
+    ],
+    "address": {
+      "street": "Boulevard Benito Juárez",
+      "number": "151",
+      "colony": "Parque Industrial",
+      "municipality": "Cuautitlán Izcalli",
+      "state": "México",
+      "postal_code": "50003",
+      "country": "Mexico"
+    },
+    "latitude": null,
+    "longitude": null,
+    "source_count": 1,
+    "data_quality_score": 88,
+    "last_verified_at": "2026-09-17T12:28:01.003351+00:00"
+  },
+  {
+    "company_id": "mx_e6215374-dd0f-8326-f7f1-312e600b596a",
+    "legal_name": "Fundición del Norte S.C.",
+    "trade_name": "Fundición del Norte",
+    "normalized_name": "FUNDICION DEL NORTE",
+    "rfc": "FDN8905053UU",
+    "rfc_type": "MORAL",
+    "website": "https://www.fundicióndelnorte.com.mx",
+    "domain": "fundicióndelnorte.com.mx",
+    "industry": "Manufactura de Componentes Electromecánicos",
+    "industry_code": null,
+    "employee_count_min": 51,
+    "employee_count_max": 100,
+    "employee_count_source": "51 a 100 personas",
+    "phone": "+524421031676",
+    "phones": [
+      {
+        "value": "+524421031676",
+        "source": "CANACINTRA",
+        "type": "OFFICE",
+        "verified": false
+      }
+    ],
+    "email": null,
+    "emails": [],
+    "address": {
+      "street": "Circuito 5 de Mayo",
+      "number": "168",
+      "colony": "San Rafael",
+      "municipality": "Colón",
+      "state": "Querétaro",
+      "postal_code": "76004",
+      "country": "Mexico"
+    },
+    "latitude": null,
+    "longitude": null,
+    "source_count": 1,
+    "data_quality_score": 78,
+    "last_verified_at": "2026-09-17T12:28:01.003351+00:00"
+  },
+  {
+    "company_id": "mx_2a2ceb1d-8969-a86c-de7c-bfdf34c83f70",
+    "legal_name": "Estructuras del Norte S.P.R. DE R.L.",
+    "trade_name": "Estructuras del Norte",
+    "normalized_name": "ESTRUCTURAS DEL NORTE S P R DE R L",
+    "rfc": "EDN90060664J",
+    "rfc_type": "MORAL",
+    "website": "https://www.estructurasdelnorte.mx",
+    "domain": "estructurasdelnorte.mx",
+    "industry": "Producción de Equipos de Enfriamiento Industrial",
+    "industry_code": null,
+    "employee_count_min": 101,
+    "employee_count_max": 250,
+    "employee_count_source": "101 a 250 personas",
+    "phone": "+522221039595",
+    "phones": [
+      {
+        "value": "+522221039595",
+        "source": "CANACINTRA",
+        "type": "OFFICE",
+        "verified": false
+      }
+    ],
+    "email": "contacto@estructurasdelnorte.mx",
+    "emails": [
+      {
+        "value": "contacto@estructurasdelnorte.mx",
+        "source": "CANACINTRA",
+        "verified": false
+      }
+    ],
+    "address": {
+      "street": "Paseo Manuel Ávila Camacho",
+      "number": "185",
+      "colony": "Roma Norte",
+      "municipality": "Puebla",
+      "state": "Puebla",
+      "postal_code": "72005",
+      "country": "Mexico"
+    },
+    "latitude": null,
+    "longitude": null,
+    "source_count": 1,
+    "data_quality_score": 88,
+    "last_verified_at": "2026-09-17T12:28:01.003351+00:00"
+  },
+  {
+    "company_id": "mx_4631236a-62d7-3102-a63c-60b0bf453242",
+    "legal_name": "GLOBAL LOGISTICS & SUPPLY CHAIN MEXICO S. DE R.L. DE C.V.",
+    "trade_name": "GLOBAL LOGISTICS MEXICO",
+    "normalized_name": "GLOBAL LOGISTICS SUPPLY CHAIN MEXICO",
+    "rfc": "GLS1104159Z1",
+    "rfc_type": "MORAL",
+    "website": "https://www.globallogisticsmex.com",
+    "domain": "globallogisticsmex.com",
+    "industry": "Transportation & Cross-Border Logistics",
+    "industry_code": null,
+    "employee_count_min": null,
+    "employee_count_max": null,
+    "employee_count_source": null,
+    "phone": "+525550809000",
+    "phones": [
+      {
+        "value": "+525550809000",
+        "source": "AMCHAM",
+        "type": "OFFICE",
+        "verified": false
+      }
+    ],
+    "email": "info@globallogisticsmex.com",
+    "emails": [
+      {
+        "value": "info@globallogisticsmex.com",
+        "source": "AMCHAM",
+        "verified": false
+      }
+    ],
+    "address": {
+      "street": "Paseo de la Reforma",
+      "number": "505 Piso 28",
+      "colony": "Cuauhtémoc",
+      "municipality": "Cuauhtémoc",
+      "state": "Ciudad de México",
+      "postal_code": "06500",
+      "country": "Mexico"
+    },
+    "latitude": null,
+    "longitude": null,
+    "source_count": 1,
+    "data_quality_score": 88,
+    "last_verified_at": "2026-09-17T12:28:01.005405+00:00"
+  },
+  {
+    "company_id": "mx_9f84b70a-dd64-e994-15cf-fe91e3f1ca71",
+    "legal_name": "TECHSOLUTIONS ADVANCED SYSTEMS MEXICO S.A. DE C.V.",
+    "trade_name": "TECHSOLUTIONS MX",
+    "normalized_name": "TECHSOLUTIONS ADVANCED SYSTEMS MEXICO",
+    "rfc": "TAS1609204A2",
+    "rfc_type": "MORAL",
+    "website": "https://www.techsolutionsmx.com",
+    "domain": "techsolutionsmx.com",
+    "industry": "Information Technology & Enterprise Software",
+    "industry_code": null,
+    "employee_count_min": null,
+    "employee_count_max": null,
+    "employee_count_source": null,
+    "phone": "+528183991200",
+    "phones": [
+      {
+        "value": "+528183991200",
+        "source": "AMCHAM",
+        "type": "OFFICE",
+        "verified": false
+      }
+    ],
+    "email": "contact@techsolutionsmx.com",
+    "emails": [
+      {
+        "value": "contact@techsolutionsmx.com",
+        "source": "AMCHAM",
+        "verified": false
+      }
+    ],
+    "address": {
+      "street": "Av. Ricardo Margáin Zozaya",
+      "number": "575",
+      "colony": "Santa Engracia",
+      "municipality": "San Pedro Garza García",
+      "state": "Nuevo León",
+      "postal_code": "66267",
+      "country": "Mexico"
+    },
+    "latitude": null,
+    "longitude": null,
+    "source_count": 1,
+    "data_quality_score": 88,
+    "last_verified_at": "2026-09-17T12:28:01.005405+00:00"
+  },
+  {
+    "company_id": "mx_40a897f7-830f-ca03-c9e2-33efebf11738",
+    "legal_name": "Consultoría Empresarial América S.A.S.",
+    "trade_name": "Consultoría Empresarial América",
+    "normalized_name": "CONSULTORIA EMPRESARIAL AMERICA S",
+    "rfc": "CEA8804040J4",
+    "rfc_type": "MORAL",
+    "website": "https://www.consultoríaempresari.mx",
+    "domain": "consultoríaempresari.mx",
+    "industry": null,
+    "industry_code": null,
+    "employee_count_min": null,
+    "employee_count_max": null,
+    "employee_count_source": null,
+    "phone": "+527221023757",
+    "phones": [
+      {
+        "value": "+527221023757",
+        "source": "AMCHAM",
+        "type": "OFFICE",
+        "verified": false
+      }
+    ],
+    "email": null,
+    "emails": [],
+    "address": {
+      "street": "Boulevard Benito Juárez",
+      "number": "",
+      "colony": "Parque Industrial",
+      "municipality": "Cuautitlán Izcalli",
+      "state": "México",
+      "postal_code": "50003",
+      "country": "Mexico"
+    },
+    "latitude": null,
+    "longitude": null,
+    "source_count": 1,
+    "data_quality_score": 68,
+    "last_verified_at": "2026-09-17T12:28:01.005405+00:00"
+  },
+  {
+    "company_id": "mx_07ee2a17-d4ff-c3cf-0b80-335aa0c64230",
+    "legal_name": "Tecnologías América S.C.",
+    "trade_name": "Tecnologías América",
+    "normalized_name": "TECNOLOGIAS AMERICA",
+    "rfc": "TAX8905053UU",
+    "rfc_type": "MORAL",
+    "website": "https://www.tecnologíasamérica.com.mx",
+    "domain": "tecnologíasamérica.com.mx",
+    "industry": null,
+    "industry_code": null,
+    "employee_count_min": null,
+    "employee_count_max": null,
+    "employee_count_source": null,
+    "phone": "+524421031676",
+    "phones": [
+      {
+        "value": "+524421031676",
+        "source": "AMCHAM",
+        "type": "OFFICE",
+        "verified": false
+      }
+    ],
+    "email": null,
+    "emails": [],
+    "address": {
+      "street": "Circuito 5 de Mayo",
+      "number": "",
+      "colony": "San Rafael",
+      "municipality": "Colón",
+      "state": "Querétaro",
+      "postal_code": "76004",
+      "country": "Mexico"
+    },
+    "latitude": null,
+    "longitude": null,
+    "source_count": 1,
+    "data_quality_score": 68,
+    "last_verified_at": "2026-09-17T12:28:01.005405+00:00"
+  },
+  {
+    "company_id": "mx_78089ac7-7165-ea8d-4b7c-398852b6e55b",
+    "legal_name": "Soluciones Globales América S.P.R. DE R.L.",
+    "trade_name": "Soluciones Globales América",
+    "normalized_name": "SOLUCIONES GLOBALES AMERICA S P R DE R L",
+    "rfc": "SGA90060664J",
+    "rfc_type": "MORAL",
+    "website": "https://www.solucionesglobalesam.mx",
+    "domain": "solucionesglobalesam.mx",
+    "industry": null,
+    "industry_code": null,
+    "employee_count_min": null,
+    "employee_count_max": null,
+    "employee_count_source": null,
+    "phone": "+522221039595",
+    "phones": [
+      {
+        "value": "+522221039595",
+        "source": "AMCHAM",
+        "type": "OFFICE",
+        "verified": false
+      }
+    ],
+    "email": "contacto@solucionesglobalesam.mx",
+    "emails": [
+      {
+        "value": "contacto@solucionesglobalesam.mx",
+        "source": "AMCHAM",
+        "verified": false
+      }
+    ],
+    "address": {
+      "street": "Paseo Manuel Ávila Camacho",
+      "number": "",
+      "colony": "Roma Norte",
+      "municipality": "Puebla",
+      "state": "Puebla",
+      "postal_code": "72005",
+      "country": "Mexico"
+    },
+    "latitude": null,
+    "longitude": null,
+    "source_count": 1,
+    "data_quality_score": 78,
+    "last_verified_at": "2026-09-17T12:28:01.005405+00:00"
+  },
+  {
+    "company_id": "mx_4986f4f4-244f-0ebb-2e5b-3dbf3220f547",
+    "legal_name": "VALVULAS Y CONEXIONES INDUSTRIALES DE MEXICO S.A. DE C.V.",
+    "trade_name": "VALCON INDUSTRIAL",
+    "normalized_name": "VALVULAS Y CONEXIONES INDUSTRIALES DE MEXICO",
+    "rfc": "VCI010620AA8",
+    "rfc_type": "MORAL",
+    "website": "https://www.valconindustrial.com.mx",
+    "domain": "valconindustrial.com.mx",
+    "industry": "Válvulas industriales, bombas y tuberías de acero",
+    "industry_code": null,
+    "employee_count_min": 31,
+    "employee_count_max": 50,
+    "employee_count_source": "31 a 50 personas",
+    "phone": "+525557629000",
+    "phones": [
+      {
+        "value": "+525557629000",
+        "source": "COSMOS",
+        "type": "OFFICE",
+        "verified": false
+      }
+    ],
+    "email": "ventas@valconindustrial.com.mx",
+    "emails": [
+      {
+        "value": "ventas@valconindustrial.com.mx",
+        "source": "COSMOS",
+        "verified": false
+      }
+    ],
+    "address": {
+      "street": "Oriente 233",
+      "number": "120",
+      "colony": "Agrícola Oriental",
+      "municipality": "Iztacalco",
+      "state": "Ciudad de México",
+      "postal_code": "08500",
+      "country": "Mexico"
+    },
+    "latitude": null,
+    "longitude": null,
+    "source_count": 1,
+    "data_quality_score": 88,
+    "last_verified_at": "2026-09-17T12:28:01.007396+00:00"
+  },
+  {
+    "company_id": "mx_ff0d5b98-f1a5-20ac-4fd5-c90b5d2ab692",
+    "legal_name": "EMPAQUES Y POLIMEROS TERMOFORMADOS S.A. DE C.V.",
+    "trade_name": "POLITERM PACKAGING",
+    "normalized_name": "EMPAQUES Y POLIMEROS TERMOFORMADOS",
+    "rfc": "EPT120305HQ1",
+    "rfc_type": "MORAL",
+    "website": "https://www.politermpack.com.mx",
+    "domain": "politermpack.com.mx",
+    "industry": "Empaques industriales, plásticos corrugados y termoformado",
+    "industry_code": null,
+    "employee_count_min": 51,
+    "employee_count_max": 100,
+    "employee_count_source": "51 a 100 personas",
+    "phone": "+523336841122",
+    "phones": [
+      {
+        "value": "+523336841122",
+        "source": "COSMOS",
+        "type": "OFFICE",
+        "verified": false
+      }
+    ],
+    "email": "contacto@politermpack.com.mx",
+    "emails": [
+      {
+        "value": "contacto@politermpack.com.mx",
+        "source": "COSMOS",
+        "verified": false
+      }
+    ],
+    "address": {
+      "street": "Av. González Gallo",
+      "number": "2100",
+      "colony": "Atlas",
+      "municipality": "Guadalajara",
+      "state": "Jalisco",
+      "postal_code": "44870",
+      "country": "Mexico"
+    },
+    "latitude": null,
+    "longitude": null,
+    "source_count": 1,
+    "data_quality_score": 88,
+    "last_verified_at": "2026-09-17T12:28:01.007396+00:00"
+  },
+  {
+    "company_id": "mx_40e327db-a427-ab0b-ccf7-2c88048c0715",
+    "legal_name": "Herramientas Técnica S.A.S.",
+    "trade_name": "Herramientas Técnica",
+    "normalized_name": "HERRAMIENTAS TECNICA S",
+    "rfc": "HTX8804040J4",
+    "rfc_type": "MORAL",
+    "website": "https://www.herramientastécnica.mx",
+    "domain": "herramientastécnica.mx",
+    "industry": "Comercio de Herramientas y Equipos de Corte",
+    "industry_code": null,
+    "employee_count_min": 31,
+    "employee_count_max": 50,
+    "employee_count_source": "31 a 50 personas",
+    "phone": "+527221023757",
+    "phones": [
+      {
+        "value": "+527221023757",
+        "source": "COSMOS",
+        "type": "OFFICE",
+        "verified": false
+      }
+    ],
+    "email": null,
+    "emails": [],
+    "address": {
+      "street": "Boulevard Benito Juárez",
+      "number": "151",
+      "colony": "Parque Industrial",
+      "municipality": "Cuautitlán Izcalli",
+      "state": "México",
+      "postal_code": "50003",
+      "country": "Mexico"
+    },
+    "latitude": null,
+    "longitude": null,
+    "source_count": 1,
+    "data_quality_score": 78,
+    "last_verified_at": "2026-09-17T12:28:01.007396+00:00"
+  },
+  {
+    "company_id": "mx_f66c1281-a73d-1e91-674f-d2984daa2e8b",
+    "legal_name": "Bombas y Válvulas Técnica S.C.",
+    "trade_name": "Bombas y Válvulas Técnica",
+    "normalized_name": "BOMBAS Y VALVULAS TECNICA",
+    "rfc": "BYV8905053UU",
+    "rfc_type": "MORAL",
+    "website": "https://www.bombasyválvulastécni.com.mx",
+    "domain": "bombasyválvulastécni.com.mx",
+    "industry": "Suministro de Bombas Industriales y Compresores",
+    "industry_code": null,
+    "employee_count_min": 51,
+    "employee_count_max": 100,
+    "employee_count_source": "51 a 100 personas",
+    "phone": "+524421031676",
+    "phones": [
+      {
+        "value": "+524421031676",
+        "source": "COSMOS",
+        "type": "OFFICE",
+        "verified": false
+      }
+    ],
+    "email": null,
+    "emails": [],
+    "address": {
+      "street": "Circuito 5 de Mayo",
+      "number": "168",
+      "colony": "San Rafael",
+      "municipality": "Colón",
+      "state": "Querétaro",
+      "postal_code": "76004",
+      "country": "Mexico"
+    },
+    "latitude": null,
+    "longitude": null,
+    "source_count": 1,
+    "data_quality_score": 78,
+    "last_verified_at": "2026-09-17T12:28:01.007396+00:00"
+  },
+  {
+    "company_id": "mx_23512f15-3035-35c9-ce21-fbf9506dd877",
+    "legal_name": "Sistemas Hidráulicos Técnica S.P.R. DE R.L.",
+    "trade_name": "Sistemas Hidráulicos Técnica",
+    "normalized_name": "SISTEMAS HIDRAULICOS TECNICA S P R DE R L",
+    "rfc": "SHT90060664J",
+    "rfc_type": "MORAL",
+    "website": "https://www.sistemashidráulicost.mx",
+    "domain": "sistemashidráulicost.mx",
+    "industry": "Distribución de Maquinaria y Equipo Pesado",
+    "industry_code": null,
+    "employee_count_min": 101,
+    "employee_count_max": 250,
+    "employee_count_source": "101 a 250 personas",
+    "phone": "+522221039595",
+    "phones": [
+      {
+        "value": "+522221039595",
+        "source": "COSMOS",
+        "type": "OFFICE",
+        "verified": false
+      }
+    ],
+    "email": null,
+    "emails": [],
+    "address": {
+      "street": "Paseo Manuel Ávila Camacho",
+      "number": "185",
+      "colony": "Roma Norte",
+      "municipality": "Puebla",
+      "state": "Puebla",
+      "postal_code": "72005",
+      "country": "Mexico"
+    },
+    "latitude": null,
+    "longitude": null,
+    "source_count": 1,
+    "data_quality_score": 78,
+    "last_verified_at": "2026-09-17T12:28:01.008398+00:00"
+  },
+  {
+    "company_id": "mx_e8ec0e00-3883-8677-52c1-7589ffb652a3",
+    "legal_name": "PRODUCTOS QUIMICOS INDUSTRIALES DEL NORTE S.A. DE C.V.",
+    "trade_name": "PROQUIM NORTE",
+    "normalized_name": "PRODUCTOS QUIMICOS INDUSTRIALES DEL NORTE",
+    "rfc": "PQN971015332",
+    "rfc_type": "MORAL",
+    "website": "https://www.proquimnorte.com.mx",
+    "domain": "proquimnorte.com.mx",
+    "industry": "Solventes industriales, ácidos y reactivos químicos",
+    "industry_code": null,
+    "employee_count_min": 11,
+    "employee_count_max": 30,
+    "employee_count_source": "11 a 30 personas",
+    "phone": "+528181234567",
+    "phones": [
+      {
+        "value": "+528181234567",
+        "source": "QUIMINET",
+        "type": "OFFICE",
+        "verified": false
+      }
+    ],
+    "email": "info@proquimnorte.com.mx",
+    "emails": [
+      {
+        "value": "info@proquimnorte.com.mx",
+        "source": "QUIMINET",
+        "verified": false
+      }
+    ],
+    "address": {
+      "street": "Av. Félix U. Gómez 2450 Norte",
+      "number": "",
+      "colony": "Moderna",
+      "municipality": "Monterrey",
+      "state": "Nuevo León",
+      "postal_code": "64530",
+      "country": "Mexico"
+    },
+    "latitude": null,
+    "longitude": null,
+    "source_count": 1,
+    "data_quality_score": 88,
+    "last_verified_at": "2026-09-17T12:28:01.010517+00:00"
+  },
+  {
+    "company_id": "mx_82c447f0-4097-4f48-cb76-2c659e14d0dc",
+    "legal_name": "AUTOMATIZACION Y ROBOTICA INDUSTRIAL DE OCCIDENTE S.A. DE C.V.",
+    "trade_name": "AUTOBOTICS OCCIDENTE",
+    "normalized_name": "AUTOMATIZACION Y ROBOTICA INDUSTRIAL DE OCCIDENTE",
+    "rfc": "ARO1407021K8",
+    "rfc_type": "MORAL",
+    "website": "https://www.autobotics.mx",
+    "domain": "autobotics.mx",
+    "industry": "Sistemas de automatización PLC, brazos robóticos y sensores",
+    "industry_code": null,
+    "employee_count_min": 31,
+    "employee_count_max": 50,
+    "employee_count_source": "31 a 50 personas",
+    "phone": "+523338129988",
+    "phones": [
+      {
+        "value": "+523338129988",
+        "source": "QUIMINET",
+        "type": "OFFICE",
+        "verified": false
+      }
+    ],
+    "email": "ventas@autobotics.mx",
+    "emails": [
+      {
+        "value": "ventas@autobotics.mx",
+        "source": "QUIMINET",
+        "verified": false
+      }
+    ],
+    "address": {
+      "street": "Calzada Lázaro Cárdenas 3400",
+      "number": "",
+      "colony": "Jardines de San Ignacio",
+      "municipality": "Zapopan",
+      "state": "Jalisco",
+      "postal_code": "45040",
+      "country": "Mexico"
+    },
+    "latitude": null,
+    "longitude": null,
+    "source_count": 1,
+    "data_quality_score": 88,
+    "last_verified_at": "2026-09-17T12:28:01.010517+00:00"
+  },
+  {
+    "company_id": "mx_6dfa8dbd-1884-1857-3417-77dd8655cebb",
+    "legal_name": "Soluciones Químicas Especializadas S.A.S.",
+    "trade_name": "Soluciones Químicas Especializadas",
+    "normalized_name": "SOLUCIONES QUIMICAS ESPECIALIZADAS S",
+    "rfc": "SQE8804040J4",
+    "rfc_type": "MORAL",
+    "website": "https://www.solucionesquímicases.mx",
+    "domain": "solucionesquímicases.mx",
+    "industry": "Materias Primas Farmacéuticas y Cosméticas",
+    "industry_code": null,
+    "employee_count_min": null,
+    "employee_count_max": null,
+    "employee_count_source": null,
+    "phone": "+527221023757",
+    "phones": [
+      {
+        "value": "+527221023757",
+        "source": "QUIMINET",
+        "type": "OFFICE",
+        "verified": false
+      }
+    ],
+    "email": null,
+    "emails": [],
+    "address": {
+      "street": "Boulevard Benito Juárez",
+      "number": "",
+      "colony": "Parque Industrial",
+      "municipality": "Cuautitlán Izcalli",
+      "state": "México",
+      "postal_code": "50003",
+      "country": "Mexico"
+    },
+    "latitude": null,
+    "longitude": null,
+    "source_count": 1,
+    "data_quality_score": 78,
+    "last_verified_at": "2026-09-17T12:28:01.010517+00:00"
+  },
+  {
+    "company_id": "mx_5aaeee99-1c2c-0309-7595-fe18b02168a9",
+    "legal_name": "Distribuidora Química Especializadas S.C.",
+    "trade_name": "Distribuidora Química Especializadas",
+    "normalized_name": "DISTRIBUIDORA QUIMICA ESPECIALIZADAS",
+    "rfc": "DQE8905053UU",
+    "rfc_type": "MORAL",
+    "website": "https://www.distribuidoraquímica.com.mx",
+    "domain": "distribuidoraquímica.com.mx",
+    "industry": "Soluciones de Tratamiento de Aguas Industriales",
+    "industry_code": null,
+    "employee_count_min": null,
+    "employee_count_max": null,
+    "employee_count_source": null,
+    "phone": "+524421031676",
+    "phones": [
+      {
+        "value": "+524421031676",
+        "source": "QUIMINET",
+        "type": "OFFICE",
+        "verified": false
+      }
+    ],
+    "email": null,
+    "emails": [],
+    "address": {
+      "street": "Circuito 5 de Mayo",
+      "number": "",
+      "colony": "San Rafael",
+      "municipality": "Colón",
+      "state": "Querétaro",
+      "postal_code": "76004",
+      "country": "Mexico"
+    },
+    "latitude": null,
+    "longitude": null,
+    "source_count": 1,
+    "data_quality_score": 78,
+    "last_verified_at": "2026-09-17T12:28:01.010517+00:00"
+  },
+  {
+    "company_id": "mx_20148860-9f9f-3bc1-d6d1-931175c50b22",
+    "legal_name": "Reactivos Especializadas S.P.R. DE R.L.",
+    "trade_name": "Reactivos Especializadas",
+    "normalized_name": "REACTIVOS ESPECIALIZADAS S P R DE R L",
+    "rfc": "REX90060664J",
+    "rfc_type": "MORAL",
+    "website": "https://www.reactivosespecializa.mx",
+    "domain": "reactivosespecializa.mx",
+    "industry": "Fabricación de Resinas y Polímeros Sintéticos",
+    "industry_code": null,
+    "employee_count_min": null,
+    "employee_count_max": null,
+    "employee_count_source": null,
+    "phone": "+522221039595",
+    "phones": [
+      {
+        "value": "+522221039595",
+        "source": "QUIMINET",
+        "type": "OFFICE",
+        "verified": false
+      }
+    ],
+    "email": "contacto@reactivosespecializa.mx",
+    "emails": [
+      {
+        "value": "contacto@reactivosespecializa.mx",
+        "source": "QUIMINET",
+        "verified": false
+      }
+    ],
+    "address": {
+      "street": "Paseo Manuel Ávila Camacho",
+      "number": "",
+      "colony": "Roma Norte",
+      "municipality": "Puebla",
+      "state": "Puebla",
+      "postal_code": "72005",
+      "country": "Mexico"
+    },
+    "latitude": null,
+    "longitude": null,
+    "source_count": 1,
+    "data_quality_score": 88,
+    "last_verified_at": "2026-09-17T12:28:01.011506+00:00"
+  },
+  {
+    "company_id": "mx_51e1e7cc-5ed5-99c4-c8d7-941681a38a2f",
+    "legal_name": "DISTRIBUIDORA ELECTRICA Y FERRETERA DEL CENTRO S.A. DE C.V.",
+    "trade_name": "ELECTROFERRETERA DEL CENTRO",
+    "normalized_name": "DISTRIBUIDORA ELECTRICA Y FERRETERA DEL CENTRO",
+    "rfc": null,
+    "rfc_type": null,
+    "website": "https://www.electroferretera.com.mx",
+    "domain": "electroferretera.com.mx",
+    "industry": "Material Eléctrico e Iluminación Industrial",
+    "industry_code": null,
+    "employee_count_min": null,
+    "employee_count_max": null,
+    "employee_count_source": null,
+    "phone": "+525555123456",
+    "phones": [
+      {
+        "value": "+525555123456",
+        "source": "SECCION_AMARILLA",
+        "type": "OFFICE",
+        "verified": false
+      }
+    ],
+    "email": "pedidos@electroferretera.com.mx",
+    "emails": [
+      {
+        "value": "pedidos@electroferretera.com.mx",
+        "source": "SECCION_AMARILLA",
+        "verified": false
+      }
+    ],
+    "address": {
+      "street": "Calle Ayuntamiento 84",
+      "number": null,
+      "colony": "Centro",
+      "municipality": "Cuauhtémoc",
+      "state": "Ciudad de México",
+      "postal_code": "06050",
+      "country": "Mexico"
+    },
+    "latitude": 19.4305,
+    "longitude": -99.1452,
+    "source_count": 1,
+    "data_quality_score": 82,
+    "last_verified_at": "2026-09-17T12:28:01.013509+00:00"
+  },
+  {
+    "company_id": "mx_47cf0738-f6c4-4c10-93b1-e0be4d0808ac",
+    "legal_name": "SERVICIOS LOGISTICOS INTEGRALES BAJIO S.A. DE C.V.",
+    "trade_name": "LOGISTICA BAJIO EXPRESS",
+    "normalized_name": "SERVICIOS LOGISTICOS INTEGRALES BAJIO",
+    "rfc": null,
+    "rfc_type": null,
+    "website": "https://www.logisticabajio.com.mx",
+    "domain": "logisticabajio.com.mx",
+    "industry": "Fletes y Transporte de Carga Consolidada",
+    "industry_code": null,
+    "employee_count_min": null,
+    "employee_count_max": null,
+    "employee_count_source": null,
+    "phone": "+524777102030",
+    "phones": [
+      {
+        "value": "+524777102030",
+        "source": "SECCION_AMARILLA",
+        "type": "OFFICE",
+        "verified": false
+      }
+    ],
+    "email": "cotizaciones@logisticabajio.com.mx",
+    "emails": [
+      {
+        "value": "cotizaciones@logisticabajio.com.mx",
+        "source": "SECCION_AMARILLA",
+        "verified": false
+      }
+    ],
+    "address": {
+      "street": "Boulevard Aeropuerto 1020",
+      "number": null,
+      "colony": "San José el Alto",
+      "municipality": "León",
+      "state": "Guanajuato",
+      "postal_code": "37545",
+      "country": "Mexico"
+    },
+    "latitude": 21.0921,
+    "longitude": -101.6214,
+    "source_count": 1,
+    "data_quality_score": 82,
+    "last_verified_at": "2026-09-17T12:28:01.013509+00:00"
+  },
+  {
+    "company_id": "mx_5fc0d045-f47f-8190-6350-92ce02bad5b2",
+    "legal_name": "Transportes del Centro S.A.S.",
+    "trade_name": "Transportes del Centro",
+    "normalized_name": "TRANSPORTES DEL CENTRO S",
+    "rfc": null,
+    "rfc_type": null,
+    "website": "https://www.transportesdelcentro.mx",
+    "domain": "transportesdelcentro.mx",
+    "industry": "Venta de Refacciones y Autopartes Industriales",
+    "industry_code": null,
+    "employee_count_min": null,
+    "employee_count_max": null,
+    "employee_count_source": null,
+    "phone": "+527221023757",
+    "phones": [
+      {
+        "value": "+527221023757",
+        "source": "SECCION_AMARILLA",
+        "type": "OFFICE",
+        "verified": false
+      }
+    ],
+    "email": "contacto@transportesdelcentro.mx",
+    "emails": [
+      {
+        "value": "contacto@transportesdelcentro.mx",
+        "source": "SECCION_AMARILLA",
+        "verified": false
+      }
+    ],
+    "address": {
+      "street": "Boulevard Benito Juárez",
+      "number": null,
+      "colony": "Parque Industrial",
+      "municipality": "Cuautitlán Izcalli",
+      "state": "México",
+      "postal_code": "50003",
+      "country": "Mexico"
+    },
+    "latitude": null,
+    "longitude": null,
+    "source_count": 1,
+    "data_quality_score": 78,
+    "last_verified_at": "2026-09-17T12:28:01.013509+00:00"
+  },
+  {
+    "company_id": "mx_f4392961-8867-130d-fe2b-6043fb2653ee",
+    "legal_name": "Constructora del Centro S.C.",
+    "trade_name": "Constructora del Centro",
+    "normalized_name": "CONSTRUCTORA DEL CENTRO",
+    "rfc": null,
+    "rfc_type": null,
+    "website": "https://www.constructoradelcentr.com.mx",
+    "domain": "constructoradelcentr.com.mx",
+    "industry": "Servicios de Limpieza y Mantenimiento Corporativo",
+    "industry_code": null,
+    "employee_count_min": null,
+    "employee_count_max": null,
+    "employee_count_source": null,
+    "phone": "+524421031676",
+    "phones": [
+      {
+        "value": "+524421031676",
+        "source": "SECCION_AMARILLA",
+        "type": "OFFICE",
+        "verified": false
+      }
+    ],
+    "email": "contacto@constructoradelcentr.com.mx",
+    "emails": [
+      {
+        "value": "contacto@constructoradelcentr.com.mx",
+        "source": "SECCION_AMARILLA",
+        "verified": false
+      }
+    ],
+    "address": {
+      "street": "Circuito 5 de Mayo",
+      "number": null,
+      "colony": "San Rafael",
+      "municipality": "Colón",
+      "state": "Querétaro",
+      "postal_code": "76004",
+      "country": "Mexico"
+    },
+    "latitude": null,
+    "longitude": null,
+    "source_count": 1,
+    "data_quality_score": 78,
+    "last_verified_at": "2026-09-17T12:28:01.013509+00:00"
+  },
+  {
+    "company_id": "mx_307da4c4-379f-8c90-af67-864f9bbd6c9a",
+    "legal_name": "Materiales del Centro S.P.R. DE R.L.",
+    "trade_name": "Materiales del Centro",
+    "normalized_name": "MATERIALES DEL CENTRO S P R DE R L",
+    "rfc": null,
+    "rfc_type": null,
+    "website": "https://www.materialesdelcentro.mx",
+    "domain": "materialesdelcentro.mx",
+    "industry": "Comercialización y Distribución al Mayoreo",
+    "industry_code": null,
+    "employee_count_min": null,
+    "employee_count_max": null,
+    "employee_count_source": null,
+    "phone": "+522221039595",
+    "phones": [
+      {
+        "value": "+522221039595",
+        "source": "SECCION_AMARILLA",
+        "type": "OFFICE",
+        "verified": false
+      }
+    ],
+    "email": "contacto@materialesdelcentro.mx",
+    "emails": [
+      {
+        "value": "contacto@materialesdelcentro.mx",
+        "source": "SECCION_AMARILLA",
+        "verified": false
+      }
+    ],
+    "address": {
+      "street": "Paseo Manuel Ávila Camacho",
+      "number": null,
+      "colony": "Roma Norte",
+      "municipality": "Puebla",
+      "state": "Puebla",
+      "postal_code": "72005",
+      "country": "Mexico"
+    },
+    "latitude": null,
+    "longitude": null,
+    "source_count": 1,
+    "data_quality_score": 78,
+    "last_verified_at": "2026-09-17T12:28:01.013509+00:00"
+  }
+]

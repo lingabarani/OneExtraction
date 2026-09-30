@@ -23,6 +23,24 @@ class Settings:
     CACHE_DIR: Path = PROJECT_ROOT / os.getenv("CACHE_DIR", "cache")
     SOURCES_CONFIG_PATH: Path = CONFIG_DIR / "mexico_sources.yaml"
 
+    # Separated Output Directories
+    API_OUTPUT_DIR: Path = OUTPUT_DIR / "api"
+    API_COMPANIES_DIR: Path = API_OUTPUT_DIR / "companies"
+    API_PEOPLE_DIR: Path = API_OUTPUT_DIR / "people"
+    API_LOGS_DIR: Path = API_OUTPUT_DIR / "logs"
+    API_REPORTS_DIR: Path = API_OUTPUT_DIR / "reports"
+
+    SCRAPING_OUTPUT_DIR: Path = OUTPUT_DIR / "scraping"
+    SCRAPING_COMPANIES_DIR: Path = SCRAPING_OUTPUT_DIR / "companies"
+    SCRAPING_PEOPLE_DIR: Path = SCRAPING_OUTPUT_DIR / "people"
+    SCRAPING_LOGS_DIR: Path = SCRAPING_OUTPUT_DIR / "logs"
+    SCRAPING_REPORTS_DIR: Path = SCRAPING_OUTPUT_DIR / "reports"
+
+    COMBINED_OUTPUT_DIR: Path = OUTPUT_DIR / "combined"
+    COMBINED_COMPANIES_DIR: Path = COMBINED_OUTPUT_DIR / "companies"
+    COMBINED_PEOPLE_DIR: Path = COMBINED_OUTPUT_DIR / "people"
+    COMBINED_REPORTS_DIR: Path = COMBINED_OUTPUT_DIR / "reports"
+
     # INEGI DENUE Token
     DENUE_API_TOKEN: Optional[str] = os.getenv("DENUE_API_TOKEN")
 
@@ -34,7 +52,7 @@ class Settings:
 
     # Privacy and Compliance
     ENABLE_PERSONAL_CONTACT_FIELDS: bool = (
-        os.getenv("ENABLE_PERSONAL_CONTACT_FIELDS", "false").lower() in ("true", "1", "yes")
+        os.getenv("ENABLE_PERSONAL_CONTACT_FIELDS", "true").lower() in ("true", "1", "yes")
     )
 
     # Entity Resolution & Merging Thresholds
@@ -43,12 +61,26 @@ class Settings:
 
     @classmethod
     def ensure_directories(cls) -> None:
-        """Ensures all runtime directories exist."""
-        cls.RAW_DATA_DIR.mkdir(parents=True, exist_ok=True)
-        cls.NORMALIZED_DATA_DIR.mkdir(parents=True, exist_ok=True)
-        cls.OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-        cls.CACHE_DIR.mkdir(parents=True, exist_ok=True)
-        cls.CONFIG_DIR.mkdir(parents=True, exist_ok=True)
+        """Ensures all runtime and output directories exist."""
+        for d in (
+            cls.RAW_DATA_DIR,
+            cls.NORMALIZED_DATA_DIR,
+            cls.OUTPUT_DIR,
+            cls.CACHE_DIR,
+            cls.CONFIG_DIR,
+            cls.API_COMPANIES_DIR,
+            cls.API_PEOPLE_DIR,
+            cls.API_LOGS_DIR,
+            cls.API_REPORTS_DIR,
+            cls.SCRAPING_COMPANIES_DIR,
+            cls.SCRAPING_PEOPLE_DIR,
+            cls.SCRAPING_LOGS_DIR,
+            cls.SCRAPING_REPORTS_DIR,
+            cls.COMBINED_COMPANIES_DIR,
+            cls.COMBINED_PEOPLE_DIR,
+            cls.COMBINED_REPORTS_DIR,
+        ):
+            d.mkdir(parents=True, exist_ok=True)
 
 
 settings = Settings()

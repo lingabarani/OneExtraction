@@ -62,7 +62,7 @@ function sentenceCase(string: string) {
   string = string
     .split(/([\W_\d])/)
     .filter((s: any) => s)
-    .join(" ")
+    .join(" ")  
   // Remove separators (except numbers)
   string = string.replace(/[\W_]/g, " ").split(/\s+/).join(" ")
   // Manage capital letters and capitalize the first character

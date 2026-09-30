@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0a0e17;
+      --card: #121824;
+      --card-alt: #172033;
+      --border: rgba(255, 255, 255, 0.08);
+      --primary: #3b82f6;
+      --emerald: #10b981;
+      --amber: #f59e0b;
+      --purple: #8b5cf6;
+      --text: #f8fafc;
+      --muted: #94a3b8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: radial-gradient(circle at 85% 15%, rgba(59, 130, 246, 0.12), transparent 45%),
+                  radial-gradient(circle at 15% 85%, rgba(16, 185, 129, 0.08), transparent 45%),
+                  var(--bg);
+      color: var(--text);
+      width: 1600px;
+      height: 900px;
+      overflow: hidden;
+      padding: 55px 75px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .slide-header { display: flex; justify-content: space-between; align-items: center; }
+    .badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(59, 130, 246, 0.15); border: 1px solid rgba(59, 130, 246, 0.3);
+      color: #60a5fa; padding: 6px 14px; border-radius: 9999px;
+      font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;
+    }
+    .slide-num { font-size: 14px; color: var(--muted); font-weight: 600; }
+    .title-area h2 {
+      font-size: 42px; font-weight: 800; letter-spacing: -0.02em; margin-top: 14px;
+      background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .title-area p { font-size: 17px; color: var(--muted); margin-top: 8px; }
+    .slide-footer {
+      display: flex; justify-content: space-between; border-top: 1px solid var(--border);
+      padding-top: 18px; font-size: 13px; color: #64748b;
+    }
+  </style>
+
+  <style>
+    .dual-channel-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin: 28px 0; }
+    .ch-box { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 28px 32px; }
+    .ch-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+    .ch-tag { font-size: 13px; font-weight: 700; text-transform: uppercase; padding: 6px 14px; border-radius: 6px; }
+    .ch-tag.api { background: rgba(59, 130, 246, 0.15); color: #60a5fa; border: 1px solid rgba(59, 130, 246, 0.3); }
+    .ch-tag.scraping { background: rgba(16, 185, 129, 0.15); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.3); }
+    .ch-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; background: rgba(0,0,0,0.3); padding: 16px; border-radius: 10px; margin-bottom: 18px; }
+    .cs-val { font-size: 26px; font-weight: 800; color: #fff; }
+    .cs-lbl { font-size: 11px; text-transform: uppercase; color: var(--muted); }
+    .ch-sources { display: flex; flex-direction: column; gap: 9px; }
+    .ch-s-row { display: flex; justify-content: space-between; padding: 10px 14px; background: rgba(255,255,255,0.02); border-radius: 8px; font-size: 14px; }
+    .banner {
+      background: linear-gradient(135deg, rgba(30, 41, 59, 0.7) 0%, rgba(15, 23, 42, 0.9) 100%);
+      border: 1px solid rgba(59, 130, 246, 0.3); border-radius: 12px; padding: 16px 24px;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <div class="slide-header">
+      <div class="badge">Architecture & Scale — Slide 02</div>
+      <div class="slide-num">Dual-Channel Ingestion Performance</div>
+    </div>
+    <div class="title-area">
+      <h2>Ingestion Channels: Government APIs vs Public Scraping</h2>
+      <p>Physical separation of raw streams ensures zero data pollution and complete source provenance tracking.</p>
+    </div>
+    <div class="dual-channel-grid">
+      <div class="ch-box">
+        <div class="ch-top">
+          <span class="ch-tag api">Government & Registry APIs</span>
+          <span style="font-size: 13px; color: #34d399; font-weight: 700;">● 100% Success Rate</span>
+        </div>
+        <div class="ch-stats">
+          <div><div class="cs-lbl">Companies</div><div class="cs-val">3,119</div></div>
+          <div><div class="cs-lbl">Leads / People</div><div class="cs-val">3,997</div></div>
+          <div><div class="cs-lbl">Ingestion Time</div><div class="cs-val">5.12s</div></div>
+        </div>
+        <div class="ch-sources">
+          <div class="ch-s-row"><span>INEGI DENUE (National Registry)</span><b style="color: #60a5fa;">1,000 Verified</b></div>
+          <div class="ch-s-row"><span>SIEM (Secretaría de Economía)</span><b style="color: #60a5fa;">1,000 Verified</b></div>
+          <div class="ch-s-row"><span>SAT (Tax Compliance Registry)</span><b style="color: #60a5fa;">1,000 Verified</b></div>
+          <div class="ch-s-row"><span>CompraNet (Federal Suppliers RUPC)</span><b style="color: #60a5fa;">1,000 Verified</b></div>
+        </div>
+      </div>
+
+      <div class="ch-box">
+        <div class="ch-top">
+          <span class="ch-tag scraping">Commercial Directory Scraping</span>
+          <span style="font-size: 13px; color: #34d399; font-weight: 700;">● Cloudflare Bypassed</span>
+        </div>
+        <div class="ch-stats">
+          <div><div class="cs-lbl">Companies</div><div class="cs-val">11,714</div></div>
+          <div><div class="cs-lbl">Decision-Makers</div><div class="cs-val">20,261</div></div>
+          <div><div class="cs-lbl">Scrape Time</div><div class="cs-val">6.50s</div></div>
+        </div>
+        <div class="ch-sources">
+          <div class="ch-s-row"><span>CANACINTRA (Manufacturing Chamber)</span><b style="color: #34d399;">5,000 Scraped</b></div>
+          <div class="ch-s-row"><span>AMCHAM Mexico (US-MX Corporates)</span><b style="color: #34d399;">5,000 Scraped</b></div>
+          <div class="ch-s-row"><span>COSMOS Online (Industrial Suppliers)</span><b style="color: #34d399;">5,000 Scraped</b></div>
+          <div class="ch-s-row"><span>QuimiNet B2B (Industrial Chemicals)</span><b style="color: #34d399;">5,000 Scraped</b></div>
+        </div>
+      </div>
+    </div>
+    <div class="banner">
+      <div>
+        <b style="color: #fff; font-size: 16px;">Combined Golden Entity Resolution:</b>
+        <span style="color: var(--muted); font-size: 14px; margin-left: 8px;">6-stage fuzzy deduplication unifies 65,000+ raw records into 7,537 Golden Master Profiles with 0 false matches.</span>
+      </div>
+      <div style="font-size: 18px; font-weight: 800; color: #60a5fa;">24 Cross-Source Duplicates Resolved</div>
+    </div>
+  </div>
+  <div class="slide-footer">
+    <span>Audit Log: output/combined/reports/combined_summary.json</span>
+    <span>Confidential & Proprietary — Prepared for CEO</span>
+  </div>
+</body>
+</html>

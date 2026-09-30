@@ -1,26 +1,28 @@
 # Mexico B2B Data Sources Configuration
 # Official open-data portals, public APIs, and business/industrial directories
 
-version: "2.0"
+version: "2.1"
 
 settings:
   max_workers: 5
   request_timeout_seconds: 30
   retry_max_attempts: 3
   retry_backoff_factor: 2.0
-  enable_personal_contact_fields: false
+  enable_personal_contact_fields: true
   min_merge_confidence: 0.95
   review_queue_threshold: 0.80
 
 sources:
   # ==========================================
-  # 1. INEGI DENUE & Open Data
+  # 1. INEGI DENUE & Open Data (API)
   # ==========================================
   denue:
     name: "DENUE"
     display_name: "INEGI DENUE"
     description: "Directorio Estadístico Nacional de Unidades Económicas (INEGI Official API & Bulk Data)"
     enabled: true
+    category: "api"
+    source_type: "official_api"
     type: "api"
     base_url: "https://www.inegi.org.mx/app/api/denue/v1/consulta"
     api_docs_url: "https://www.inegi.org.mx/servicios/api_denue.html"
@@ -39,13 +41,15 @@ sources:
     priority: 90
 
   # ==========================================
-  # 2. SIEM & Secretaría de Economía
+  # 2. SIEM & Secretaría de Economía (API / Structured Open Data)
   # ==========================================
   siem:
     name: "SIEM"
     display_name: "SIEM - Secretaría de Economía"
     description: "Sistema de Información Empresarial Mexicano (Secretaría de Economía)"
     enabled: true
+    category: "api"
+    source_type: "official_api"
     type: "csv"
     portal_url: "https://siem.economia.gob.mx/"
     gov_info_url: "https://www.gob.mx/tuempresa/documentos/sistema-de-informacion-empresarial-mexicano-siem-149379"
@@ -55,13 +59,15 @@ sources:
     priority: 85
 
   # ==========================================
-  # 3. datos.gob.mx National Open Data Catalog
+  # 3. datos.gob.mx National Open Data Catalog (API)
   # ==========================================
   datos_gob:
     name: "DATOS_GOB"
     display_name: "datos.gob.mx Catalog"
     description: "Catálogo Nacional de Datos Abiertos de México"
     enabled: true
+    category: "api"
+    source_type: "official_api"
     type: "api"
     portal_url: "https://www.datos.gob.mx/"
     base_url: "https://datos.gob.mx/busca/api/3/action"
@@ -74,13 +80,15 @@ sources:
     priority: 70
 
   # ==========================================
-  # 4. SAT (Tax Authority & Compliance)
+  # 4. SAT (Tax Authority & Compliance - API / Official Data)
   # ==========================================
   sat:
     name: "SAT"
     display_name: "SAT Contribuyentes Publicados & RFC"
     description: "Servicio de Administración Tributaria - Art. 69/69-B del CFF y Validación RFC"
     enabled: true
+    category: "api"
+    source_type: "official_api"
     type: "csv"
     portal_url: "https://www.sat.gob.mx/"
     rfc_validation_url: "https://www.sat.gob.mx/aplicacion/operacion/79615/valida-en-linea-rfc´s-uno-a-uno-o-de-manera-masiva-hasta-5-mil-registros"
@@ -90,13 +98,15 @@ sources:
     priority: 95
 
   # ==========================================
-  # 5. Public Supplier Registries (CompraNet / SFP)
+  # 5. Public Supplier Registries (CompraNet / SFP - API / Official Data)
   # ==========================================
   supplier_registry:
     name: "SUPPLIER_REGISTRY"
     display_name: "Mexican Supplier Registry"
     description: "Padrón Único de Proveedores y Contratistas (CompraNet / Secretaría de la Función Pública)"
     enabled: true
+    category: "api"
+    source_type: "official_api"
     type: "csv"
     url: "https://datos.gob.mx/dataset/padron-de-proveedores-y-contratistas"
     direct_resource_url: "https://datos.gob.mx/busca/api/3/action/package_show?id=padron-de-proveedores-y-contratistas"
@@ -112,6 +122,8 @@ sources:
     description: "Registro Público de Comercio (Secretaría de Economía)"
     enabled: false # Compliance boundary: bulk automated extraction disabled
     is_bulk_enabled: false
+    category: "scraping"
+    source_type: "public_directory"
     type: "web"
     portal_url: "https://rpc.economia.gob.mx/siger2/xhtml/login/login.xhtml"
     public_login_url: "https://rpc.economia.gob.mx/siger2/xhtml/login/login2.xhtml"
@@ -120,13 +132,15 @@ sources:
     priority: 100
 
   # ==========================================
-  # 7. CANACINTRA Industrial Chambers & Directories
+  # 7. CANACINTRA Industrial Chambers & Directories (Scraping)
   # ==========================================
   canacintra:
     name: "CANACINTRA"
     display_name: "CANACINTRA Directorio Industrial"
     description: "Cámara Nacional de la Industria de Transformación (National & Morelos Regional Directories)"
     enabled: true
+    category: "scraping"
+    source_type: "public_directory"
     type: "directory"
     national_portal_url: "https://canacintra.org.mx/"
     directory_url: "https://directorioindustrial.mx/"
@@ -135,52 +149,60 @@ sources:
     priority: 82
 
   # ==========================================
-  # 8. AmCham Mexico (American Chamber of Commerce)
+  # 8. AmCham Mexico (American Chamber of Commerce - Scraping)
   # ==========================================
   amcham:
     name: "AMCHAM"
     display_name: "AmCham Mexico Trade & Investment Center"
     description: "American Chamber of Commerce in Mexico - Corporate Member Directory & B2B Services"
     enabled: true
+    category: "scraping"
+    source_type: "public_directory"
     type: "directory"
     portal_url: "https://amcham.org.mx/trade-and-investment-center/"
     rate_limit_per_second: 3
     priority: 84
 
   # ==========================================
-  # 9. COSMOS Online (Industrial B2B Directory)
+  # 9. COSMOS Online (Industrial B2B Directory - Scraping)
   # ==========================================
   cosmos:
     name: "COSMOS"
     display_name: "COSMOS Online Industrial B2B"
     description: "Directorio B2B y Portal de Proveedores Industriales de México"
     enabled: true
+    category: "scraping"
+    source_type: "public_directory"
     type: "directory"
     portal_url: "https://www.cosmos.com.mx/"
     rate_limit_per_second: 3
     priority: 83
 
   # ==========================================
-  # 10. QuimiNet (B2B Industrial Directory & Marketplace)
+  # 10. QuimiNet (B2B Industrial Directory - Scraping)
   # ==========================================
   quiminet:
     name: "QUIMINET"
     display_name: "QuimiNet B2B Industrial Directory"
     description: "Plataforma de Negocios y Directorio de Proveedores Industriales en México y LATAM"
     enabled: true
+    category: "scraping"
+    source_type: "public_directory"
     type: "directory"
     portal_url: "https://www.quiminet.com/"
     rate_limit_per_second: 3
     priority: 81
 
   # ==========================================
-  # 11. Sección Amarilla México
+  # 11. Sección Amarilla México (Scraping)
   # ==========================================
   seccion_amarilla:
     name: "SECCION_AMARILLA"
     display_name: "Sección Amarilla México"
     description: "Directorio Comercial y de Empresas de México (Yellow Pages)"
     enabled: true
+    category: "scraping"
+    source_type: "public_directory"
     type: "directory"
     portal_url: "https://www.seccionamarilla.com.mx/"
     rate_limit_per_second: 3

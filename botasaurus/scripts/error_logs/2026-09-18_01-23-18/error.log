@@ -1,0 +1,47 @@
+Traceback (most recent call last):
+  File "C:\Users\Lingabarini M\AppData\Local\Programs\Python\Python312\Lib\site-packages\botasaurus\request_decorator.py", line 111, in run_task
+    result = func(reqs, data)
+             ^^^^^^^^^^^^^^^^
+  File "D:\Data Scraping Project POC\OneExtraction\botasaurus\src\us_b2b\connectors\sam_client.py", line 35, in fetch_sam_entities_botasaurus
+    response = request.get(BASE_URL, params=params, headers=headers)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lingabarini M\AppData\Local\Programs\Python\Python312\Lib\site-packages\botasaurus_requests\request_class.py", line 60, in get
+    return reqs.get(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lingabarini M\AppData\Local\Programs\Python\Python312\Lib\site-packages\botasaurus_requests\reqs.py", line 360, in get
+    return retry_on_network_error(lambda: _get(url, *args, **add_redirects(kwargs, True)))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lingabarini M\AppData\Local\Programs\Python\Python312\Lib\site-packages\botasaurus_requests\reqs.py", line 348, in retry_on_network_error
+    raise e
+  File "C:\Users\Lingabarini M\AppData\Local\Programs\Python\Python312\Lib\site-packages\botasaurus_requests\reqs.py", line 341, in retry_on_network_error
+    return func()
+           ^^^^^^
+  File "C:\Users\Lingabarini M\AppData\Local\Programs\Python\Python312\Lib\site-packages\botasaurus_requests\reqs.py", line 360, in <lambda>
+    return retry_on_network_error(lambda: _get(url, *args, **add_redirects(kwargs, True)))
+                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lingabarini M\AppData\Local\Programs\Python\Python312\Lib\site-packages\botasaurus_requests\reqs.py", line 249, in request
+    req.send()
+  File "C:\Users\Lingabarini M\AppData\Local\Programs\Python\Python312\Lib\site-packages\botasaurus_requests\reqs.py", line 136, in send
+    raise e
+  File "C:\Users\Lingabarini M\AppData\Local\Programs\Python\Python312\Lib\site-packages\botasaurus_requests\reqs.py", line 133, in send
+    self.response = self.session.request(self.method, self.url, **merged_kwargs)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lingabarini M\AppData\Local\Programs\Python\Python312\Lib\site-packages\botasaurus_requests\session.py", line 192, in request
+    proc.send()
+  File "C:\Users\Lingabarini M\AppData\Local\Programs\Python\Python312\Lib\site-packages\botasaurus_requests\response.py", line 64, in send
+    self.response = self.execute_request()
+                    ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lingabarini M\AppData\Local\Programs\Python\Python312\Lib\site-packages\botasaurus_requests\response.py", line 76, in execute_request
+    raise e
+  File "C:\Users\Lingabarini M\AppData\Local\Programs\Python\Python312\Lib\site-packages\botasaurus_requests\response.py", line 69, in execute_request
+    resp = self.session.execute_request(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lingabarini M\AppData\Local\Programs\Python\Python312\Lib\site-packages\botasaurus_requests\client.py", line 492, in execute_request
+    return self.build_response(url, headers, response_object, request_payload['proxyUrl'])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lingabarini M\AppData\Local\Programs\Python\Python312\Lib\site-packages\botasaurus_requests\client.py", line 455, in build_response
+    return self.build_response_obj(url, headers, response_object['response'], proxy)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lingabarini M\AppData\Local\Programs\Python\Python312\Lib\site-packages\botasaurus_requests\client.py", line 435, in build_response_obj
+    raise ClientException(response_object['body'])
+botasaurus_requests.exceptions.ClientException: failed to do request: Get "https://api.sam.gov/entity-information/v3/entities?registrationStatus=A&purposeOfRegistrationCode=Z2&entityEFTIndicator=&samExtractCode=1&size=10&page=0&naicsCode=541511": dial tcp [2600:1f28:40:510e:949c:9c64:3163:8595]:443: i/o timeout (Client.Timeout exceeded while awaiting headers)

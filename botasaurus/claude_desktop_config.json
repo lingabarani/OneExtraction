@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "oneextraction-b2b": {
+      "command": "python",
+      "args": [
+        "-m",
+        "src.us_b2b.mcp_server_stdio"
+      ],
+      "cwd": "d:\\Data Scraping Project POC\\OneExtraction\\botasaurus",
+      "env": {
+        "PYTHONPATH": "d:\\Data Scraping Project POC\\OneExtraction\\botasaurus",
+        "PYTHONIOENCODING": "utf-8"
+      }
+    }
+  }
+}

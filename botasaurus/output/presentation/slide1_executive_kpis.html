@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0a0e17;
+      --card: #121824;
+      --card-alt: #172033;
+      --border: rgba(255, 255, 255, 0.08);
+      --primary: #3b82f6;
+      --emerald: #10b981;
+      --amber: #f59e0b;
+      --purple: #8b5cf6;
+      --text: #f8fafc;
+      --muted: #94a3b8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: radial-gradient(circle at 85% 15%, rgba(59, 130, 246, 0.12), transparent 45%),
+                  radial-gradient(circle at 15% 85%, rgba(16, 185, 129, 0.08), transparent 45%),
+                  var(--bg);
+      color: var(--text);
+      width: 1600px;
+      height: 900px;
+      overflow: hidden;
+      padding: 55px 75px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .slide-header { display: flex; justify-content: space-between; align-items: center; }
+    .badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(59, 130, 246, 0.15); border: 1px solid rgba(59, 130, 246, 0.3);
+      color: #60a5fa; padding: 6px 14px; border-radius: 9999px;
+      font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;
+    }
+    .slide-num { font-size: 14px; color: var(--muted); font-weight: 600; }
+    .title-area h2 {
+      font-size: 42px; font-weight: 800; letter-spacing: -0.02em; margin-top: 14px;
+      background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .title-area p { font-size: 17px; color: var(--muted); margin-top: 8px; }
+    .slide-footer {
+      display: flex; justify-content: space-between; border-top: 1px solid var(--border);
+      padding-top: 18px; font-size: 13px; color: #64748b;
+    }
+  </style>
+
+  <style>
+    .kpi-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin: 36px 0; }
+    .kpi-card {
+      background: var(--card); border: 1px solid var(--border); border-radius: 16px;
+      padding: 34px 28px; position: relative;
+    }
+    .kpi-card::after {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px;
+      background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+    }
+    .kpi-card.emerald::after { background: linear-gradient(90deg, #10b981, #059669); }
+    .kpi-card.amber::after { background: linear-gradient(90deg, #f59e0b, #d97706); }
+    .kpi-card.purple::after { background: linear-gradient(90deg, #8b5cf6, #ec4899); }
+    .kpi-num { font-size: 56px; font-weight: 800; color: #fff; margin: 14px 0 6px 0; }
+    .kpi-lbl { font-size: 13px; font-weight: 700; text-transform: uppercase; color: var(--muted); letter-spacing: 0.05em; }
+    .kpi-sub { font-size: 13px; color: #64748b; line-height: 1.5; }
+    .hero-summary {
+      background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border);
+      border-radius: 12px; padding: 22px 30px; display: flex; justify-content: space-around;
+    }
+    .hs-item { text-align: center; }
+    .hs-val { font-size: 24px; font-weight: 800; color: #60a5fa; }
+    .hs-lbl { font-size: 12px; text-transform: uppercase; color: var(--muted); margin-top: 4px; }
+  </style>
+</head>
+<body>
+  <div>
+    <div class="slide-header">
+      <div class="badge">Executive Briefing — Slide 01</div>
+      <div class="slide-num">Executive Summary & Platform Scale</div>
+    </div>
+    <div class="title-area">
+      <h2>Mexico B2B Sales & Decision-Maker Intelligence Platform</h2>
+      <p>Enterprise data intelligence platform extracting, verifying, and unifying corporate profiles across Mexico's 5.5M+ businesses.</p>
+    </div>
+    <div class="kpi-row">
+      <div class="kpi-card">
+        <div class="kpi-lbl">National Universe 🇲🇽</div>
+        <div class="kpi-num">5.52M+</div>
+        <div class="kpi-sub">Official INEGI DENUE economic units across all 32 federal entities</div>
+      </div>
+      <div class="kpi-card emerald">
+        <div class="kpi-lbl">Golden Profiles Generated ⭐</div>
+        <div class="kpi-num">7,537</div>
+        <div class="kpi-sub">Fully unified, deduplicated multi-source Mexican company master records</div>
+      </div>
+      <div class="kpi-card amber">
+        <div class="kpi-lbl">Verified Decision-Makers 👔</div>
+        <div class="kpi-num">8,834</div>
+        <div class="kpi-sub">C-Suite leaders, Directors & Owners with direct Mexican phone & email</div>
+      </div>
+      <div class="kpi-card purple">
+        <div class="kpi-lbl">SAT Tax & RFC Clearance 🛡️</div>
+        <div class="kpi-num">100%</div>
+        <div class="kpi-sub">Official Modulo 11 check + Art 69-B EFOS shell company blacklist cleared</div>
+      </div>
+    </div>
+    <div class="hero-summary">
+      <div class="hs-item"><div class="hs-val">2 Independent Channels</div><div class="hs-lbl">API vs Public Scraping Segregation</div></div>
+      <div class="hs-item"><div class="hs-val">94.9% Trust Score</div><div class="hs-lbl">Average Golden Data Quality</div></div>
+      <div class="hs-item"><div class="hs-val">0 Failed Ingestions</div><div class="hs-lbl">100% Pipeline Reliability</div></div>
+      <div class="hs-item"><div class="hs-val">~$1,490 / Month</div><div class="hs-lbl">Full Production Operating Cost</div></div>
+    </div>
+  </div>
+  <div class="slide-footer">
+    <span>Mexico B2B Sales Intelligence Platform — POC Validation</span>
+    <span>Confidential & Proprietary — Prepared for CEO</span>
+  </div>
+</body>
+</html>

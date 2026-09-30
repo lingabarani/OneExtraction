@@ -1,0 +1,24 @@
+{
+  "timestamp": "2026-09-18T18:14:54.072530",
+  "summary": {
+    "total_companies": 1000,
+    "total_people": 2000,
+    "csuite_executives": 2000,
+    "company_contacts": 0,
+    "people_contacts": 0
+  },
+  "breakdown": {
+    "company_emails": 0,
+    "company_phones": 0,
+    "people_emails": 0,
+    "people_phones": 0
+  },
+  "csuite_by_title": {
+    "Chief Executive Officer (CEO)": 1000,
+    "Chief Financial Officer (CFO)": 1000
+  },
+  "data_sources": {
+    "null": 2000
+  },
+  "errors": []
+}

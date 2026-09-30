@@ -1,0 +1,74 @@
+{
+  "run_id": "scrape_20260917_122800",
+  "channel": "scraping",
+  "summary_metrics": {
+    "companies": 25,
+    "people": 19,
+    "records_received": 25,
+    "records_rejected": 0,
+    "records_with_warnings": 0,
+    "duplicates_resolved": 0,
+    "average_quality_score": 81.92,
+    "pages_visited": 5,
+    "successful_pages": 5,
+    "failed_pages": 0
+  },
+  "source_statuses": {
+    "CANACINTRA": {
+      "status": "SUCCESS",
+      "records_received": 5,
+      "companies": 5,
+      "people": 5,
+      "validation_passed": 5,
+      "validation_warnings": 0,
+      "validation_rejected": 0,
+      "duration_seconds": 0.0,
+      "error": null
+    },
+    "AMCHAM": {
+      "status": "SUCCESS",
+      "records_received": 5,
+      "companies": 5,
+      "people": 3,
+      "validation_passed": 5,
+      "validation_warnings": 0,
+      "validation_rejected": 0,
+      "duration_seconds": 0.0,
+      "error": null
+    },
+    "COSMOS": {
+      "status": "SUCCESS",
+      "records_received": 5,
+      "companies": 5,
+      "people": 5,
+      "validation_passed": 5,
+      "validation_warnings": 0,
+      "validation_rejected": 0,
+      "duration_seconds": 0.0,
+      "error": null
+    },
+    "QUIMINET": {
+      "status": "SUCCESS",
+      "records_received": 5,
+      "companies": 5,
+      "people": 3,
+      "validation_passed": 5,
+      "validation_warnings": 0,
+      "validation_rejected": 0,
+      "duration_seconds": 0.0,
+      "error": null
+    },
+    "SECCION_AMARILLA": {
+      "status": "SUCCESS",
+      "records_received": 5,
+      "companies": 5,
+      "people": 3,
+      "validation_passed": 5,
+      "validation_warnings": 0,
+      "validation_rejected": 0,
+      "duration_seconds": 0.0,
+      "error": null
+    }
+  },
+  "invalid_records_sample": []
+}

@@ -1,0 +1,18 @@
+{
+  "run_id": "us_20260918_102620",
+  "total_raw_ingested": 0,
+  "total_after_dedup": 0,
+  "total_valid_companies": 0,
+  "total_exported_companies": 0,
+  "total_decision_makers": 0,
+  "duplicate_records_removed": 0,
+  "avg_quality_score": 0,
+  "elapsed_seconds": 18.85,
+  "sources_used": [
+    "SAM_GOV"
+  ],
+  "export_formats": [
+    "json"
+  ],
+  "status": "COMPLETE"
+}
